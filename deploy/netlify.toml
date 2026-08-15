@@ -19,7 +19,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://api.example.kg/api/:splat" # заменить на реальный поддомен бэкенда
+  to = "https://ayka-cleaning-api.onrender.com/api/:splat"
   status = 200
   force = true
 
@@ -35,7 +35,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     X-Frame-Options = "DENY"
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; connect-src 'self' https://api.example.kg https://www.google-analytics.com https://region1.google-analytics.com https://mc.yandex.ru; frame-src https://mc.yandex.ru; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; connect-src 'self' https://ayka-cleaning-api.onrender.com https://www.google-analytics.com https://region1.google-analytics.com https://mc.yandex.ru; frame-src https://mc.yandex.ru; frame-ancestors 'none'"
 
 # Статика с хешем в имени — кешировать на год (раздел 14 BRIEF.md)
 [[headers]]
