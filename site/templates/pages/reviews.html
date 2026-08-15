@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+
+    <div class="grid grid-3">
+      {% for review in reviews %}
+      <article class="review-card reveal">
+        {% if review.placeholder %}
+        <span class="review-card__badge">{{ ui.reviews.placeholder_badge }}</span>
+        {% endif %}
+        <div class="review-card__stars" aria-label="{{ review.rating }}/5">
+          {% for _ in range(review.rating) %}★{% endfor %}{% for _ in range(5 - review.rating) %}☆{% endfor %}
+        </div>
+        <p class="review-card__text">{{ review.text }}</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar" aria-hidden="true">{{ review.author[0] }}</div>
+          <div>
+            <div>{{ review.author }}</div>
+            <div class="review-card__meta">{{ review.service }} &middot; {{ review.date }}</div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="form-note" style="margin-top:2rem">{{ page.disclaimer }}</p>
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>{{ page.cta_title }}</h2>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="{{ '/' + lang + '/ceny/#calculator' }}">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

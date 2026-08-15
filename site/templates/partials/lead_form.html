@@ -1,0 +1,72 @@
+<form class="lead-form" id="lead-form" data-lead-form
+      data-api-base="{{ config.api_base_url }}"
+      data-whatsapp="{{ config.whatsapp }}"
+      data-success-text="{{ ui.form.success }}"
+      data-error-text="{{ ui.form.error }}"
+      data-fallback-text="{{ ui.form.fallback }}"
+      novalidate>
+  <div class="form-field">
+    <label for="lf-name">{{ ui.form.name_label }}</label>
+    <input type="text" id="lf-name" name="name" placeholder="{{ ui.form.name_placeholder }}" minlength="2" maxlength="100" required>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-phone">{{ ui.form.phone_label }}</label>
+    <input type="tel" id="lf-phone" name="phone" placeholder="{{ ui.form.phone_placeholder }}" required>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-channel">{{ ui.form.channel_label }}</label>
+    <select id="lf-channel" name="contact_channel">
+      <option value="whatsapp">{{ ui.form.channel_whatsapp }}</option>
+      <option value="call">{{ ui.form.channel_call }}</option>
+      {% if config.telegram %}
+      <option value="telegram">{{ ui.form.channel_telegram }}</option>
+      {% endif %}
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-date">{{ ui.form.date_label }}</label>
+    <input type="date" id="lf-date" name="preferred_date">
+  </div>
+
+  <div class="form-field">
+    <label for="lf-address">{{ ui.form.address_label }}</label>
+    <input type="text" id="lf-address" name="address" placeholder="{{ ui.form.address_placeholder }}" maxlength="200">
+  </div>
+
+  <div class="form-field">
+    <label for="lf-comment">{{ ui.form.comment_label }}</label>
+    <textarea id="lf-comment" name="comment" rows="3" maxlength="1000" placeholder="{{ ui.form.comment_placeholder }}"></textarea>
+  </div>
+
+  <!-- Скрытые поля: перенос параметров калькулятора (form.js), UTM, антиспам -->
+  <input type="hidden" name="service_type">
+  <input type="hidden" name="property_type">
+  <input type="hidden" name="area_m2">
+  <input type="hidden" name="bathrooms">
+  <input type="hidden" name="addons">
+  <input type="hidden" name="urgency">
+  <input type="hidden" name="frequency">
+  <input type="hidden" name="price_min">
+  <input type="hidden" name="price_max">
+  <input type="hidden" name="lang" value="{{ lang }}">
+  <input type="hidden" name="utm_source">
+  <input type="hidden" name="utm_medium">
+  <input type="hidden" name="utm_campaign">
+  <input type="hidden" name="utm_content">
+  <input type="hidden" name="utm_term">
+  <input type="hidden" name="referrer">
+  <input type="hidden" name="landing_page">
+  <input type="hidden" name="rendered_at">
+
+  <div class="form-honeypot" aria-hidden="true">
+    <label for="lf-website">Website</label>
+    <input type="text" id="lf-website" name="company_website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit" class="btn btn-accent btn-block">{{ ui.form.submit }}</button>
+  <p class="form-note">{{ ui.form.consent }}</p>
+  <div class="form-status" data-form-status role="status"></div>
+</form>

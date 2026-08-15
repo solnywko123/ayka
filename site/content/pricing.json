@@ -1,0 +1,30 @@
+{
+  "base_rates_per_m2": {
+    "maintenance": 90,
+    "general": 180,
+    "post_renovation": 300,
+    "post_move": 200
+  },
+  "min_order": 2500,
+  "bathroom_extra": 500,
+  "addons": {
+    "windows_per_sash": 400,
+    "sofa_seat": 900,
+    "carpet_per_m2": 250,
+    "fridge_inside": 700,
+    "oven_inside": 800,
+    "balcony": 1000,
+    "ironing_per_hour": 500
+  },
+  "multipliers": {
+    "urgency_today": 1.20,
+    "property_house": 1.10,
+    "property_office": 1.05
+  },
+  "discounts": {
+    "weekly": 0.15,
+    "biweekly": 0.10,
+    "monthly": 0.05
+  },
+  "price_range_spread": 0.15
+}

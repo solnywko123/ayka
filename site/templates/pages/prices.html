@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>{{ page.table.service_col }}</th>
+            <th>{{ page.table.rate_col }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in services %}
+          <tr>
+            <td>{{ s.title }}</td>
+            <td>{{ s.price_from }} {{ config.currency_symbol[lang] }}/м²</td>
+          </tr>
+          {% endfor %}
+          <tr>
+            <td>{{ page.table.min_order_row }}</td>
+            <td>{{ pricing.min_order }} {{ config.currency_symbol[lang] }}</td>
+          </tr>
+          <tr>
+            <td>{{ page.table.bathroom_row }}</td>
+            <td>+{{ pricing.bathroom_extra }} {{ config.currency_symbol[lang] }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:3rem">{{ page.addons_title }}</h2>
+    <div class="table-scroll" style="margin-top:1.5rem">
+      <table class="price-table">
+        <thead>
+          <tr><th>{{ page.table.addon_col }}</th><th>{{ page.table.rate_col }}</th></tr>
+        </thead>
+        <tbody>
+          {% for key, addon in calculator_i18n.addons.items() %}
+          <tr>
+            <td>{{ addon.label }}</td>
+            <td>{{ pricing.addons[key] }} {{ config.currency_symbol[lang] }}{% if addon.unit %} {{ addon.unit }}{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:3rem">{{ page.discounts_title }}</h2>
+    <div class="table-scroll" style="margin-top:1.5rem">
+      <table class="price-table">
+        <thead>
+          <tr><th>{{ page.table.frequency_col }}</th><th>{{ page.table.discount_col }}</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>{{ calculator_i18n.frequency.weekly }}</td><td>&minus;{{ (pricing.discounts.weekly * 100) | round | int }}%</td></tr>
+          <tr><td>{{ calculator_i18n.frequency.biweekly }}</td><td>&minus;{{ (pricing.discounts.biweekly * 100) | round | int }}%</td></tr>
+          <tr><td>{{ calculator_i18n.frequency.monthly }}</td><td>&minus;{{ (pricing.discounts.monthly * 100) | round | int }}%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-table__note">{{ page.note }}</p>
+  </div>
+</section>
+
+<section id="calculator" class="bg-muted">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2>{{ calculator_i18n.title }}</h2>
+    </div>
+    {% include "partials/calculator.html" %}
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calculator" style="max-width:640px; margin-inline:auto;" id="lead-form">
+      <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
+      {% include "partials/lead_form.html" %}
+    </div>
+  </div>
+</section>
+{% endblock %}

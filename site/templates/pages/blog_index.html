@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+
+    <div class="grid grid-3">
+      {% for post in posts %}
+      <a class="blog-card reveal" href="{{ '/' + lang + '/blog/' + post.slug + '/' }}">
+        <div class="hero__media" style="aspect-ratio:16/9; border-radius:0">
+          <img src="{{ asset('img/placeholders/blog.svg') }}" alt="" width="480" height="270" loading="lazy">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__date">{{ post.date }}</span>
+          <h3>{{ post.title }}</h3>
+          <p class="blog-card__desc">{{ post.description }}</p>
+          <span class="service-card__link">{{ ui.buttons.read_more }}
+            <svg width="16" height="16" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-chevron-right"></use></svg>
+          </span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

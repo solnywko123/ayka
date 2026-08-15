@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<article class="article" style="padding-top:var(--space-5); padding-bottom:var(--space-6)">
+  <div class="container">
+    <h1>{{ district.title }}</h1>
+    <p class="article__meta">{{ district.arrival_time }}</p>
+    <p>{{ district.intro }}</p>
+    {% for paragraph in district.body %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+
+    {% if district.highlights %}
+    <ul class="checklist checklist--yes">
+      {% for h in district.highlights %}
+      <li>{{ h }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</article>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ ui.nav.services }}</h2>
+    </div>
+    <div class="grid grid-3">
+      {% for s in services %}
+      <a class="service-card reveal" href="{{ '/' + lang + '/uslugi/' + s.slug + '/' }}">
+        <span class="service-card__icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ s.icon }}"></use></svg>
+        </span>
+        <h3>{{ s.title }}</h3>
+        <p class="service-card__desc">{{ s.short_description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>{{ ui.buttons.calculate }}</h2>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="{{ '/' + lang + '/ceny/#calculator' }}">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

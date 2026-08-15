@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+
+    {% for section in page.sections %}
+    <div class="grid grid-2 reveal" style="align-items:center; margin-bottom:3rem">
+      {% if loop.index0 is even %}
+      <div>
+        <h2>{{ section.title }}</h2>
+        <p>{{ section.text }}</p>
+      </div>
+      <div class="hero__media" style="aspect-ratio:4/3">
+        <img src="{{ asset('img/placeholders/' + section.image) }}" alt="{{ section.image_alt }}" width="800" height="600" loading="lazy">
+      </div>
+      {% else %}
+      <div class="hero__media" style="aspect-ratio:4/3">
+        <img src="{{ asset('img/placeholders/' + section.image) }}" alt="{{ section.image_alt }}" width="800" height="600" loading="lazy">
+      </div>
+      <div>
+        <h2>{{ section.title }}</h2>
+        <p>{{ section.text }}</p>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ page.values_title }}</h2>
+    </div>
+    <div class="grid grid-2">
+      {% for value in page.value_items %}
+      <div class="why-card reveal">
+        <span class="why-card__icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-shield-check"></use></svg>
+        </span>
+        <div>
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>{{ page.cta_title }}</h2>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="{{ '/' + lang + '/ceny/#calculator' }}">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

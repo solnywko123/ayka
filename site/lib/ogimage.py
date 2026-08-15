@@ -1,0 +1,82 @@
+"""Generates 1200x630 Open Graph images at build time (BRIEF.md section 10).
+Uses a build-time-only TTF (site/build_assets/Manrope-Variable.ttf) — never shipped to dist/,
+the site itself only ever serves the self-hosted woff2 files."""
+from __future__ import annotations
+
+import textwrap
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+FONT_PATH = Path(__file__).resolve().parent.parent / "build_assets" / "Manrope-Variable.ttf"
+
+PRIMARY_DARK = (6, 58, 55)
+PRIMARY = (15, 110, 105)
+ACCENT = (243, 112, 63)
+WHITE = (255, 255, 255)
+MUTED = (200, 224, 220)
+
+_font_cache: dict[tuple[int, int], ImageFont.FreeTypeFont] = {}
+
+
+def _get_font(size: int, weight: int = 700) -> ImageFont.FreeTypeFont:
+    key = (size, weight)
+    if key not in _font_cache:
+        font = ImageFont.truetype(str(FONT_PATH), size)
+        try:
+            font.set_variation_by_axes([weight])
+        except Exception:
+            pass
+        _font_cache[key] = font
+    return _font_cache[key]
+
+
+def generate_og_image(title: str, subtitle: str, out_path: Path, brand: str = "") -> None:
+    width, height = 1200, 630
+    img = Image.new("RGB", (width, height), PRIMARY_DARK)
+    draw = ImageDraw.Draw(img)
+
+    for x in range(width):
+        t = x / width
+        r = int(PRIMARY_DARK[0] + (PRIMARY[0] - PRIMARY_DARK[0]) * t)
+        g = int(PRIMARY_DARK[1] + (PRIMARY[1] - PRIMARY_DARK[1]) * t)
+        b = int(PRIMARY_DARK[2] + (PRIMARY[2] - PRIMARY_DARK[2]) * t)
+        draw.line([(x, 0), (x, height)], fill=(r, g, b))
+
+    draw.rectangle([0, height - 14, width, height], fill=ACCENT)
+
+    margin = 80
+    if brand:
+        brand_font = _get_font(26, 700)
+        draw.text((margin, 64), brand.upper(), font=brand_font, fill=ACCENT)
+
+    title_font = _get_font(58, 800)
+    wrapped = textwrap.wrap(title, width=20)[:3]
+    y = 190
+    for line in wrapped:
+        draw.text((margin, y), line, font=title_font, fill=WHITE)
+        y += 70
+
+    if subtitle:
+        subtitle_font = _get_font(28, 500)
+        sub_wrapped = textwrap.wrap(subtitle, width=48)[:2]
+        y += 18
+        for line in sub_wrapped:
+            draw.text((margin, y), line, font=subtitle_font, fill=MUTED)
+            y += 40
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "PNG", optimize=True)
+
+
+def generate_placeholder_svg(out_path: Path, width: int, height: int, label: str) -> None:
+    """Simple labeled placeholder (per BRIEF.md section 4 — no stock photography)."""
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <rect width="{width}" height="{height}" fill="#e3f4f1"/>
+  <rect x="1" y="1" width="{width - 2}" height="{height - 2}" fill="none" stroke="#4fb6ab" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="50%" y="48%" text-anchor="middle" font-family="sans-serif" font-size="{max(14, width // 28)}" fill="#0f6e69" font-weight="700">{label}</text>
+  <text x="50%" y="58%" text-anchor="middle" font-family="sans-serif" font-size="{max(11, width // 40)}" fill="#6a6863">{width}×{height} — заменить на реальное фото</text>
+</svg>
+'''
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(svg, encoding="utf-8")

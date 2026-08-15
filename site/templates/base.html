@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+{% include "partials/seo_head.html" %}
+</head>
+<body class="has-mobile-bar" data-page-type="{{ page_type }}"{% if service_slug %} data-service-slug="{{ service_slug }}"{% endif %}>
+<a class="skip-link" href="#main">{{ ui.skip_to_content }}</a>
+{% if demo_banner %}
+{% include "partials/demo_banner.html" %}
+{% endif %}
+{% include "partials/header.html" %}
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+{% include "partials/footer.html" %}
+{% include "partials/cta.html" %}
+
+<script id="ayka-config" type="application/json">{{ {"analytics": config.analytics} | tojson }}</script>
+<script type="module" src="{{ asset('js/ui.js') }}"></script>
+<script type="module" src="{{ asset('js/analytics.js') }}"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

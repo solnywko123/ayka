@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="{{ meta.alt_paths.get(lang, '/' + lang + '/') }}">
+      <span class="logo__mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24"><use href="{{ asset('icons/sprite.svg') }}#icon-sparkle"></use></svg>
+      </span>
+      {{ config.company_name }}
+    </a>
+
+    <nav class="main-nav" aria-label="{{ ui.nav.services }}">
+      <ul>
+        <li><a href="{{ '/' + lang + '/uslugi/' }}">{{ ui.nav.services }}</a></li>
+        <li><a href="{{ '/' + lang + '/ceny/' }}">{{ ui.nav.prices }}</a></li>
+        <li><a href="{{ '/' + lang + '/o-nas/' }}">{{ ui.nav.about }}</a></li>
+        <li><a href="{{ '/' + lang + '/otzyvy/' }}">{{ ui.nav.reviews }}</a></li>
+        <li><a href="{{ '/' + lang + '/blog/' }}">{{ ui.nav.blog }}</a></li>
+        <li><a href="{{ '/' + lang + '/kontakty/' }}">{{ ui.nav.contacts }}</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-actions__phone" href="tel:{{ config.phone | replace(' ', '') }}">{{ config.phone }}</a>
+
+      <div class="lang-switch">
+        <button class="lang-switch__button" type="button" aria-haspopup="true">
+          <svg width="16" height="16" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-globe"></use></svg>
+          {{ lang }}
+        </button>
+        <ul class="lang-switch__list">
+          {% for l in langs %}
+          <li><a href="{{ meta.alt_paths.get(l, '/' + l + '/') }}" {% if l == lang %}aria-current="true"{% endif %}>{{ lang_names.get(l, l) }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <a class="btn btn-accent btn-sm" href="{{ '/' + lang + '/kontakty/#lead-form' }}">{{ ui.buttons.order }}</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="{{ ui.nav.services }}">
+        <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <h1 class="hero__title reveal">{{ home.hero.h1 }}</h1>
+      <p class="hero__subtitle reveal">{{ home.hero.subtitle }}</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn-accent" href="#calculator">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
+          <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+          {{ ui.buttons.whatsapp }}
+        </a>
+      </div>
+      <div class="trust-markers reveal">
+        {% for marker in home.hero.trust_markers %}
+        <div class="trust-marker">
+          <svg width="18" height="18" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-shield-check"></use></svg>
+          {{ marker }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="hero__media reveal">
+      <img src="{{ asset('img/placeholders/hero.svg') }}" alt="{{ home.hero.image_alt }}" width="960" height="720" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.nav.services }}</span>
+      <h2>{{ home.services_title }}</h2>
+    </div>
+    <div class="grid grid-3">
+      {% for s in services %}
+      <a class="service-card reveal" href="{{ '/' + lang + '/uslugi/' + s.slug + '/' }}">
+        <span class="service-card__icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ s.icon }}"></use></svg>
+        </span>
+        <h3>{{ s.title }}</h3>
+        <p class="service-card__price">{{ home.from_label }} {{ s.price_from }} {{ config.currency_symbol[lang] }}/м²</p>
+        <p class="service-card__desc">{{ s.short_description }}</p>
+        <span class="service-card__link">{{ ui.buttons.read_more }}
+          <svg width="16" height="16" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-chevron-right"></use></svg>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="calculator" class="bg-muted">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">{{ calculator_i18n.labels.result_label }}</span>
+      <h2>{{ calculator_i18n.title }}</h2>
+    </div>
+    {% include "partials/calculator.html" %}
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ home.how_it_works_eyebrow }}</span>
+      <h2>{{ home.how_it_works_title }}</h2>
+    </div>
+    <div class="grid grid-4 steps">
+      {% for step in home.steps %}
+      <div class="step reveal">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ home.why_us_eyebrow }}</span>
+      <h2>{{ home.why_us_title }}</h2>
+    </div>
+    <div class="grid grid-2">
+      {% for item in home.why_us %}
+      <div class="why-card reveal">
+        <span class="why-card__icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-check"></use></svg>
+        </span>
+        <div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.nav.reviews }}</span>
+      <h2>{{ home.reviews_title }}</h2>
+    </div>
+    {% with review_items = reviews %}
+    {% include "partials/reviews.html" %}
+    {% endwith %}
+    <a class="btn btn-outline" style="margin-top:2rem" href="{{ '/' + lang + '/otzyvy/' }}">{{ ui.buttons.view_all_reviews }}</a>
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.nav.prices }}</span>
+      <h2>{{ home.prices_title }}</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>{{ home.price_table.service_col }}</th>
+            <th>{{ home.price_table.price_col }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in services %}
+          <tr>
+            <td>{{ s.title }}</td>
+            <td>{{ home.from_label }} {{ s.price_from }} {{ config.currency_symbol[lang] }}/м²</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="price-table__note">{{ home.price_table.note }}</p>
+    <a class="btn btn-primary" style="margin-top:1rem" href="{{ '/' + lang + '/ceny/' }}">{{ home.price_table.cta }}</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">FAQ</span>
+      <h2>{{ home.faq_title }}</h2>
+    </div>
+    {% with faq_items = faq %}
+    {% include "partials/faq.html" %}
+    {% endwith %}
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.geography_title }}</span>
+      <h2>{{ home.geography_title }}</h2>
+    </div>
+    <div class="grid grid-4">
+      {% for d in districts %}
+      <a class="district-card reveal" href="{{ '/' + lang + '/rayony/' + d.slug + '/' }}">
+        {{ d.title }}
+        <svg width="16" height="16" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-chevron-right"></use></svg>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>{{ home.final_cta.title }}</h2>
+      <p>{{ home.final_cta.subtitle }}</p>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="#calculator">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+
+    <div class="calculator" style="margin-top:3rem; max-width:640px; margin-inline:auto;">
+      <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
+      {% include "partials/lead_form.html" %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

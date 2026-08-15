@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="error-page">
+  <div class="container">
+    <div class="error-page__code">404</div>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.text }}</p>
+    <div class="final-cta__actions" style="margin-top:2rem">
+      <a class="btn btn-primary" href="{{ '/' + lang + '/' }}">{{ ui.buttons.back_home }}</a>
+      <a class="btn btn-outline" href="{{ '/' + lang + '/uslugi/' }}">{{ ui.nav.services }}</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:3rem">
+      {% for s in services[:3] %}
+      <a class="service-card reveal" href="{{ '/' + lang + '/uslugi/' + s.slug + '/' }}">
+        <h3>{{ s.title }}</h3>
+        <p class="service-card__desc">{{ s.short_description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

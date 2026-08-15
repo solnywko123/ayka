@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.nav.services }}</span>
+      <h1>{{ service.title }}</h1>
+      <p>{{ service.short_description }}</p>
+    </div>
+
+    <div class="grid grid-2" style="align-items:start">
+      <div>
+        <h2 style="margin-bottom:1rem">{{ service.included_title }}</h2>
+        <ul class="checklist checklist--yes">
+          {% for item in service.checklist_included %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2 style="margin-bottom:1rem">{{ service.excluded_title }}</h2>
+        <ul class="checklist checklist--no">
+          {% for item in service.checklist_excluded %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator" class="bg-muted">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">{{ service.price_from }} {{ config.currency_symbol[lang] }}/м²</span>
+      <h2>{{ calculator_i18n.title }}</h2>
+    </div>
+    {% with calc_preset_service = service.calculator_preset.service_type,
+            calc_preset_property = service.calculator_preset.property_type,
+            calc_highlight_addon = service.calculator_preset.highlight_addon %}
+    {% include "partials/calculator.html" %}
+    {% endwith %}
+  </div>
+</section>
+
+{% if related %}
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ service.related_title }}</h2>
+    </div>
+    <div class="grid grid-3">
+      {% for r in related %}
+      <a class="service-card reveal" href="{{ '/' + lang + '/uslugi/' + r.slug + '/' }}">
+        <span class="service-card__icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ r.icon }}"></use></svg>
+        </span>
+        <h3>{{ r.title }}</h3>
+        <p class="service-card__desc">{{ r.short_description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">FAQ</span>
+      <h2>{{ service.faq_title }}</h2>
+    </div>
+    {% with faq_items = service.faq %}
+    {% include "partials/faq.html" %}
+    {% endwith %}
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calculator" style="max-width:640px; margin-inline:auto;" id="lead-form">
+      <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
+      {% include "partials/lead_form.html" %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+<div class="reviews-track">
+  {% for review in review_items %}
+  <article class="review-card reveal">
+    {% if review.placeholder %}
+    <span class="review-card__badge">{{ ui.reviews.placeholder_badge }}</span>
+    {% endif %}
+    <div class="review-card__stars" aria-label="{{ review.rating }}/5">
+      {% for _ in range(review.rating) %}★{% endfor %}{% for _ in range(5 - review.rating) %}☆{% endfor %}
+    </div>
+    <p class="review-card__text">{{ review.text }}</p>
+    <div class="review-card__author">
+      <div class="review-card__avatar" aria-hidden="true">{{ review.author[0] }}</div>
+      <div>
+        <div>{{ review.author }}</div>
+        <div class="review-card__meta">{{ review.service }} &middot; {{ review.date }}</div>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>

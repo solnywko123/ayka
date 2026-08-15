@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:start">
+      <div>
+        <h1>{{ page.h1 }}</h1>
+        <p>{{ page.intro }}</p>
+
+        <ul class="checklist" style="margin-top:2rem; gap:1rem">
+          <li>
+            <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-phone"></use></svg>
+            <a href="tel:{{ config.phone | replace(' ', '') }}">{{ config.phone }}</a>
+          </li>
+          <li>
+            <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+            <a href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-mail"></use></svg>
+            <a href="mailto:{{ config.email }}">{{ config.email }}</a>
+          </li>
+          {% if config.address %}
+          <li>
+            <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-pin"></use></svg>
+            {{ config.address }}
+          </li>
+          {% endif %}
+          <li>
+            <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-clock"></use></svg>
+            {{ config.work_hours[lang] }}
+          </li>
+        </ul>
+
+        {% if config.geo %}
+        <div style="margin-top:2rem; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm)">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox={{ config.geo.lng - 0.01 }}%2C{{ config.geo.lat - 0.01 }}%2C{{ config.geo.lng + 0.01 }}%2C{{ config.geo.lat + 0.01 }}&layer=mapnik&marker={{ config.geo.lat }}%2C{{ config.geo.lng }}"
+            width="100%" height="320" style="border:0" loading="lazy" title="{{ page.map_title }}"></iframe>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="calculator" id="lead-form">
+        <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
+        {% include "partials/lead_form.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

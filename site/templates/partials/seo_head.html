@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ meta.title }}</title>
+<meta name="description" content="{{ meta.description }}">
+<link rel="canonical" href="{{ meta.canonical }}">
+{% for alt_lang, alt_url in meta.alternates.items() %}
+<link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url }}">
+{% endfor %}
+{% if meta.alternates.get(default_lang) %}
+<link rel="alternate" hreflang="x-default" href="{{ meta.alternates[default_lang] }}">
+{% endif %}
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ config.company_name }}">
+<meta property="og:title" content="{{ meta.title }}">
+<meta property="og:description" content="{{ meta.description }}">
+<meta property="og:url" content="{{ meta.canonical }}">
+<meta property="og:image" content="{{ meta.og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ lang }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta.title }}">
+<meta name="twitter:description" content="{{ meta.description }}">
+<meta name="twitter:image" content="{{ meta.og_image }}">
+<meta name="theme-color" content="#0f6e69">
+
+<link rel="icon" href="{{ asset('icons/favicon.svg') }}" type="image/svg+xml">
+
+<link rel="preload" href="{{ asset('fonts/manrope-variable-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ asset('fonts/manrope-variable-cyrillic.woff2') }}" as="font" type="font/woff2" crossorigin>
+
+<style>{{ critical_css | safe }}</style>
+<link rel="preload" as="style" href="{{ asset('css/main.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ asset('css/main.css') }}"></noscript>
+
+{% for block in json_ld %}
+<script type="application/ld+json">{{ block | tojson }}</script>
+{% endfor %}

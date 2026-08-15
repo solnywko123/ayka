@@ -1,0 +1,64 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>{{ config.company_name }}</h4>
+        <p>{{ config.tagline[lang] }}</p>
+        {% if config.telegram or config.instagram %}
+        <div class="social-icons" style="margin-top:1rem">
+          {% if config.telegram %}
+          <a href="{{ config.telegram }}" aria-label="Telegram" rel="noopener" target="_blank">
+            <svg width="18" height="18" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-telegram"></use></svg>
+          </a>
+          {% endif %}
+          {% if config.instagram %}
+          <a href="{{ config.instagram }}" aria-label="Instagram" rel="noopener" target="_blank">
+            <svg width="18" height="18" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-instagram"></use></svg>
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div>
+        <h4>{{ ui.footer.services_title }}</h4>
+        <ul>
+          {% for s in nav_services %}
+          <li><a href="{{ '/' + lang + '/uslugi/' + s.slug + '/' }}">{{ s.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ ui.footer.company_title }}</h4>
+        <ul>
+          <li><a href="{{ '/' + lang + '/o-nas/' }}">{{ ui.nav.about }}</a></li>
+          <li><a href="{{ '/' + lang + '/otzyvy/' }}">{{ ui.nav.reviews }}</a></li>
+          <li><a href="{{ '/' + lang + '/blog/' }}">{{ ui.nav.blog }}</a></li>
+          <li><a href="{{ '/' + lang + '/ceny/' }}">{{ ui.nav.prices }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ ui.footer.contacts_title }}</h4>
+        <ul>
+          <li><a href="tel:{{ config.phone | replace(' ', '') }}">{{ config.phone }}</a></li>
+          <li><a href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:{{ config.email }}">{{ config.email }}</a></li>
+          {% if config.address %}
+          <li>{{ config.address }}</li>
+          {% endif %}
+          <li>{{ ui.footer.work_hours_label }}: {{ config.work_hours[lang] }}</li>
+          <li>{{ ui.footer.service_area_label }}: {{ config.service_area | join(', ') }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        &copy; {{ build_date[:4] }} {{ config.company_name }}{% if config.legal_name %} ({{ config.legal_name }}){% endif %}. {{ ui.footer.rights }}
+      </span>
+      <span><a href="{{ '/' + lang + '/o-nas/' }}">{{ config.company_name }}</a> · {{ config.city[lang] }}, {{ config.country[lang] }}</span>
+    </div>
+  </div>
+</footer>

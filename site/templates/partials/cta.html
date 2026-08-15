@@ -1,0 +1,19 @@
+<a class="float-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}"
+   rel="noopener" target="_blank" aria-label="{{ ui.buttons.whatsapp }}">
+  <svg width="28" height="28" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+</a>
+
+<nav class="mobile-bar" aria-label="{{ ui.buttons.order }}">
+  <a href="tel:{{ config.phone | replace(' ', '') }}">
+    <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-phone"></use></svg>
+    {{ ui.mobile_bar.call }}
+  </a>
+  <a href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
+    <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+    {{ ui.mobile_bar.whatsapp }}
+  </a>
+  <a href="{{ '/' + lang + '/#calculator' if page_type == 'home' else '/' + lang + '/ceny/#calculator' }}">
+    <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-sparkle"></use></svg>
+    {{ ui.mobile_bar.calculate }}
+  </a>
+</nav>

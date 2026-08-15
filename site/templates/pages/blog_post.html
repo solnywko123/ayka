@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<article class="article" style="padding-top:var(--space-5); padding-bottom:var(--space-6)">
+  <div class="container">
+    <h1>{{ post.title }}</h1>
+    <p class="article__meta">{{ post.date }}</p>
+    {{ post.html | safe }}
+
+    <div class="final-cta reveal" style="margin-top:3rem">
+      <h2>{{ ui.buttons.calculate }}</h2>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="{{ '/' + lang + '/ceny/#calculator' }}">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% if other_posts %}
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ ui.nav.blog }}</h2>
+    </div>
+    <div class="grid grid-2">
+      {% for p in other_posts %}
+      <a class="blog-card reveal" href="{{ '/' + lang + '/blog/' + p.slug + '/' }}">
+        <div class="blog-card__body">
+          <span class="blog-card__date">{{ p.date }}</span>
+          <h3>{{ p.title }}</h3>
+          <p class="blog-card__desc">{{ p.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}
