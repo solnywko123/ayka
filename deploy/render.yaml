@@ -1,0 +1,43 @@
+# Render Blueprint — деплой FastAPI-бэкенда. render.com/docs/blueprint-spec
+# Подключите репозиторий на render.com -> New -> Blueprint, укажите этот файл.
+databases:
+  - name: ayka-cleaning-db
+    plan: free
+    databaseName: ayka
+    user: ayka
+
+services:
+  - type: web
+    name: ayka-cleaning-api
+    runtime: docker
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: BUILD_ENV
+        value: prod
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ayka-cleaning-db
+          property: connectionString
+      - key: PRICING_PATH
+        value: site/content/pricing.json
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD_HASH
+        sync: false # задаётся вручную в дашборде Render — см. `make hash-password`
+      - key: IP_HASH_SALT
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: https://example.kg # заменить на реальный домен фронтенда
+      - key: TELEGRAM_BOT_TOKEN
+        value: ""
+      - key: TELEGRAM_CHAT_ID
+        value: ""
+      - key: RATE_LIMIT_LEADS_PER_HOUR
+        value: "5"
+      - key: RATE_LIMIT_QUOTE_PER_MINUTE
+        value: "30"

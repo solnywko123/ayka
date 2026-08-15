@@ -111,10 +111,23 @@ api/.venv/Scripts/python -m pytest api/tests -v
 ### Альтернатива — VPS (Docker Compose + Caddy)
 
 ```bash
-docker compose -f docker-compose.prod.yml up -d --build
+cp .env.example .env   # заполните реальными значениями — POSTGRES_PASSWORD, JWT_SECRET и т.д.
+# перед первым запуском отредактируйте deploy/Caddyfile: замените example.kg на реальный домен
+
+docker compose -f docker-compose.prod.yml run --rm site-builder   # собирает site/dist
+docker compose -f docker-compose.prod.yml up -d --build           # postgres + api + caddy
 ```
 
-`deploy/Caddyfile` настраивает автоматический HTTPS через Let's Encrypt. Подробности — в комментариях внутри файла.
+`deploy/Caddyfile` настраивает автоматический HTTPS через Let's Encrypt. Подробности — в комментариях внутри файла. Пересобирайте `site-builder` после каждой правки контента сайта — Caddy отдаёт `site/dist` как обычную файловую директорию, а не пересобирает её сам.
+
+### Локальная проверка прод-подобного окружения
+
+`docker-compose.yml` (в корне репозитория, без `.prod`) поднимает `postgres` + `api` + `nginx` со собранной статикой на `localhost:8080` — удобно, чтобы проверить, что Docker-образ API вообще стартует и проходит health check, не разворачивая реальный VPS:
+
+```bash
+python site/build.py            # site/dist должен существовать до старта nginx
+docker compose up --build
+```
 
 ### Чеклист домена
 

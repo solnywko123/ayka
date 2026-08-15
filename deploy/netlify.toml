@@ -1,0 +1,54 @@
+# Netlify — деплой статического сайта. Файл должен лежать в корне репозитория как
+# netlify.toml — при подключении сайта на netlify.com укажите "Base directory" пустым
+# и "Config file path" = deploy/netlify.toml, либо скопируйте этот файл в корень репозитория.
+[build]
+  command = "pip install -r site/requirements.txt && python site/check_config.py && python site/build.py"
+  publish = "site/dist"
+
+[build.environment]
+  BUILD_ENV = "prod"
+  PYTHON_VERSION = "3.12"
+
+# / -> /ru/ (дефолтный язык). Основной редирект уже реализован в site/dist/index.html
+# (meta refresh, работает без JS) — это правило дублирует его на уровне CDN для скорости.
+[[redirects]]
+  from = "/"
+  to = "/ru/"
+  status = 302
+  force = false
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.example.kg/api/:splat" # заменить на реальный поддомен бэкенда
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; connect-src 'self' https://api.example.kg https://www.google-analytics.com https://region1.google-analytics.com https://mc.yandex.ru; frame-src https://mc.yandex.ru; frame-ancestors 'none'"
+
+# Статика с хешем в имени — кешировать на год (раздел 14 BRIEF.md)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

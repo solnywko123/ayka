@@ -1,0 +1,52 @@
+# Локальная разработка: api + postgres + собранная статика сайта через nginx.
+# Для повседневной разработки быстрее использовать `make dev` (build-watcher + uvicorn
+# напрямую, без Docker) — этот compose нужен, чтобы проверить прод-подобное окружение.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ayka
+      POSTGRES_USER: ayka
+      POSTGRES_PASSWORD: ayka_local_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - ayka_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ayka"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      BUILD_ENV: dev
+      DATABASE_URL: postgresql+psycopg://ayka:ayka_local_dev_password@postgres:5432/ayka
+      PRICING_PATH: site/content/pricing.json
+      JWT_SECRET: local-dev-secret-do-not-use-in-prod
+      ADMIN_USERNAME: admin
+      # Хеш пароля "admin" — ТОЛЬКО для локальной разработки. В проде сгенерируйте свой: make hash-password.
+      ADMIN_PASSWORD_HASH: "$$2b$$12$$Caa4Lg3X.6nA79RJjJx7uORHS2cbBjH4bJyjPNVR30PQM4P6pGhG2"
+      IP_HASH_SALT: local-dev-salt
+      CORS_ORIGIN: http://localhost:8080
+    ports:
+      - "8000:8000"
+
+  site:
+    image: nginx:alpine
+    volumes:
+      - ./site/dist:/usr/share/nginx/html:ro
+      - ./deploy/nginx.local.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+
+volumes:
+  ayka_postgres_data:

@@ -1,0 +1,36 @@
+# Caddy автоматически получает и продлевает Let's Encrypt сертификат для домена.
+# Замените example.kg на реальный домен перед запуском (см. НАСТРОЙКА.md).
+
+# www -> без www, 301/308 (раздел 10 BRIEF.md — единообразный домен)
+www.example.kg {
+	redir https://example.kg{uri} 308
+}
+
+example.kg {
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+
+	handle {
+		root * /srv/site
+		try_files {path} {path}/ {path}/index.html =404
+		file_server
+		encode gzip zstd
+
+		header {
+			X-Content-Type-Options nosniff
+			Referrer-Policy strict-origin-when-cross-origin
+			Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+			X-Frame-Options DENY
+		}
+
+		@static path *.css *.js *.woff2 *.svg *.png *.jpg *.avif *.webp
+		header @static Cache-Control "public, max-age=31536000, immutable"
+
+		handle_errors {
+			@404 expression {http.error.status_code} == 404
+			rewrite @404 /404.html
+			file_server
+		}
+	}
+}
