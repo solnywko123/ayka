@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Заявка {{ lead.name }}{% endblock %}
+{% block content %}
+<p><a href="/admin/leads">← К списку заявок</a></p>
+<h1 style="font-size:1.3rem">
+  {{ lead.name }}
+  <span class="badge badge-{{ lead.status.value }}">{{ lead.status.value }}</span>
+</h1>
+
+<div class="card">
+  <h2 style="font-size:1rem">Контакты</h2>
+  <p>
+    <a href="tel:{{ lead.phone }}">📞 {{ lead.phone }}</a>
+    &nbsp;·&nbsp;
+    <a href="https://wa.me/{{ lead.phone | replace('+', '') }}" target="_blank" rel="noopener">💬 WhatsApp</a>
+    &nbsp;·&nbsp; Канал связи: {{ lead.contact_channel.value }}
+  </p>
+</div>
+
+<div class="card">
+  <h2 style="font-size:1rem">Параметры заказа</h2>
+  <table>
+    <tbody>
+      <tr><td>Услуга</td><td>{{ lead.service_type.value }}</td></tr>
+      <tr><td>Тип объекта</td><td>{{ lead.property_type.value }}</td></tr>
+      <tr><td>Площадь</td><td>{{ lead.area_m2 }} м²</td></tr>
+      <tr><td>Санузлов</td><td>{{ lead.bathrooms }}</td></tr>
+      <tr><td>Доп. услуги</td><td>{{ lead.addons or "—" }}</td></tr>
+      <tr><td>Срочность</td><td>{{ lead.urgency.value }}</td></tr>
+      <tr><td>Регулярность</td><td>{{ lead.frequency.value }}</td></tr>
+      <tr><td>Желаемая дата</td><td>{{ lead.preferred_date or "—" }}</td></tr>
+      <tr><td>Район</td><td>{{ lead.district or "—" }}</td></tr>
+      <tr><td>Адрес</td><td>{{ lead.address or "—" }}</td></tr>
+      <tr><td>Комментарий</td><td>{{ lead.comment or "—" }}</td></tr>
+      <tr><td>Цена</td><td>{{ lead.price_min }}–{{ lead.price_max }} {{ lead.currency }}</td></tr>
+      <tr><td>Язык сайта</td><td>{{ lead.lang.value }}</td></tr>
+      <tr><td>UTM</td><td>{{ lead.utm_source or "—" }} / {{ lead.utm_medium or "—" }} / {{ lead.utm_campaign or "—" }}</td></tr>
+      <tr><td>Страница захода</td><td>{{ lead.landing_page or "—" }}</td></tr>
+      <tr><td>Создана</td><td>{{ lead.created_at.strftime("%d.%m.%Y %H:%M") }}</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2 style="font-size:1rem">Управление заявкой</h2>
+  <form method="post" action="/admin/leads/{{ lead.id }}/update">
+    <div class="field">
+      <label for="status">Статус</label>
+      <select id="status" name="status">
+        {% for s in ["new", "contacted", "scheduled", "done", "canceled", "spam"] %}
+        <option value="{{ s }}" {{ "selected" if lead.status.value == s }}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="assigned_to">Ответственный</label>
+      <input type="text" id="assigned_to" name="assigned_to" value="{{ lead.assigned_to or '' }}">
+    </div>
+    <div class="field">
+      <label for="admin_note">Заметка</label>
+      <textarea id="admin_note" name="admin_note" rows="3">{{ lead.admin_note or "" }}</textarea>
+    </div>
+    <button type="submit" class="btn">Сохранить</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2 style="font-size:1rem">История изменений</h2>
+  <ul class="history">
+    {% for event in lead.events %}
+    <li>{{ event.created_at.strftime("%d.%m.%Y %H:%M") }} — {{ event.from_status or "—" }} → {{ event.to_status }} ({{ event.actor or "система" }})</li>
+    {% else %}
+    <li>Событий пока нет.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

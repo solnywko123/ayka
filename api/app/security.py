@@ -48,6 +48,18 @@ def get_current_admin(token: str | None = Depends(_cookie_scheme)) -> str:
     return subject
 
 
+def cookie_kwargs() -> dict:
+    """httpOnly + Secure + SameSite=Lax (BRIEF.md раздел 7). Secure отключается только в
+    BUILD_ENV=dev, иначе локальная разработка по обычному http:// невозможна — браузер
+    (и http.cookiejar) не отправляют Secure-куки без TLS."""
+    return {
+        "httponly": True,
+        "secure": settings.build_env != "dev",
+        "samesite": "lax",
+        "max_age": TOKEN_TTL_HOURS * 60 * 60,
+    }
+
+
 def hash_ip(ip_address: str) -> str:
     """IP хранится только как SHA-256 хеш с солью (персональные данные, BRIEF.md раздел 7)."""
     return hashlib.sha256(f"{ip_address}{settings.ip_hash_salt}".encode("utf-8")).hexdigest()

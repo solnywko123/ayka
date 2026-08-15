@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Дашборд{% endblock %}
+{% block content %}
+<div data-leads-today="{{ stats.leads_today }}"></div>
+
+<div class="toggle-row" style="margin-bottom:1rem">
+  <input type="checkbox" id="sound-toggle" data-sound-toggle>
+  <label for="sound-toggle">Звуковой сигнал на новую заявку (автообновление каждые 60 сек)</label>
+</div>
+
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="value">{{ stats.leads_today }}</div>
+    <div class="label">Заявок сегодня</div>
+  </div>
+  <div class="stat-card">
+    <div class="value">{{ stats.leads_7d }}</div>
+    <div class="label">За 7 дней</div>
+  </div>
+  <div class="stat-card">
+    <div class="value">{{ stats.leads_30d }}</div>
+    <div class="label">За 30 дней</div>
+  </div>
+  <div class="stat-card">
+    <div class="value">{{ "{:,.0f}".format(stats.potential_total_kgs).replace(",", " ") }}</div>
+    <div class="label">Суммарный потенциал, сом</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2 style="font-size:1.1rem">Воронка по статусам</h2>
+  <table>
+    <thead><tr><th>Статус</th><th>Количество</th></tr></thead>
+    <tbody>
+      {% for status, count in stats.by_status.items() %}
+      <tr><td><span class="badge badge-{{ status }}">{{ status }}</span></td><td>{{ count }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2 style="font-size:1.1rem">Топ источников UTM</h2>
+  {% if stats.top_utm_sources %}
+  <table>
+    <thead><tr><th>utm_source</th><th>Заявок</th></tr></thead>
+    <tbody>
+      {% for row in stats.top_utm_sources %}
+      <tr><td>{{ row.source }}</td><td>{{ row.count }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color:var(--text-muted)">Пока нет заявок с UTM-метками.</p>
+  {% endif %}
+</div>
+{% endblock %}

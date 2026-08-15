@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Заявки{% endblock %}
+{% block content %}
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem">
+  <h1 style="font-size:1.3rem">Заявки ({{ total }})</h1>
+  <a class="btn btn-outline"
+     href="/api/v1/admin/leads/export.csv?status={{ filters.status }}&service_type={{ filters.service_type }}&lang={{ filters.lang }}&utm_source={{ filters.utm_source }}&date_from={{ filters.date_from }}&date_to={{ filters.date_to }}&search={{ filters.search }}">
+    Экспорт в CSV
+  </a>
+</div>
+
+<form method="get" action="/admin/leads" class="filters card">
+  <select name="status">
+    <option value="">Все статусы</option>
+    {% for s in ["new", "contacted", "scheduled", "done", "canceled", "spam"] %}
+    <option value="{{ s }}" {{ "selected" if filters.status == s }}>{{ s }}</option>
+    {% endfor %}
+  </select>
+  <select name="service_type">
+    <option value="">Все услуги</option>
+    {% for s in ["maintenance", "general", "post_renovation", "post_move"] %}
+    <option value="{{ s }}" {{ "selected" if filters.service_type == s }}>{{ s }}</option>
+    {% endfor %}
+  </select>
+  <select name="lang">
+    <option value="">Любой язык</option>
+    {% for l in ["ru", "ky", "en"] %}
+    <option value="{{ l }}" {{ "selected" if filters.lang == l }}>{{ l }}</option>
+    {% endfor %}
+  </select>
+  <input type="text" name="utm_source" placeholder="utm_source" value="{{ filters.utm_source }}">
+  <input type="date" name="date_from" value="{{ filters.date_from }}">
+  <input type="date" name="date_to" value="{{ filters.date_to }}">
+  <input type="text" name="search" placeholder="Имя или телефон" value="{{ filters.search }}">
+  <button type="submit" class="btn">Фильтровать</button>
+  <a href="/admin/leads" class="btn btn-outline">Сбросить</a>
+</form>
+
+<div class="card table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>Дата</th><th>Статус</th><th>Имя</th><th>Телефон</th><th>Услуга</th><th>Площадь</th><th>Цена</th><th>Язык</th><th>UTM</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lead in items %}
+      <tr onclick="window.location='/admin/leads/{{ lead.id }}'" style="cursor:pointer">
+        <td data-label="Дата">{{ lead.created_at.strftime("%d.%m.%Y %H:%M") }}</td>
+        <td data-label="Статус"><span class="badge badge-{{ lead.status.value }}">{{ lead.status.value }}</span></td>
+        <td data-label="Имя">{{ lead.name }}</td>
+        <td data-label="Телефон">{{ lead.phone }}</td>
+        <td data-label="Услуга">{{ lead.service_type.value }}</td>
+        <td data-label="Площадь">{{ lead.area_m2 }} м²</td>
+        <td data-label="Цена">{{ lead.price_min }}–{{ lead.price_max }}</td>
+        <td data-label="Язык">{{ lead.lang.value }}</td>
+        <td data-label="UTM">{{ lead.utm_source or "—" }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="9">Заявок не найдено.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="pagination">
+  {% if page > 1 %}<a class="btn btn-outline" href="?page={{ page - 1 }}">← Назад</a>{% endif %}
+  <span>Страница {{ page }} из {{ total_pages }}</span>
+  {% if page < total_pages %}<a class="btn btn-outline" href="?page={{ page + 1 }}">Вперёд →</a>{% endif %}
+</div>
+{% endblock %}
