@@ -1,8 +1,12 @@
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, Request
 from sqlalchemy.orm import Session
 
 from .. import models
+from ..antispam import is_spam
+from ..config import settings
 from ..database import get_db
+from ..limiter import limiter
+from ..notify import notify_telegram
 from ..pricing import compute_price
 from ..schemas import LeadCreate, LeadCreateResult
 from ..security import hash_ip
@@ -11,7 +15,12 @@ router = APIRouter()
 
 
 @router.post("/leads", response_model=LeadCreateResult, status_code=200)
-def create_lead(payload: LeadCreate, request: Request, db: Session = Depends(get_db)) -> LeadCreateResult:
+@limiter.limit(f"{settings.rate_limit_leads_per_hour}/hour")
+def create_lead(
+    request: Request, payload: LeadCreate, background_tasks: BackgroundTasks, db: Session = Depends(get_db)
+) -> LeadCreateResult:
+    spam = is_spam(payload, db)
+
     price = compute_price(
         service_type=payload.service_type.value,
         property_type=payload.property_type.value,
@@ -26,7 +35,7 @@ def create_lead(payload: LeadCreate, request: Request, db: Session = Depends(get
     user_agent = request.headers.get("user-agent")
 
     lead = models.Lead(
-        status=models.LeadStatus.new,
+        status=models.LeadStatus.spam if spam else models.LeadStatus.new,
         name=payload.name,
         phone=payload.phone,
         contact_channel=payload.contact_channel,
@@ -60,6 +69,9 @@ def create_lead(payload: LeadCreate, request: Request, db: Session = Depends(get
     db.add(models.LeadEvent(lead_id=lead.id, from_status=None, to_status=lead.status.value, actor="system", note="created"))
     db.commit()
     db.refresh(lead)
+
+    if not spam:
+        background_tasks.add_task(notify_telegram, lead)
 
     return LeadCreateResult(
         id=lead.id, status=lead.status, price_min=float(lead.price_min), price_max=float(lead.price_max)
