@@ -33,6 +33,26 @@ The most accurate way to find out the current price for your specific apartment 
 
 Many people wonder why cleaning companies quote a range like "12,000 to 14,300 KGS" instead of an exact number right away. The reason is simple: without inspecting the apartment, it's impossible to predict with 100% certainty the condition of the grime, the accessibility of certain areas, or layout quirks. A ±15% range around the calculated amount is an honest way to show a realistic ballpark, while the exact amount is confirmed before work starts so there are no surprises later.
 
+## How to compare quotes from different cleaning companies
+
+When you're collecting a few quotes to choose a contractor, comparing only the final number in a WhatsApp message is a bad idea. The same figure from different companies can hide a very different scope of work. Before comparing prices, make sure you're actually comparing the same conditions.
+
+First, clarify exactly what the price covers: the whole apartment, or a specific list of tasks. If Company A quotes 20% less than Company B, but its base checklist skips cleaning plumbing fixtures from the inside or wiping down kitchen cabinet fronts, that's not really a cheaper service — it's a smaller one. Ask each company for a detailed list of what's included and compare the lists, not just the numbers.
+
+Second, find out how many cleaners are coming and for how long. A general cleaning done by two cleaners in 3 hours and one done by a single cleaner in 5 hours might cost the same, but the result is usually different — a multi-person team covers more areas at once, with one person mopping while another handles the plumbing, for example.
+
+Third, check whether the price includes the company's own products and equipment, or whether you're expected to supply something yourself — your own vacuum cleaner or cleaning products, say. Some cheaper offers on the market save money precisely by shifting part of the cost onto the client.
+
+Finally, ask about payment terms and re-cleaning policy. A company that only takes payment after you've checked the result and is willing to redo problem areas for free objectively carries less financial risk for you than one that requires prepayment with no clear guarantees — even if its price is a bit higher.
+
+## Common budgeting mistakes
+
+The first common mistake is anchoring on a price a friend once mentioned, without adjusting for the area and condition of your specific apartment. Rates vary by city, by company, and by year — prices from several years ago aren't a reliable reference anymore.
+
+The second mistake is not budgeting for add-on services you'll likely end up needing anyway. If the windows haven't been washed in a long time, there's a good chance you'll want to add that service during the general cleaning too — it's better to estimate the combined budget upfront rather than only pricing the base cleaning.
+
+The third mistake is booking cleaning at the last minute before an important event and paying an urgency surcharge for something that could have been planned ahead of time. If you know you'll have guests in two weeks, book the team for that date now instead of waiting until the last two days.
+
 ## How to save on general cleaning
 
 If your budget is tight but you need general cleaning regularly — say, once a quarter — consider a combination: book [maintenance cleaning](/en/uslugi/podderzhivayushchaya-uborka/) on a recurring basis (weekly or biweekly), and get a full general cleaning less often. Regular maintenance cleaning prevents dirt from building up, so even a general cleaning a few months later will take less time — and cost less.
@@ -44,3 +64,5 @@ Another way to save is to book cleaning in advance rather than urgently. The urg
 The cost of general cleaning in Bishkek in 2026 depends on the apartment's area, number of bathrooms, chosen add-on services, urgency and booking frequency. For a standard apartment, the estimate typically falls within a range of several thousand KGS, and for larger apartments and private houses the amount scales up proportionally with area.
 
 The fastest way to find the exact price for your apartment is to use the calculator on the site or [leave a request](/en/kontakty/#lead-form) with your property's details. We'll calculate the price and confirm a convenient visit time within minutes.
+
+One last thing: try not to put off general cleaning until it becomes an emergency booking. Planned cleaning scheduled a few days ahead is almost always cheaper and less stressful for everyone than a last-minute scramble before guests arrive or an apartment changes hands.

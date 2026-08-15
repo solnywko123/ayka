@@ -33,6 +33,16 @@ It's important to understand the boundaries of the service to avoid misunderstan
 
 Complete removal of very old, deeply set-in stains also isn't guaranteed — if the renovation finished several months ago and surfaces have absorbed grime, the result should be assessed individually: sometimes complex cases need a different, stronger cleaning agent, and an honest company will warn you about this upfront rather than promise the impossible.
 
+## Different types of renovation mean different amounts of work
+
+A cosmetic refresh (re-papering walls, painting without replastering, replacing flooring without removing the old screed) usually leaves the least dust and needs the least cleaning time. Here it's often enough to thoroughly cover the floor, window sills, and remove localized paint-related residue.
+
+A major renovation involving removing old tile, chasing walls for wiring, and replacing the floor screed is an entirely different level of mess. Wall-chasing is especially dusty: fine cement and brick dust settles not just on surfaces but works its way into cracks, ventilation ducts, and behind radiators. After this kind of renovation, cleaning often takes two or three passes over the same surfaces with a break in between, to let dust that gets stirred up during cleaning itself settle again.
+
+A renovation that includes window replacement is its own case: besides ordinary construction dust, you're left with spray foam around the frame perimeter, fingerprints on new glass panes, and often fine shavings from trimming the reveals. This kind of cleaning is best booked once the reveals are fully finished, not while installation is still underway.
+
+A kitchen or bathroom renovation with new plumbing and tile concentrates all the mess in one room, but it demands especially careful work on the grout lines — that's where cement dust and small grout splashes tend to collect, and they're hard to remove without specialized products.
+
 ## Practical tips before the cleaners arrive
 
 To make post-renovation cleaning as effective as possible, there are a few simple things worth doing beforehand:
@@ -41,6 +51,24 @@ To make post-renovation cleaning as effective as possible, there are a few simpl
 - Clear access to every room — put away tools and ladders if the renovation crew hasn't fully wrapped up yet.
 - Ventilate the apartment before the visit — this helps fine dust settle faster and makes the cleaning more effective.
 - Point out any areas with especially stubborn residue in the request comment — this lets the team bring the right products and tools in advance.
+
+## Who removes the construction waste — the renovation crew or the cleaners
+
+Confusion over who's responsible for what is common between the renovation crew and the cleaning company. It's good practice to agree on this in advance, before either job starts, so you don't end up with the apartment still full of material boxes on the day the cleaners show up.
+
+The standard split looks like this: the renovation crew is responsible for hauling away genuinely bulky, heavy waste — leftover drywall, old tile, flooring packaging, pipe offcuts. That's heavy physical work requiring separate transport, and cleaning companies typically don't offer it as part of standard post-renovation cleaning.
+
+The cleaning company, in turn, is responsible for the cleaning itself: removing dust, washing surfaces, dealing with localized residue. Small debris — wallpaper scraps, bits of tape, empty product packaging — is usually also the cleaners' responsibility, since it's inseparable from the cleaning process itself.
+
+If you're hiring the renovation crew and the cleaning company independently, it's worth explicitly spelling out with both sides who cleans up what — it'll save you time and stress on handover day.
+
+## Post-renovation cleaning cost vs. general cleaning cost
+
+The price gap between these two services is not about the company trying to charge more — it reflects a real difference in labor. While a general cleaning of a standard apartment might take a couple of hours with two cleaners, post-renovation cleaning of the same square footage often needs a team of three working a full day, and sometimes a second visit the next day for rooms with especially heavy residue.
+
+Another factor is consumables. Construction dust and cement splashes use up more water, cloths and cleaning agents than ordinary household grime, and some types of residue (spray-foam streaks, for instance) require specialized products that cost more than general-purpose cleaners.
+
+That's why it makes sense to budget a separate line item for professional cleaning at the end of a renovation, rather than assuming it can be handled in an evening with your own effort — that's usually an underestimate of the actual workload, especially after a major renovation.
 
 ## Bottom line
 

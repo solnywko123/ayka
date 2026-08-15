@@ -45,6 +45,24 @@ Honest companies openly disclose when demo/placeholder reviews are temporarily s
 
 If you need cleaning not just once but on a recurring basis, ask whether there's a discount for frequency and how it's calculated — weekly, biweekly and monthly visits usually get different discounts. It's also worth asking what happens if you need to reschedule or cancel a visit — whether there are any cancellation fees.
 
+## Red flags worth paying extra attention to
+
+A few signals during your very first contact with a company should worry you more than others. The first is pressure toward an immediate decision: if a manager insists a "special price" only applies "today" or pushes you to leave a prepayment right away without giving you time to think, that's a classic sales tactic — and here it's especially suspicious, since urgency to decide has nothing to do with cleaning quality.
+
+The second signal is the absence of any written confirmation of agreements. If all communication happens only over the phone, and the company avoids answering when you ask for a service list and price in writing, there's a good chance you'll have no evidence of what was actually agreed if a dispute comes up.
+
+The third signal is reluctance to say who will actually show up to clean. A responsible company either names its regular cleaners or at least confirms that everyone working with clients is formally employed and vetted. Evasive answers to a direct question about this are worth noting.
+
+The fourth signal is a price sharply below the market average with no explanation. A reasonable discount for new clients is normal, but if a price is two or three times lower than competitors offering a comparable scope of work, it's worth asking what exactly is behind the savings — inexperienced staff, a stripped-down scope, or one-off contractors with no accountability to the company.
+
+## Contracts and liability: why they matter even for a one-time cleaning
+
+It might seem like a contract only matters for large corporate bookings, and that a one-time apartment cleaning can be arranged "on trust." In practice, even a verbal agreement is a form of contract, and how clearly it's documented determines how any dispute gets resolved if something goes wrong.
+
+The minimum set of agreements worth confirming in writing before the visit: the exact address and time, the scope of work, the final price or price range, payment terms, and what happens if furniture or equipment is accidentally damaged during cleaning. A responsible company will confirm these points over WhatsApp or another messenger without hesitation — this isn't bureaucracy, it's basic protection for both sides.
+
+It's also worth asking whether the company's liability is insured in case of property damage during cleaning — larger, longer-established companies are more likely to have this in place than one-off contractors with no formal business registration.
+
 ## Bottom line: a short checklist before you book
 
 Before submitting a request to a cleaning company, check:
