@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section style="padding-top:var(--space-5)">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+
+    <div class="grid grid-3">
+      {% for s in services %}
+      <a class="service-card reveal" href="{{ '/' + lang + '/uslugi/' + s.slug + '/' }}">
+        <span class="service-card__icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ s.icon }}"></use></svg>
+        </span>
+        <h3>{{ s.title }}</h3>
+        <p class="service-card__price">{{ page.from_label }} {{ s.price_from }} {{ config.currency_symbol[lang] }}/м²</p>
+        <p class="service-card__desc">{{ s.short_description }}</p>
+        <span class="service-card__link">{{ ui.buttons.read_more }}
+          <svg width="16" height="16" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-chevron-right"></use></svg>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>{{ ui.buttons.calculate }}</h2>
+      <div class="final-cta__actions">
+        <a class="btn btn-accent" href="{{ '/' + lang + '/ceny/#calculator' }}">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

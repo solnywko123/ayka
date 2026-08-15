@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "author": "Aigerim T.",
+      "rating": 5,
+      "text": "I booked a general cleaning before my parents arrived. The team showed up on time and did a thorough job — I was especially happy with the kitchen, the hood and oven looked brand new. Will book again.",
+      "service": "General cleaning",
+      "date": "2026-02-14",
+      "placeholder": true
+    },
+    {
+      "id": 2,
+      "author": "Daniyar K.",
+      "rating": 5,
+      "text": "Post-renovation cleaning was exactly what we needed. We would've spent a week wiping down dust ourselves — they got the apartment ready for the furniture in a single day.",
+      "service": "Post-renovation cleaning",
+      "date": "2026-01-28",
+      "placeholder": true
+    },
+    {
+      "id": 3,
+      "author": "Svetlana V.",
+      "rating": 4,
+      "text": "I've been using biweekly maintenance cleaning for a few months now. Overall I'm happy — once I had to ask them to re-mop a floor, and they redid it the same day, no questions asked.",
+      "service": "Maintenance cleaning",
+      "date": "2026-03-02",
+      "placeholder": true
+    },
+    {
+      "id": 4,
+      "author": "Maksim O.",
+      "rating": 5,
+      "text": "We booked office cleaning in the evening after closing — staff walked into a clean, fresh space the next morning. We've been on a recurring plan for two months now.",
+      "service": "Office cleaning",
+      "date": "2026-02-05",
+      "placeholder": true
+    },
+    {
+      "id": 5,
+      "author": "Gulnara A.",
+      "rating": 5,
+      "text": "The sofa dry cleaning exceeded expectations — marker stains from the kids that seemed permanent are completely gone. The sofa looks like it just came from the store.",
+      "service": "Furniture dry cleaning",
+      "date": "2026-01-19",
+      "placeholder": true
+    },
+    {
+      "id": 6,
+      "author": "Viktor P.",
+      "rating": 5,
+      "text": "They washed the windows on the balcony and in every room — not a single streak, I was genuinely surprised. Showed up on time and worked quickly and carefully.",
+      "service": "Window washing",
+      "date": "2026-02-21",
+      "placeholder": true
+    },
+    {
+      "id": 7,
+      "author": "Nurgul Zh.",
+      "rating": 4,
+      "text": "I booked cleaning after moving — the apartment had been empty for a while and there was a lot of dust. Everything ended up spotless, it just took a bit longer than we initially expected.",
+      "service": "Move-out cleaning",
+      "date": "2026-03-10",
+      "placeholder": true
+    }
+  ]
+}

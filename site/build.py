@@ -37,7 +37,7 @@ URL_SLUGS = {
     "blog": "blog",
 }
 
-STATIC_PAGE_KEYS = {"ceny": "ceny", "o-nas": "about", "otzyvy": "otzyvy", "kontakty": "kontakty"}
+STATIC_PAGE_KEYS = {"uslugi": "services", "ceny": "ceny", "o-nas": "about", "otzyvy": "otzyvy", "kontakty": "kontakty"}
 
 BUILD_DATE = dt.date.today().isoformat()
 
@@ -390,6 +390,7 @@ class SiteBuilder:
                 self.build_service(lang, service)
             for district in self.lang_content[lang]["districts"]:
                 self.build_district(lang, district)
+            self.build_static_page(lang, "uslugi", "pages/services_index.html")
             self.build_static_page(lang, "ceny", "pages/prices.html")
             self.build_static_page(lang, "o-nas", "pages/about.html")
             self.build_static_page(lang, "otzyvy", "pages/reviews.html")

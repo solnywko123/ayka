@@ -1,0 +1,307 @@
+{
+  "services": [
+    {
+      "slug": "generalnaya-uborka",
+      "service_type": "general",
+      "title": "General Cleaning in Bishkek",
+      "meta_title": "General Apartment Cleaning in Bishkek — from 180 KGS/m²",
+      "meta_description": "General cleaning of apartments and houses in Bishkek: ceiling-to-baseboard cleaning, bathrooms, kitchen, appliance exteriors. Our own supplies, fixed pricing. Get an instant quote.",
+      "short_description": "A deep clean of every corner: from light fixtures to baseboards, including the kitchen and bathrooms.",
+      "price_from": 180,
+      "icon": "sparkle",
+      "included_title": "What's included in general cleaning",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Washing floors, baseboards and thresholds in every room",
+        "Dusting all horizontal and vertical surfaces, including the tops of cabinets",
+        "Cleaning doors, door handles and light switches",
+        "Cleaning radiators from the outside and between sections",
+        "Wiping down kitchen cabinet fronts, countertops and backsplash",
+        "Cleaning the stove and range hood exterior",
+        "Cleaning sinks, faucets and tiles in the kitchen and bathrooms",
+        "Cleaning the toilet, bathtub or shower inside and out",
+        "Removing limescale from plumbing fixtures",
+        "Cleaning mirrors and glass surfaces",
+        "Wiping window sills and radiators",
+        "Dusting light fixtures and chandeliers within reach",
+        "Taking out the trash and fitting a fresh liner",
+        "Cleaning thresholds and washing the entrance door on both sides"
+      ],
+      "checklist_excluded": [
+        "Washing windows inside and out — booked as a separate service",
+        "Dry cleaning of upholstered furniture and carpets — a separate service",
+        "Laundry and ironing",
+        "Washing entire walls (beyond local stains near switches and baseboards)",
+        "Post-renovation cleanup with construction residue — a separate service for that"
+      ],
+      "faq_title": "General cleaning FAQ",
+      "faq": [
+        {
+          "question": "How long does a general cleaning take?",
+          "answer": "On average 3–6 hours with a team of 2 cleaners for a 60–80 m² apartment. The calculator shows the exact estimate based on area and number of bathrooms."
+        },
+        {
+          "question": "Do I need to be home during the cleaning?",
+          "answer": "No, not necessarily. Many clients grant access via an intercom code or a concierge. Payment is due after you personally check the result."
+        },
+        {
+          "question": "Do you bring your own supplies?",
+          "answer": "Yes, cleaners arrive with professional cleaning products, vacuum cleaners and microfiber cloths. You don't need to buy or prepare anything."
+        },
+        {
+          "question": "How often is general cleaning needed?",
+          "answer": "Most clients book general cleaning every 1–3 months, with maintenance cleaning once a week or two in between."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["podderzhivayushchaya-uborka", "himchistka-mebeli", "mytyo-okon"],
+      "calculator_preset": { "service_type": "general", "property_type": null, "highlight_addon": null }
+    },
+    {
+      "slug": "uborka-posle-remonta",
+      "service_type": "post_renovation",
+      "title": "Post-Renovation Cleaning in Bishkek",
+      "meta_title": "Post-Renovation Cleaning in Bishkek — from 300 KGS/m²",
+      "meta_description": "Post-renovation cleaning in Bishkek: removing construction dust, paint and glue residue, washing windows and floors. Professional equipment. Get an instant quote.",
+      "short_description": "We remove construction dust, paint, glue and cement residue — handing over a move-in-ready home.",
+      "price_from": 300,
+      "icon": "hammer",
+      "included_title": "What's included in post-renovation cleaning",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Collecting and removing small construction debris (offcuts, packaging, film)",
+        "Removing construction dust from all surfaces, including the tops of cabinets and pipes",
+        "Washing floors in multiple passes, including tile grout lines",
+        "Removing paint, glue and foam residue from glass and other surfaces",
+        "Washing windows and sills from construction dust and stickers",
+        "Cleaning switches, sockets (exterior) and door handles",
+        "Washing doors and door frames free of dust and streaks",
+        "Cleaning kitchen fronts, countertop and appliance exteriors",
+        "Washing plumbing and tiles, removing grout and cement splashes",
+        "Cleaning baseboards and thresholds",
+        "Dusting ventilation grilles",
+        "Wet-wiping window sills and radiators",
+        "Cleaning mirrors and shower glass doors",
+        "Final polishing of glossy surfaces",
+        "Cleaning the balcony/loggia from construction debris and dust"
+      ],
+      "checklist_excluded": [
+        "Hauling away bulky construction waste (pallets, large offcuts) — discussed separately",
+        "Dry cleaning of upholstered furniture",
+        "Removing dried stains older than six months without an on-site assessment first",
+        "Cleaning the building's exterior facade or outside windows above the 2nd floor without climbing equipment"
+      ],
+      "faq_title": "Post-renovation cleaning FAQ",
+      "faq": [
+        {
+          "question": "How soon after renovation can I book a cleaning?",
+          "answer": "Ideally 1–2 days after the dustiest work is finished, once the bulk of construction dust has settled. This makes the cleaning faster and more effective."
+        },
+        {
+          "question": "How many cleaners and how much time does a post-renovation apartment need?",
+          "answer": "Usually a team of 2–3 works 5–8 hours for a 60–80 m² apartment — this is the most labor-intensive cleaning type; the calculator will show the exact area-based estimate."
+        },
+        {
+          "question": "Will you remove dried paint stains from the floor?",
+          "answer": "Fresh and standard residue — yes. Old, stubborn stains are assessed on site: sometimes they need a different cleaning agent, which we'll discuss before starting."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["generalnaya-uborka", "mytyo-okon"],
+      "calculator_preset": { "service_type": "post_renovation", "property_type": null, "highlight_addon": null }
+    },
+    {
+      "slug": "podderzhivayushchaya-uborka",
+      "service_type": "maintenance",
+      "title": "Maintenance Cleaning in Bishkek",
+      "meta_title": "Maintenance Apartment Cleaning in Bishkek — from 90 KGS/m²",
+      "meta_description": "Regular maintenance cleaning of apartments in Bishkek: weekly, biweekly or monthly. Discounts for recurring bookings. A consistent, vetted cleaning team.",
+      "short_description": "Regular upkeep of your apartment — weekly, biweekly or monthly, with a discount for recurring bookings.",
+      "price_from": 90,
+      "icon": "broom",
+      "included_title": "What's included in maintenance cleaning",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Dusting exposed furniture surfaces",
+        "Washing floors in every room",
+        "Wet-cleaning the kitchen: countertop, stove exterior, sink",
+        "Cleaning bathrooms: toilet, sink, bathtub/shower inside and out",
+        "Wiping mirrors",
+        "Taking out the trash",
+        "Making the bed (upon request)",
+        "Cleaning thresholds and the entryway",
+        "Wiping switches and door handles",
+        "Watering houseplants (by prior arrangement)"
+      ],
+      "checklist_excluded": [
+        "Washing windows",
+        "Dry cleaning of upholstered furniture and carpets",
+        "Deep-cleaning the oven and fridge interior — booked as an add-on",
+        "Laundry and ironing, unless arranged separately",
+        "Washing walls and ceilings"
+      ],
+      "faq_title": "Maintenance cleaning FAQ",
+      "faq": [
+        {
+          "question": "Can I request the same team every time?",
+          "answer": "Yes, for recurring cleaning we try to assign a consistent team to each client — this way the cleaners get to know your home's specifics."
+        },
+        {
+          "question": "What discount applies to recurring cleaning?",
+          "answer": "Weekly cleaning gets a 15% discount, biweekly 10%, monthly 5%. The calculator shows the discounted total."
+        },
+        {
+          "question": "Can I cancel or reschedule a visit?",
+          "answer": "Yes, just let us know a day in advance by phone or WhatsApp — we'll reschedule to a convenient time with no penalty."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["generalnaya-uborka", "uborka-ofisov"],
+      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": null }
+    },
+    {
+      "slug": "uborka-ofisov",
+      "service_type": "maintenance",
+      "title": "Office Cleaning in Bishkek",
+      "meta_title": "Office Cleaning in Bishkek — Commercial Cleaning Services",
+      "meta_description": "Professional office cleaning in Bishkek: one-time or recurring, in the evening or after hours. Contracts with legal entities, invoicing, flexible scheduling. Get an instant quote.",
+      "short_description": "Cleaning for offices and commercial spaces — one-time or on a schedule, without disrupting your business.",
+      "price_from": 90,
+      "icon": "briefcase",
+      "included_title": "What's included in office cleaning",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Washing floors in all work areas and hallways",
+        "Dusting desks, equipment exteriors and shelves",
+        "Cleaning the kitchen/break area: table, sink, appliance exteriors",
+        "Cleaning and disinfecting restrooms",
+        "Taking out trash and replacing liners in all bins",
+        "Wiping doors, handles, switches and handrails",
+        "Cleaning mirrors and glass partitions",
+        "Vacuuming carpeted floors and office chairs",
+        "Wiping window sills",
+        "Preparing meeting rooms and the reception area before the workday starts"
+      ],
+      "checklist_excluded": [
+        "Washing windows and facades — booked separately",
+        "Dry cleaning of furniture and carpeted flooring",
+        "Servicing server rooms or the equipment inside them",
+        "Pest control and extermination"
+      ],
+      "faq_title": "Office cleaning FAQ",
+      "faq": [
+        {
+          "question": "Can the office be cleaned after hours or early in the morning?",
+          "answer": "Yes, for corporate clients we adapt the schedule to the company's working hours: evenings after staff leave or early mornings before opening."
+        },
+        {
+          "question": "Do you work with legal entities under contract with invoicing?",
+          "answer": "Yes, we sign a contract, provide closing documents, and can arrange deferred invoice payment — terms are discussed individually."
+        },
+        {
+          "question": "Are there discounts for recurring office service?",
+          "answer": "Yes, for recurring bookings (2–5 times a week) we offer an individual rate — we'll calculate it during your first inquiry."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["podderzhivayushchaya-uborka", "mytyo-okon"],
+      "calculator_preset": { "service_type": "maintenance", "property_type": "office", "highlight_addon": null }
+    },
+    {
+      "slug": "himchistka-mebeli",
+      "service_type": "maintenance",
+      "title": "Furniture Dry Cleaning in Bishkek",
+      "meta_title": "Sofa & Upholstery Dry Cleaning in Bishkek — from 900 KGS",
+      "meta_description": "Dry cleaning of sofas, armchairs and carpets at home in Bishkek. We remove stains, odors and dust mites. Professional equipment, chemicals safe for kids and pets.",
+      "short_description": "We remove stains, odors and dust from your sofa, armchairs and carpets right at home.",
+      "price_from": 900,
+      "icon": "sofa",
+      "included_title": "What's included in furniture dry cleaning",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Inspection to determine fabric type before cleaning",
+        "Dry vacuuming with an upholstery attachment",
+        "Wet extraction cleaning with a hot-water extraction vacuum",
+        "Spot treatment of stubborn stains (coffee, wine, grease — where possible)",
+        "Deodorizing and removing unpleasant odors",
+        "Dust mite treatment",
+        "Cleaning cushions and decorative elements",
+        "Drying the surface with professional equipment",
+        "On-site carpet cleaning without removal (for standard soiling)",
+        "Antibacterial treatment safe for children and pets"
+      ],
+      "checklist_excluded": [
+        "Furniture takes 4–8 hours to fully dry — we recommend not using it during that time",
+        "Complete removal of old, deeply set-in stains is not guaranteed — assessed on site",
+        "Cleaning leather furniture requires a separately agreed product",
+        "Taking a carpet off-site to a workshop for deep cleaning — not offered, we clean on location only"
+      ],
+      "faq_title": "Furniture dry cleaning FAQ",
+      "faq": [
+        {
+          "question": "How long does a sofa take to dry after cleaning?",
+          "answer": "On average 4–8 hours at normal humidity. We use professional extraction vacuums that shorten the drying time."
+        },
+        {
+          "question": "Is the chemistry safe for kids and pets?",
+          "answer": "Yes, we use hypoallergenic products that are safe for health. Once fully dry, the furniture can be used as usual."
+        },
+        {
+          "question": "Do you guarantee removal of all stains?",
+          "answer": "Fresh and most everyday stains come out completely. Old, stubborn stains (from dyes, for example) are assessed individually before work starts — we'll be upfront if a result isn't guaranteed."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"],
+      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "sofa_seat" }
+    },
+    {
+      "slug": "mytyo-okon",
+      "service_type": "maintenance",
+      "title": "Window Washing in Bishkek",
+      "meta_title": "Window Washing in Bishkek — from 400 KGS per sash",
+      "meta_description": "Professional window washing in Bishkek: frames, glass, sills, reveals, insect screens. Streak-free finish using squeegees and professional products.",
+      "short_description": "Streak-free windows: glass, frames, sills and insect screens — inside and out.",
+      "price_from": 400,
+      "icon": "window",
+      "included_title": "What's included in window washing",
+      "excluded_title": "What's not included",
+      "checklist_included": [
+        "Washing glass on both sides with a professional squeegee, streak-free",
+        "Cleaning the frame (plastic or wood) from dust and grime",
+        "Washing the sill inside and out",
+        "Cleaning rubber seals",
+        "Washing and drying insect screens",
+        "Cleaning window hardware and handles",
+        "Removing tape, sticker residue and foam marks (for post-renovation windows)",
+        "Cleaning window reveals",
+        "Cleaning drip caps",
+        "Dry-polishing the glass for a streak-free shine"
+      ],
+      "checklist_excluded": [
+        "Washing windows above the 2nd floor from the outside without a balcony or loggia — requires climbing equipment, discussed separately",
+        "Repairing hardware or replacing seals",
+        "Washing stained-glass or ornate windows of complex shape — assessed individually",
+        "Washing windows in rain or below-freezing outdoor temperatures"
+      ],
+      "faq_title": "Window washing FAQ",
+      "faq": [
+        {
+          "question": "Is the price per whole window or per sash?",
+          "answer": "Per sash. A standard window with 2–3 sashes costs from 800 to 1,200 KGS depending on the number of sashes and access type."
+        },
+        {
+          "question": "Do you wash windows on high floors?",
+          "answer": "Yes, if there's safe access from a balcony or loggia. Washing from the outside above the 2nd floor without a balcony requires climbing equipment — let us know when booking so we can arrange it."
+        },
+        {
+          "question": "In what weather can I book window washing?",
+          "answer": "Interior cleaning is done in any weather. Exterior washing is rescheduled during rain, strong wind or frost — we'll suggest the nearest suitable date."
+        }
+      ],
+      "related_title": "Related services",
+      "related": ["generalnaya-uborka", "uborka-posle-remonta"],
+      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "windows_per_sash" }
+    }
+  ]
+}

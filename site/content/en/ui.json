@@ -1,0 +1,64 @@
+{
+  "skip_to_content": "Skip to content",
+  "demo_banner_text": "Demo version of the site. Contact details and prices are placeholders and have not been configured yet.",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "prices": "Prices",
+    "about": "About us",
+    "reviews": "Reviews",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
+  "buttons": {
+    "calculate": "Calculate the cost",
+    "whatsapp": "Message on WhatsApp",
+    "call": "Call us",
+    "order": "Book a cleaning",
+    "view_all_services": "All services",
+    "view_all_reviews": "All reviews",
+    "read_more": "Read the article",
+    "submit_lead": "Send request",
+    "call_cleaner": "Book a cleaner",
+    "back_home": "Back to home"
+  },
+  "geography_title": "Areas we serve",
+  "lang_switch_label": "Language",
+  "mobile_bar": {
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "calculate": "Calculate"
+  },
+  "footer": {
+    "services_title": "Services",
+    "company_title": "Company",
+    "contacts_title": "Contacts",
+    "work_hours_label": "Working hours",
+    "service_area_label": "We work in",
+    "rights": "All rights reserved."
+  },
+  "form": {
+    "title": "Leave a request",
+    "name_label": "Name",
+    "name_placeholder": "How should we address you",
+    "phone_label": "Phone",
+    "phone_placeholder": "+996 700 12-34-56",
+    "channel_label": "Preferred contact method",
+    "channel_whatsapp": "WhatsApp",
+    "channel_call": "Phone call",
+    "channel_telegram": "Telegram",
+    "date_label": "Preferred cleaning date",
+    "address_label": "Address",
+    "address_placeholder": "District, street, house, apartment",
+    "comment_label": "Comment",
+    "comment_placeholder": "Any special requests for the cleaning",
+    "consent": "By submitting this form, you agree to the processing of your personal data.",
+    "submit": "Send request",
+    "success": "Your request has been sent! We'll get back to you within 15 minutes during business hours.",
+    "error": "Please check the form fields — name and phone are required.",
+    "fallback": "We couldn't submit the form through the site. Opening WhatsApp — your request will get through faster this way."
+  },
+  "reviews": {
+    "placeholder_badge": "Demo review — to be replaced with a real one"
+  }
+}

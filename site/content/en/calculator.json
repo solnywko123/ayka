@@ -1,0 +1,46 @@
+{
+  "title": "Get a cleaning quote in 30 seconds",
+  "labels": {
+    "service_type_label": "Cleaning type",
+    "property_type_label": "Property type",
+    "area_label": "Area, m²",
+    "bathrooms_label": "Number of bathrooms",
+    "addons_label": "Add-on services",
+    "urgency_label": "Urgency",
+    "frequency_label": "Frequency",
+    "result_label": "Estimated price",
+    "cta": "Book a cleaner"
+  },
+  "service_types": {
+    "maintenance": { "title": "Maintenance", "hint": "regular upkeep cleaning" },
+    "general": { "title": "General", "hint": "deep clean of every corner" },
+    "post_renovation": { "title": "Post-renovation", "hint": "construction dust and residue" },
+    "post_move": { "title": "Move in/out", "hint": "before moving in or after moving out" }
+  },
+  "property_types": {
+    "apartment": "Apartment",
+    "house": "House",
+    "office": "Office"
+  },
+  "addons": {
+    "windows_per_sash": { "label": "Window washing", "unit": "per sash" },
+    "sofa_seat": { "label": "Sofa dry cleaning", "unit": "per seat" },
+    "carpet_per_m2": { "label": "Carpet dry cleaning", "unit": "per m²" },
+    "fridge_inside": { "label": "Fridge — inside", "unit": "" },
+    "oven_inside": { "label": "Oven — inside", "unit": "" },
+    "balcony": { "label": "Balcony cleaning", "unit": "" },
+    "ironing_per_hour": { "label": "Ironing", "unit": "per hour" }
+  },
+  "urgency": {
+    "normal": "Within a week",
+    "urgent": "Today or tomorrow"
+  },
+  "frequency": {
+    "once": "One-time",
+    "monthly": "Monthly",
+    "biweekly": "Every 2 weeks",
+    "weekly": "Weekly"
+  },
+  "meta_template": "≈ {hours} h of work, {cleaners} cleaners",
+  "savings_template": "You save {amount} {currency} with the selected frequency"
+}

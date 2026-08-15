@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "question": "How is the cost of cleaning calculated?",
+      "answer": "The price depends on the area, cleaning type, number of bathrooms, selected add-on services, urgency and frequency of visits. Use the calculator on the site — it shows an exact price range in 30 seconds, no calls needed."
+    },
+    {
+      "question": "Do I need to buy cleaning products or provide equipment?",
+      "answer": "No. Cleaners arrive with their own professional products, vacuum cleaners, microfiber cloths and all the necessary equipment. You don't need to prepare anything in advance."
+    },
+    {
+      "question": "When do I need to pay for the cleaning?",
+      "answer": "After the work is finished and you've personally checked the result. We don't take prepayment for apartment cleaning — it's part of our commitment to client trust."
+    },
+    {
+      "question": "What if I'm not happy with the quality of the cleaning?",
+      "answer": "If, for objective reasons, the work wasn't completed properly or has flaws, we'll redo the problem areas free of charge within 24 hours of the cleaning."
+    },
+    {
+      "question": "Can I be away from home during the cleaning?",
+      "answer": "Yes, many clients grant access via an intercom code, a concierge or neighbors. Cleaners take photos of the result when finished, and payment happens in whatever way is convenient for you."
+    },
+    {
+      "question": "How quickly can I book a cleaner?",
+      "answer": "For urgent bookings, a team can arrive the same day or the next — an urgency surcharge applies to the price for this. For regular bookings, we recommend booking 1–2 days ahead."
+    },
+    {
+      "question": "Do you work on weekends and holidays?",
+      "answer": "Yes, we work every day without days off, including holidays, during the hours listed on the site."
+    },
+    {
+      "question": "Do you vet your cleaners before hiring them?",
+      "answer": "Yes, every cleaner goes through document verification and an interview before being allowed to work with clients — this is part of our safety policy."
+    },
+    {
+      "question": "Which areas do you serve?",
+      "answer": "We cover all of Bishkek and nearby suburbs — Kant, Lebedinovka, Voenno-Antonovka. See the full list of districts in the \"Areas we serve\" section."
+    },
+    {
+      "question": "Can I book cleaning for just one room or area, like the kitchen?",
+      "answer": "Yes, mention in the request comment that you only need a specific area cleaned — we'll calculate the price individually based on that area."
+    }
+  ]
+}

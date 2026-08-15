@@ -1,0 +1,64 @@
+{
+  "skip_to_content": "Перейти к содержимому",
+  "demo_banner_text": "Демо-версия сайта. Контакты и цены — примерные, ещё не настроены владельцем.",
+  "nav": {
+    "home": "Главная",
+    "services": "Услуги",
+    "prices": "Цены",
+    "about": "О нас",
+    "reviews": "Отзывы",
+    "blog": "Блог",
+    "contacts": "Контакты"
+  },
+  "buttons": {
+    "calculate": "Рассчитать стоимость",
+    "whatsapp": "Написать в WhatsApp",
+    "call": "Позвонить",
+    "order": "Заказать уборку",
+    "view_all_services": "Все услуги",
+    "view_all_reviews": "Все отзывы",
+    "read_more": "Читать статью",
+    "submit_lead": "Отправить заявку",
+    "call_cleaner": "Вызвать клинера",
+    "back_home": "На главную"
+  },
+  "geography_title": "География работы",
+  "lang_switch_label": "Язык",
+  "mobile_bar": {
+    "call": "Позвонить",
+    "whatsapp": "WhatsApp",
+    "calculate": "Рассчитать"
+  },
+  "footer": {
+    "services_title": "Услуги",
+    "company_title": "Компания",
+    "contacts_title": "Контакты",
+    "work_hours_label": "Часы работы",
+    "service_area_label": "Работаем в районах",
+    "rights": "Все права защищены."
+  },
+  "form": {
+    "title": "Оставить заявку",
+    "name_label": "Имя",
+    "name_placeholder": "Как к вам обращаться",
+    "phone_label": "Телефон",
+    "phone_placeholder": "+996 700 12-34-56",
+    "channel_label": "Как удобнее связаться",
+    "channel_whatsapp": "WhatsApp",
+    "channel_call": "Звонок",
+    "channel_telegram": "Telegram",
+    "date_label": "Желаемая дата уборки",
+    "address_label": "Адрес",
+    "address_placeholder": "Район, улица, дом, квартира",
+    "comment_label": "Комментарий",
+    "comment_placeholder": "Особые пожелания к уборке",
+    "consent": "Отправляя форму, вы соглашаетесь на обработку персональных данных.",
+    "submit": "Отправить заявку",
+    "success": "Заявка отправлена! Мы свяжемся с вами в течение 15 минут в рабочее время.",
+    "error": "Проверьте, пожалуйста, поля формы — имя и телефон обязательны.",
+    "fallback": "Не удалось отправить форму через сайт. Открываем WhatsApp — так заявка точно дойдёт быстрее."
+  },
+  "reviews": {
+    "placeholder_badge": "Демо-отзыв — заменить на реальный"
+  }
+}

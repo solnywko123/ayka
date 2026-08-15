@@ -1,0 +1,130 @@
+{
+  "home": {
+    "meta_title": "Cleaning Company in Bishkek — Apartment & Office Cleaning",
+    "meta_description": "Cleaning services in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning, window washing. Get an instant online quote in 30 seconds.",
+    "hero": {
+      "h1": "Cleaning Services in Bishkek",
+      "subtitle": "Effortless cleanliness: get an instant online quote and book a cleaning for a convenient time — our own supplies, vetted cleaners, a fixed price on your request.",
+      "image_alt": "A bright, clean apartment after a professional cleaning",
+      "trust_markers": [
+        "Our own supplies and equipment",
+        "Cleaners with verified documents",
+        "Pay after you check the result"
+      ]
+    },
+    "services_title": "Our services",
+    "from_label": "from",
+    "how_it_works_eyebrow": "Process",
+    "how_it_works_title": "How we work",
+    "steps": [
+      { "title": "Request", "desc": "Leave a request via the calculator, WhatsApp or phone — tell us what needs cleaning." },
+      { "title": "Quote & confirmation", "desc": "We clarify the details, lock in the price and agree on a convenient visit time." },
+      { "title": "Cleaning", "desc": "Cleaners arrive with their own supplies and equipment and follow the agreed checklist." },
+      { "title": "Check & payment", "desc": "You personally check the result, and only then does payment happen." }
+    ],
+    "why_us_eyebrow": "Why us",
+    "why_us_title": "Why choose us",
+    "why_us": [
+      { "title": "A fixed price upfront", "desc": "The price range is locked in before work starts — no surprise \"actual cost\" charges without agreement." },
+      { "title": "Cleaners with verified documents", "desc": "Every team member goes through document verification and an interview before working with clients." },
+      { "title": "Free re-cleaning", "desc": "If, for objective reasons, you don't accept the work, we'll redo the problem areas free of charge within 24 hours." },
+      { "title": "Our own supplies and equipment", "desc": "Professional cleaning products, vacuums and equipment — nothing to buy or prepare." },
+      { "title": "Pay after inspection", "desc": "You only pay once you've personally confirmed the quality of the cleaning." },
+      { "title": "Flexible scheduling, no days off", "desc": "We work daily, including holidays — we fit your schedule, not the other way around." }
+    ],
+    "reviews_title": "What our clients say",
+    "prices_title": "Cleaning prices",
+    "price_table": {
+      "service_col": "Service",
+      "price_col": "Price",
+      "note": "The final price depends on the area, number of bathrooms and add-on services — use the calculator for an exact quote.",
+      "cta": "See full price list"
+    },
+    "faq_title": "Frequently asked questions",
+    "geography_title": "We serve all of Bishkek and its suburbs",
+    "final_cta": {
+      "title": "Book a cleaning right now",
+      "subtitle": "Get an instant online quote or leave a request — we'll call you back and confirm a convenient visit time."
+    }
+  },
+  "services": {
+    "meta_title": "Cleaning Services in Bishkek — Ayka Cleaning",
+    "meta_description": "All cleaning services from Ayka Cleaning in Bishkek: general and maintenance cleaning, post-renovation cleaning, office cleaning, furniture dry cleaning, window washing.",
+    "h1": "Our services",
+    "intro": "Pick the service you need to see a detailed checklist and get a price estimate for your apartment or office.",
+    "from_label": "from"
+  },
+  "about": {
+    "meta_title": "About Ayka Cleaning — Cleaning Services in Bishkek",
+    "meta_description": "Ayka Cleaning is a cleaning company operating in Bishkek. Vetted cleaners, our own equipment and supplies, fixed prices agreed in advance. Learn more about how we work.",
+    "h1": "About Ayka Cleaning",
+    "intro": "We are a cleaning company operating in Bishkek and its suburbs. Our goal is to take cleaning off your plate — without overcharging you or cutting corners on quality.",
+    "sections": [
+      {
+        "title": "Our team",
+        "text": "Cleaners go through document verification and an interview before they start working with clients. For recurring cleaning, we build a consistent team around each client — so cleaners get to know your home or office and work faster with every visit.",
+        "image": "about-team.svg",
+        "image_alt": "Ayka Cleaning's team of cleaners"
+      },
+      {
+        "title": "Equipment & supplies",
+        "text": "Every visit, the team brings professional cleaning products, dry and wet vacuums, extraction equipment for furniture dry cleaning, and all the necessary tools. You don't need to buy or prepare anything — just open the door.",
+        "image": "about-equipment.svg",
+        "image_alt": "Professional cleaning equipment and supplies"
+      }
+    ],
+    "values_title": "How we operate",
+    "value_items": [
+      { "title": "Honest pricing", "desc": "The price range is locked in before work starts, with no hidden charges added afterward." },
+      { "title": "Pay for results", "desc": "You pay after personally checking the quality of the cleaning, not upfront." },
+      { "title": "Accountability", "desc": "If something's not right for an objective reason, we redo it free of charge within 24 hours." },
+      { "title": "Respect for your time", "desc": "We show up at the agreed time and fit your schedule, including evenings and weekends." }
+    ],
+    "cta_title": "Leave the cleaning to the professionals"
+  },
+  "ceny": {
+    "meta_title": "Cleaning Prices in Bishkek — Ayka Cleaning",
+    "meta_description": "Current cleaning service prices in Bishkek: general and maintenance cleaning, post-renovation cleaning, add-on services and discounts for recurring bookings.",
+    "h1": "Cleaning prices",
+    "intro": "Below are the base rates per square meter and the cost of add-on services. The final price is calculated individually based on area, number of bathrooms, urgency and frequency — use the calculator below for an exact quote.",
+    "table": {
+      "service_col": "Service",
+      "rate_col": "Rate",
+      "min_order_row": "Minimum order",
+      "bathroom_row": "Each bathroom beyond the first",
+      "addon_col": "Add-on service",
+      "frequency_col": "Frequency",
+      "discount_col": "Discount"
+    },
+    "addons_title": "Add-on services",
+    "discounts_title": "Discounts for recurring bookings",
+    "note": "The final price in your request is shown as a range \"from X to Y\" — the exact amount is confirmed once the details of the property are clarified."
+  },
+  "otzyvy": {
+    "meta_title": "Reviews of Ayka Cleaning in Bishkek",
+    "meta_description": "Client reviews of Ayka Cleaning, a cleaning company in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning.",
+    "h1": "Client reviews",
+    "intro": "Here you'll find reviews about the quality of our work. We only publish reviews from real clients.",
+    "disclaimer": "The reviews on this page are marked as demo placeholders and will be replaced with real client reviews once the site launches — publishing fabricated reviews is not something we do.",
+    "cta_title": "Become our next happy client"
+  },
+  "kontakty": {
+    "meta_title": "Contact Ayka Cleaning — Cleaning Services in Bishkek",
+    "meta_description": "Get in touch with Ayka Cleaning, a cleaning company in Bishkek: phone, WhatsApp, email, working hours. Leave an online request for cleaning.",
+    "h1": "Contacts",
+    "intro": "Reach out however is convenient for you — by phone, on WhatsApp, or through the request form below. We respond quickly during business hours.",
+    "map_title": "Location map"
+  },
+  "blog": {
+    "meta_title": "Cleaning Blog — Ayka Cleaning, Bishkek",
+    "meta_description": "Helpful articles about apartment cleaning in Bishkek: prices, tips, and advice on choosing a cleaning company.",
+    "h1": "Blog",
+    "intro": "We explain how cleaning actually works: what things cost, what to watch out for, and how to avoid overpaying."
+  },
+  "not_found": {
+    "meta_title": "Page Not Found — Ayka Cleaning",
+    "meta_description": "The page you requested was not found. Go to the homepage of Ayka Cleaning or use the navigation menu.",
+    "title": "Page not found",
+    "text": "The link may be outdated or the page may have moved. Go back to the homepage or pick a service below."
+  }
+}

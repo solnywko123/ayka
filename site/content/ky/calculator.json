@@ -1,0 +1,46 @@
+{
+  "title": "Тазалоонун баасын 30 секундда эсептеңиз",
+  "labels": {
+    "service_type_label": "Тазалоо түрү",
+    "property_type_label": "Объект түрү",
+    "area_label": "Аянты, м²",
+    "bathrooms_label": "Санитардык түйүндөрдүн саны",
+    "addons_label": "Кошумча кызматтар",
+    "urgency_label": "Шашылыштык",
+    "frequency_label": "Мезгилдүүлүк",
+    "result_label": "Болжолдуу баасы",
+    "cta": "Тазалоочуну чакыруу"
+  },
+  "service_types": {
+    "maintenance": { "title": "Колдоочу", "hint": "тазалыкты дайыма кармоо" },
+    "general": { "title": "Генералдык", "hint": "ар бир бурчту терең тазалоо" },
+    "post_renovation": { "title": "Ремонттон кийин", "hint": "курулуш чаңы жана изи" },
+    "post_move": { "title": "Көчүүдөн кийин", "hint": "кирерден мурун же чыккандан кийин" }
+  },
+  "property_types": {
+    "apartment": "Батир",
+    "house": "Жеке үй",
+    "office": "Офис"
+  },
+  "addons": {
+    "windows_per_sash": { "label": "Терезелерди жуу", "unit": "бир канатына" },
+    "sofa_seat": { "label": "Диванды химиялык тазалоо", "unit": "бир орунга" },
+    "carpet_per_m2": { "label": "Килемди химиялык тазалоо", "unit": "м² үчүн" },
+    "fridge_inside": { "label": "Муздаткычтын ичи", "unit": "" },
+    "oven_inside": { "label": "Мешкененин ичи", "unit": "" },
+    "balcony": { "label": "Балконду тазалоо", "unit": "" },
+    "ironing_per_hour": { "label": "Кийимди үтүктөө", "unit": "саатына" }
+  },
+  "urgency": {
+    "normal": "Бир жумада",
+    "urgent": "Бүгүн же эртең"
+  },
+  "frequency": {
+    "once": "Бир жолу",
+    "monthly": "Айына бир жолу",
+    "biweekly": "2 жумада бир жолу",
+    "weekly": "Ар жума сайын"
+  },
+  "meta_template": "≈ {hours} саат иш, {cleaners} тазалоочу",
+  "savings_template": "Тандалган мезгилдүүлүктө {amount} {currency} үнөмдөйсүз"
+}

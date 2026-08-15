@@ -1,0 +1,46 @@
+{
+  "title": "Рассчитайте стоимость уборки за 30 секунд",
+  "labels": {
+    "service_type_label": "Тип уборки",
+    "property_type_label": "Тип объекта",
+    "area_label": "Площадь, м²",
+    "bathrooms_label": "Количество санузлов",
+    "addons_label": "Дополнительные услуги",
+    "urgency_label": "Срочность",
+    "frequency_label": "Регулярность",
+    "result_label": "Ориентировочно",
+    "cta": "Вызвать клинера"
+  },
+  "service_types": {
+    "maintenance": { "title": "Поддерживающая", "hint": "регулярный уход за чистотой" },
+    "general": { "title": "Генеральная", "hint": "глубокая уборка каждого угла" },
+    "post_renovation": { "title": "После ремонта", "hint": "стройпыль и налипания" },
+    "post_move": { "title": "После переезда", "hint": "перед заездом или после выезда" }
+  },
+  "property_types": {
+    "apartment": "Квартира",
+    "house": "Частный дом",
+    "office": "Офис"
+  },
+  "addons": {
+    "windows_per_sash": { "label": "Мытьё окон", "unit": "за створку" },
+    "sofa_seat": { "label": "Химчистка дивана", "unit": "за посадочное место" },
+    "carpet_per_m2": { "label": "Химчистка ковра", "unit": "за м²" },
+    "fridge_inside": { "label": "Холодильник внутри", "unit": "" },
+    "oven_inside": { "label": "Духовка внутри", "unit": "" },
+    "balcony": { "label": "Уборка балкона", "unit": "" },
+    "ironing_per_hour": { "label": "Глажка белья", "unit": "за час" }
+  },
+  "urgency": {
+    "normal": "В течение недели",
+    "urgent": "Сегодня или завтра"
+  },
+  "frequency": {
+    "once": "Разово",
+    "monthly": "Раз в месяц",
+    "biweekly": "Раз в 2 недели",
+    "weekly": "Еженедельно"
+  },
+  "meta_template": "≈ {hours} ч работы, {cleaners} клинера",
+  "savings_template": "Вы экономите {amount} {currency} при выбранной регулярности"
+}

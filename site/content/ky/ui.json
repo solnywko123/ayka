@@ -1,0 +1,64 @@
+{
+  "skip_to_content": "Мазмунга өтүү",
+  "demo_banner_text": "Сайттын демо-версиясы. Байланыш маалыматтары жана баалар — үлгү, ээси әлі жөндөгөн жок.",
+  "nav": {
+    "home": "Башкы бет",
+    "services": "Кызматтар",
+    "prices": "Баалар",
+    "about": "Биз жөнүндө",
+    "reviews": "Пикирлер",
+    "blog": "Блог",
+    "contacts": "Байланыш"
+  },
+  "buttons": {
+    "calculate": "Баасын эсептөө",
+    "whatsapp": "WhatsApp жазуу",
+    "call": "Чалуу",
+    "order": "Тазалоону буйрутма кылуу",
+    "view_all_services": "Бардык кызматтар",
+    "view_all_reviews": "Бардык пикирлер",
+    "read_more": "Макаланы окуу",
+    "submit_lead": "Билдирүү жөнөтүү",
+    "call_cleaner": "Тазалоочуну чакыруу",
+    "back_home": "Башкы бетке"
+  },
+  "geography_title": "Иштеген аймактар",
+  "lang_switch_label": "Тил",
+  "mobile_bar": {
+    "call": "Чалуу",
+    "whatsapp": "WhatsApp",
+    "calculate": "Эсептөө"
+  },
+  "footer": {
+    "services_title": "Кызматтар",
+    "company_title": "Компания",
+    "contacts_title": "Байланыш",
+    "work_hours_label": "Иш убактысы",
+    "service_area_label": "Иштеген райондор",
+    "rights": "Бардык укуктар корголгон."
+  },
+  "form": {
+    "title": "Билдирүү калтыруу",
+    "name_label": "Аты",
+    "name_placeholder": "Сизге кантип кайрылса болот",
+    "phone_label": "Телефон",
+    "phone_placeholder": "+996 700 12-34-56",
+    "channel_label": "Кайсы ыкма менен байланышуу ыңгайлуу",
+    "channel_whatsapp": "WhatsApp",
+    "channel_call": "Чалуу",
+    "channel_telegram": "Telegram",
+    "date_label": "Каалаган тазалоо күнү",
+    "address_label": "Дареги",
+    "address_placeholder": "Район, көчө, үй, батир",
+    "comment_label": "Комментарий",
+    "comment_placeholder": "Тазалоо боюнча кошумча тилектер",
+    "consent": "Форманы жөнөтүү менен сиз жеке маалыматтарды иштетүүгө макул болосуз.",
+    "submit": "Билдирүү жөнөтүү",
+    "success": "Билдирүү жөнөтүлдү! Биз сиз менен жумуш убактысында 15 мүнөттүн ичинде байланышабыз.",
+    "error": "Форманын талааларын текшериңиз — аты жана телефон милдеттүү.",
+    "fallback": "Форманы сайт аркылуу жөнөтүү мүмкүн болбоду. WhatsApp ачылат — билдирүү тезирээк жетет."
+  },
+  "reviews": {
+    "placeholder_badge": "Демо-пикир — чыныгы пикирге алмаштырылат"
+  }
+}
