@@ -1,10 +1,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="logo" href="{{ meta.alt_paths.get(lang, '/' + lang + '/') }}">
-      <span class="logo__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24"><use href="{{ asset('icons/sprite.svg') }}#icon-sparkle"></use></svg>
-      </span>
-      {{ config.company_name }}
+      <img class="logo__image" src="{{ asset('img/logo.png') }}" alt="{{ config.company_name }}" width="44" height="44">
     </a>
 
     <nav class="main-nav" aria-label="{{ ui.nav.services }}">

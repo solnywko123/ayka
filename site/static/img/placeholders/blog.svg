@@ -1,6 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="270" viewBox="0 0 480 270">
-  <rect width="480" height="270" fill="#eef1f6"/>
-  <rect x="1" y="1" width="478" height="268" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="10 8"/>
-  <text x="50%" y="48%" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1d4ed8" font-weight="700">Фото статьи</text>
-  <text x="50%" y="58%" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c6472">480×270 — заменить на реальное фото</text>
+  <defs>
+    <linearGradient id="blogwash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde2e2"/>
+      <stop offset="35%" stop-color="#fef3d9"/>
+      <stop offset="68%" stop-color="#dcf5e6"/>
+      <stop offset="100%" stop-color="#dbe7fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="270" fill="url(#blogwash)"/>
+  <g transform="translate(200,85)" fill="none" stroke="#12151b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="80" height="100" rx="8" fill="#fff"/>
+    <path d="M18 28h44M18 46h44M18 64h30"/>
+  </g>
+  <g transform="translate(300,60)">
+    <path d="M12 3l1.6 4.7L18 9l-4.4 1.5L12 15l-1.6-4.5L6 9l4.4-1.3L12 3z" fill="#b45309"/>
+  </g>
 </svg>

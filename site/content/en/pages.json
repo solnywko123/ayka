@@ -62,15 +62,11 @@
     "sections": [
       {
         "title": "Our team",
-        "text": "Cleaners go through document verification and an interview before they start working with clients. For recurring cleaning, we build a consistent team around each client — so cleaners get to know your home or office and work faster with every visit.",
-        "image": "about-team.svg",
-        "image_alt": "All Clean's team of cleaners"
+        "text": "Cleaners go through document verification and an interview before they start working with clients. For recurring cleaning, we build a consistent team around each client — so cleaners get to know your home or office and work faster with every visit."
       },
       {
         "title": "Equipment & supplies",
-        "text": "Every visit, the team brings professional cleaning products, dry and wet vacuums, extraction equipment for furniture dry cleaning, and all the necessary tools. You don't need to buy or prepare anything — just open the door.",
-        "image": "about-equipment.svg",
-        "image_alt": "Professional cleaning equipment and supplies"
+        "text": "Every visit, the team brings professional cleaning products, dry and wet vacuums, extraction equipment for furniture dry cleaning, and all the necessary tools. You don't need to buy or prepare anything — just open the door."
       }
     ],
     "process_title": "How a cleaning visit works",

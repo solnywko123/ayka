@@ -181,7 +181,7 @@ h1, h2, h3, h4 { line-height: var(--lh-heading); font-weight: 700; }
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
-button { font-family: inherit; }
+button { font-family: inherit; color: inherit; }
 input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
 
 .skip-link {
@@ -300,22 +300,8 @@ section { padding-block: var(--space-8); }
   justify-content: space-between;
   gap: var(--space-4);
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--color-primary-900);
-}
-.logo__mark {
-  width: 34px; height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #3a4157, #1e2230);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-  flex-shrink: 0;
-}
+.logo { display: flex; align-items: center; }
+.logo__image { height: 44px; width: auto; border-radius: 8px; }
 .main-nav { display: none; }
 .main-nav ul { display: flex; align-items: center; gap: var(--space-5); }
 .main-nav a { font-weight: 600; color: var(--color-text); transition: color var(--transition-fast); }

@@ -9,27 +9,14 @@
       <p>{{ page.intro }}</p>
     </div>
 
-    {% for section in page.sections %}
-    <div class="grid grid-2 reveal" style="align-items:center; margin-bottom:3rem">
-      {% if loop.index0 is even %}
-      <div>
+    <div class="grid grid-2">
+      {% for section in page.sections %}
+      <div class="reveal">
         <h2>{{ section.title }}</h2>
         <p>{{ section.text }}</p>
       </div>
-      <div class="hero__media" style="aspect-ratio:4/3">
-        <img src="{{ asset('img/placeholders/' + section.image) }}" alt="{{ section.image_alt }}" width="800" height="600" loading="lazy">
-      </div>
-      {% else %}
-      <div class="hero__media" style="aspect-ratio:4/3">
-        <img src="{{ asset('img/placeholders/' + section.image) }}" alt="{{ section.image_alt }}" width="800" height="600" loading="lazy">
-      </div>
-      <div>
-        <h2>{{ section.title }}</h2>
-        <p>{{ section.text }}</p>
-      </div>
-      {% endif %}
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 
