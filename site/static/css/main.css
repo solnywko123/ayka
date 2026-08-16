@@ -1,7 +1,8 @@
 /*
-  Ayka Cleaning — design system
+  All Clean — design system
   Vanilla CSS. Custom properties + modern layout (grid/flex/clamp).
-  Light theme is primary, dark theme via prefers-color-scheme.
+  Light theme only, deliberately — see DECISIONS.md for why the
+  prefers-color-scheme dark block was removed.
 */
 
 /* ---------- Fonts (self-hosted, variable) ---------- */
@@ -121,35 +122,6 @@
   --transition-base: 250ms ease;
 
   --header-height: 72px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #14110e;
-    --color-surface: #1e1a16;
-    --color-surface-muted: #262019;
-    --color-border: #3a3229;
-    --color-text: #f5f1ec;
-    --color-text-muted: #b3a89c;
-    /* primary-500/600/700/900 are used both as text/border color (needs to
-       lighten here) and — in a handful of rules — as a fixed dark background
-       paired with white text (those rules use literal hex instead of these
-       variables specifically so they're unaffected by this override; see
-       DECISIONS.md for the full list and why). */
-    --color-primary-900: #f5f1ec;
-    --color-primary-700: #d3cabd;
-    --color-primary-600: #ada194;
-    --color-primary-500: #837769;
-    --color-primary-100: #262019;
-    --color-primary-050: #1e1a16;
-    --color-accent-100: #163a24;
-    --color-brand-red-100: #3a1e1e;
-    --color-brand-yellow-100: #3a2e14;
-    --color-brand-green-100: #163a24;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
-  }
 }
 
 /* ---------- Reset ---------- */
