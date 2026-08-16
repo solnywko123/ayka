@@ -50,9 +50,9 @@
         <td data-label="Статус"><span class="badge badge-{{ lead.status.value }}">{{ lead.status.value }}</span></td>
         <td data-label="Имя">{{ lead.name }}</td>
         <td data-label="Телефон">{{ lead.phone }}</td>
-        <td data-label="Услуга">{{ lead.service_type.value }}</td>
-        <td data-label="Площадь">{{ lead.area_m2 }} м²</td>
-        <td data-label="Цена">{{ lead.price_min }}–{{ lead.price_max }}</td>
+        <td data-label="Услуга">{{ lead.service_type.value if lead.service_type else "—" }}</td>
+        <td data-label="Площадь">{{ (lead.area_m2 ~ " м²") if lead.area_m2 else "—" }}</td>
+        <td data-label="Цена">{{ (lead.price_min ~ "–" ~ lead.price_max) if lead.price_min is not none else "уточняется" }}</td>
         <td data-label="Язык">{{ lead.lang.value }}</td>
         <td data-label="UTM">{{ lead.utm_source or "—" }}</td>
       </tr>

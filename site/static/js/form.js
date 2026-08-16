@@ -1,4 +1,4 @@
-// Lead form: UTM capture, calculator transfer, honeypot/time-trap fields, graceful WhatsApp fallback.
+// Lead form: UTM capture, honeypot/time-trap fields, graceful WhatsApp fallback.
 (function () {
   "use strict";
 
@@ -42,11 +42,6 @@
     lines.push("Здравствуйте! Хочу заказать уборку.");
     if (name && name.value) lines.push("Имя: " + name.value);
     if (phone && phone.value) lines.push("Телефон: " + phone.value);
-    var priceMin = form.querySelector('[name="price_min"]');
-    var priceMax = form.querySelector('[name="price_max"]');
-    if (priceMin && priceMin.value && priceMax && priceMax.value) {
-      lines.push("Расчёт калькулятора: " + priceMin.value + "–" + priceMax.value);
-    }
     if (comment && comment.value) lines.push("Комментарий: " + comment.value);
     var digits = (whatsappNumber || "").replace(/[^\d]/g, "");
     return "https://wa.me/" + digits + "?text=" + encodeURIComponent(lines.join("\n"));
@@ -88,27 +83,6 @@
     var langField = form.querySelector('[name="lang"]');
     if (langField && !langField.value) langField.value = document.documentElement.lang || "ru";
 
-    document.addEventListener("ayka:calculator-transfer", function (event) {
-      var payload = event.detail;
-      var map = {
-        service_type: payload.service_type,
-        property_type: payload.property_type,
-        area_m2: payload.area_m2,
-        bathrooms: payload.bathrooms,
-        urgency: payload.urgency,
-        frequency: payload.frequency,
-        price_min: payload.price_min,
-        price_max: payload.price_max,
-      };
-      Object.keys(map).forEach(function (key) {
-        var field = form.querySelector('[name="' + key + '"]');
-        if (field) field.value = map[key];
-      });
-      var addonsField = form.querySelector('[name="addons"]');
-      if (addonsField) addonsField.value = JSON.stringify(payload.addons || {});
-      if (window.aykaTrack) window.aykaTrack("form_opened", {});
-    });
-
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       clearErrors(form);
@@ -125,11 +99,6 @@
       formData.forEach(function (value, key) {
         payload[key] = value;
       });
-      if (payload.addons) {
-        try { payload.addons = JSON.parse(payload.addons); } catch (e) { payload.addons = {}; }
-      }
-      if (payload.area_m2) payload.area_m2 = Number(payload.area_m2);
-      if (payload.bathrooms) payload.bathrooms = Number(payload.bathrooms);
 
       var apiBase = form.dataset.apiBase || "/api/v1";
 
@@ -146,7 +115,7 @@
           setStatus(form, form.dataset.successText || "Заявка отправлена! Мы свяжемся с вами в ближайшее время.", "success");
           form.reset();
           if (window.aykaTrack) {
-            window.aykaTrack("lead_submitted", { price_min: payload.price_min || null });
+            window.aykaTrack("lead_submitted", {});
           }
         })
         .catch(function () {

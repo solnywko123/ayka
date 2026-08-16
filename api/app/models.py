@@ -78,11 +78,15 @@ class Lead(Base):
         SAEnum(ContactChannel, native_enum=False, length=20), default=ContactChannel.whatsapp
     )
 
-    service_type: Mapped[ServiceType] = mapped_column(SAEnum(ServiceType, native_enum=False, length=20))
+    # Калькулятор убран с сайта — service_type/area_m2 больше никогда не приходят
+    # от клиента, менеджер уточняет это сам после осмотра (см. DECISIONS.md).
+    service_type: Mapped[ServiceType | None] = mapped_column(
+        SAEnum(ServiceType, native_enum=False, length=20), nullable=True
+    )
     property_type: Mapped[PropertyType] = mapped_column(
         SAEnum(PropertyType, native_enum=False, length=20), default=PropertyType.apartment
     )
-    area_m2: Mapped[int] = mapped_column(Integer)
+    area_m2: Mapped[int | None] = mapped_column(Integer, nullable=True)
     bathrooms: Mapped[int] = mapped_column(Integer, default=1)
     addons: Mapped[dict] = mapped_column(JSON, default=dict)
     urgency: Mapped[Urgency] = mapped_column(SAEnum(Urgency, native_enum=False, length=20), default=Urgency.normal)
@@ -95,8 +99,8 @@ class Lead(Base):
     address: Mapped[str | None] = mapped_column(String(300), nullable=True)
     comment: Mapped[str | None] = mapped_column(Text, nullable=True)
 
-    price_min: Mapped[float] = mapped_column(Numeric(10, 2))
-    price_max: Mapped[float] = mapped_column(Numeric(10, 2))
+    price_min: Mapped[float | None] = mapped_column(Numeric(10, 2), nullable=True)
+    price_max: Mapped[float | None] = mapped_column(Numeric(10, 2), nullable=True)
     currency: Mapped[str] = mapped_column(String(8), default="KGS")
 
     lang: Mapped[Lang] = mapped_column(SAEnum(Lang, native_enum=False, length=8), default=Lang.ru)

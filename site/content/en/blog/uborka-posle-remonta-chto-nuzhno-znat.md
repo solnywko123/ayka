@@ -25,7 +25,7 @@ A good rule of thumb is to plan post-renovation cleaning for the stage when furn
 
 Post-renovation cleaning pricing follows the same principle as general cleaning: a base rate per square meter, plus a surcharge for extra bathrooms, plus the cost of add-ons like window washing (especially relevant after a renovation, since glass almost always has painter's tape residue and construction dust on it).
 
-If the renovation was extensive — say, a full flooring replacement and wall plastering — plan for more time and a higher budget than for a cosmetic touch-up. The [calculator on the site](/en/ceny/#calculator) will show an exact estimate for your area and apartment condition — enter the area, number of bathrooms, and add window washing as a separate option if needed.
+If the renovation was extensive — say, a full flooring replacement and wall plastering — plan for more time and a higher budget than for a cosmetic touch-up. A manager will give you an exact estimate for your area and apartment condition — [leave a request](/en/ceny/#lead-form) with the area, number of bathrooms, and mention window washing in the comment if you need it.
 
 ## What's not included in standard post-renovation cleaning
 
@@ -74,4 +74,4 @@ That's why it makes sense to budget a separate line item for professional cleani
 
 Post-renovation cleaning in Bishkek is a distinct, more labor-intensive type of cleaning that requires professional equipment and a specific approach to construction dust and residue. It's best booked 1–2 days after the dustiest work wraps up, before furniture is fully moved in. The price depends on the area, number of bathrooms, and add-ons like window washing.
 
-To find the exact price for your apartment, use the calculator on the site or [leave a request](/en/kontakty/#lead-form) — we'll clarify the renovation details and suggest a convenient time for the team to visit.
+To find the exact price for your apartment, [leave a request](/en/kontakty/#lead-form) — we'll clarify the renovation details, confirm the exact price and suggest a convenient time for the team to visit.

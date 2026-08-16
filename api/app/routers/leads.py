@@ -7,7 +7,6 @@ from ..config import settings
 from ..database import get_db
 from ..limiter import limiter
 from ..notify import notify_telegram
-from ..pricing import compute_price
 from ..schemas import LeadCreate, LeadCreateResult
 from ..security import hash_ip
 
@@ -20,16 +19,6 @@ def create_lead(
     request: Request, payload: LeadCreate, background_tasks: BackgroundTasks, db: Session = Depends(get_db)
 ) -> LeadCreateResult:
     spam = is_spam(payload, db)
-
-    price = compute_price(
-        service_type=payload.service_type.value,
-        property_type=payload.property_type.value,
-        area_m2=payload.area_m2,
-        bathrooms=payload.bathrooms,
-        addons=payload.addons,
-        urgency=payload.urgency.value,
-        frequency=payload.frequency.value,
-    )
 
     client_ip = request.client.host if request.client else "unknown"
     user_agent = request.headers.get("user-agent")
@@ -50,8 +39,8 @@ def create_lead(
         district=payload.district,
         address=payload.address,
         comment=payload.comment,
-        price_min=price["price_min"],
-        price_max=price["price_max"],
+        price_min=payload.price_min,
+        price_max=payload.price_max,
         currency="KGS",
         lang=payload.lang,
         utm_source=payload.utm_source,
@@ -74,5 +63,8 @@ def create_lead(
         background_tasks.add_task(notify_telegram, lead)
 
     return LeadCreateResult(
-        id=lead.id, status=lead.status, price_min=float(lead.price_min), price_max=float(lead.price_max)
+        id=lead.id,
+        status=lead.status,
+        price_min=float(lead.price_min) if lead.price_min is not None else None,
+        price_max=float(lead.price_max) if lead.price_max is not None else None,
     )

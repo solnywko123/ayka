@@ -45,17 +45,27 @@
 </section>
 {% endif %}
 
-<section id="calculator" class="bg-muted">
+<section class="bg-muted">
   <div class="container">
     <div class="section-head section-head--center">
       <span class="eyebrow">{{ service.price_from }} {{ config.currency_symbol[lang] }}/м²</span>
-      <h2>{{ calculator_i18n.title }}</h2>
+      <h2>{{ ui.price_factors.title }}</h2>
     </div>
-    {% with calc_preset_service = service.calculator_preset.service_type,
-            calc_preset_property = service.calculator_preset.property_type,
-            calc_highlight_addon = service.calculator_preset.highlight_addon %}
-    {% include "partials/calculator.html" %}
-    {% endwith %}
+    <div class="grid grid-4">
+      {% for factor in ui.price_factors.factors %}
+      <div class="why-card reveal">
+        <span class="why-card__icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ factor.icon }}"></use></svg>
+        </span>
+        <div>
+          <h3>{{ factor.title }}</h3>
+          <p>{{ factor.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="price-table__note" style="margin-top:2rem">{{ ui.price_factors.note }}</p>
+    <a class="btn btn-accent" style="margin-top:1rem" href="#lead-form">{{ ui.buttons.calculate }}</a>
   </div>
 </section>
 
@@ -94,7 +104,7 @@
 
 <section>
   <div class="container">
-    <div class="calculator" style="max-width:640px; margin-inline:auto;" id="lead-form">
+    <div class="calculator" style="max-width:640px; margin-inline:auto;">
       <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
       {% include "partials/lead_form.html" %}
     </div>

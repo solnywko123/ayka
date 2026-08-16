@@ -12,9 +12,9 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from .admin_ui.router import router as admin_ui_router
 from .config import settings
 from .limiter import limiter
-from .routers import admin, health, leads, quote
+from .routers import admin, health, leads
 
-app = FastAPI(title="Ayka Cleaning API", version="0.1.0")
+app = FastAPI(title="All Clean API", version="0.1.0")
 
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
@@ -30,7 +30,6 @@ app.add_middleware(
 API_PREFIX = "/api/v1"
 
 app.include_router(health.router, prefix=API_PREFIX, tags=["health"])
-app.include_router(quote.router, prefix=API_PREFIX, tags=["quote"])
 app.include_router(leads.router, prefix=API_PREFIX, tags=["leads"])
 app.include_router(admin.router, prefix=API_PREFIX, tags=["admin"])
 

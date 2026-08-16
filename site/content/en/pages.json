@@ -17,7 +17,7 @@
     "how_it_works_eyebrow": "Process",
     "how_it_works_title": "How we work",
     "steps": [
-      { "title": "Request", "desc": "Leave a request via the calculator, WhatsApp or phone — tell us what needs cleaning." },
+      { "title": "Request", "desc": "Leave a request on the site, via WhatsApp or by phone — tell us what needs cleaning." },
       { "title": "Quote & confirmation", "desc": "We clarify the details, lock in the price and agree on a convenient visit time." },
       { "title": "Cleaning", "desc": "Cleaners arrive with their own supplies and equipment and follow the agreed checklist." },
       { "title": "Check & payment", "desc": "You personally check the result, and only then does payment happen." }
@@ -37,7 +37,7 @@
     "price_table": {
       "service_col": "Service",
       "price_col": "Price",
-      "note": "The final price depends on the area, number of bathrooms and add-on services — use the calculator for an exact quote.",
+      "note": "The final price depends on the area, number of bathrooms and add-on services — a manager will confirm the exact quote after clarifying the details.",
       "cta": "See full price list"
     },
     "faq_title": "Frequently asked questions",
@@ -89,7 +89,7 @@
     "meta_title": "Cleaning Prices in Bishkek — All Clean",
     "meta_description": "Current cleaning service prices in Bishkek: general and maintenance cleaning, post-renovation cleaning, add-on services and discounts for recurring bookings.",
     "h1": "Cleaning prices",
-    "intro": "Below are the base rates per square meter and the cost of add-on services. The final price is calculated individually based on area, number of bathrooms, urgency and frequency — use the calculator below for an exact quote.",
+    "intro": "Below are the base rates per square meter and the cost of add-on services. The final price is calculated individually based on area, number of bathrooms, urgency and frequency — leave a request and we'll confirm the exact amount.",
     "table": {
       "service_col": "Service",
       "rate_col": "Rate",

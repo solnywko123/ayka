@@ -18,34 +18,19 @@ class ErrorResponse(BaseModel):
     error: ErrorDetail
 
 
-# ---------- /quote ----------
-
-class QuoteRequest(BaseModel):
-    service_type: ServiceType
-    property_type: PropertyType = PropertyType.apartment
-    area_m2: int = Field(ge=5, le=1000)
-    bathrooms: int = Field(default=1, ge=1, le=5)
-    addons: dict[str, int] = Field(default_factory=dict)
-    urgency: Urgency = Urgency.normal
-    frequency: Frequency = Frequency.once
-
-
-class QuoteResponse(BaseModel):
-    price_min: float
-    price_max: float
-    currency: str = "KGS"
-
-
 # ---------- /leads ----------
+# Калькулятор убран с сайта (решение владельца — цена всегда обсуждается с
+# менеджером после осмотра объекта, см. DECISIONS.md). service_type/area_m2/
+# цена больше никогда не приходят от клиента — заявка должна создаваться и без них.
 
 class LeadCreate(BaseModel):
     name: str = Field(min_length=2, max_length=100)
     phone: str
     contact_channel: ContactChannel = ContactChannel.whatsapp
 
-    service_type: ServiceType
+    service_type: ServiceType | None = None
     property_type: PropertyType = PropertyType.apartment
-    area_m2: int = Field(ge=5, le=1000)
+    area_m2: int | None = Field(default=None, ge=5, le=1000)
     bathrooms: int = Field(default=1, ge=1, le=5)
     addons: dict[str, int] = Field(default_factory=dict)
     urgency: Urgency = Urgency.normal
@@ -57,7 +42,8 @@ class LeadCreate(BaseModel):
     comment: str | None = Field(default=None, max_length=1000)
     lang: Lang = Lang.ru
 
-    # Клиентский расчёт передаётся, но не используется для сохранения — сервер пересчитывает сам (раздел 6).
+    # Оставлены на случай, если в будущем на сайт вернут калькулятор — сейчас
+    # с фронта никогда не передаются, цена всегда "уточняется после осмотра".
     price_min: float | None = None
     price_max: float | None = None
 
@@ -103,8 +89,8 @@ class LeadCreate(BaseModel):
 class LeadCreateResult(BaseModel):
     id: uuid.UUID
     status: LeadStatus
-    price_min: float
-    price_max: float
+    price_min: float | None = None
+    price_max: float | None = None
     currency: str = "KGS"
 
 
@@ -135,9 +121,9 @@ class LeadOut(BaseModel):
     name: str
     phone: str
     contact_channel: ContactChannel
-    service_type: ServiceType
+    service_type: ServiceType | None
     property_type: PropertyType
-    area_m2: int
+    area_m2: int | None
     bathrooms: int
     addons: dict
     urgency: Urgency
@@ -146,8 +132,8 @@ class LeadOut(BaseModel):
     district: str | None
     address: str | None
     comment: str | None
-    price_min: float
-    price_max: float
+    price_min: float | None
+    price_max: float | None
     currency: str
     lang: Lang
     utm_source: str | None
@@ -173,10 +159,10 @@ class LeadListItem(BaseModel):
     status: LeadStatus
     name: str
     phone: str
-    service_type: ServiceType
-    area_m2: int
-    price_min: float
-    price_max: float
+    service_type: ServiceType | None
+    area_m2: int | None
+    price_min: float | None
+    price_max: float | None
     lang: Lang
     utm_source: str | None
 

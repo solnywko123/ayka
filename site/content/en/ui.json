@@ -11,7 +11,7 @@
     "contacts": "Contacts"
   },
   "buttons": {
-    "calculate": "Calculate the cost",
+    "calculate": "Leave a request",
     "whatsapp": "Message on WhatsApp",
     "call": "Call us",
     "order": "Book a cleaning",
@@ -27,7 +27,17 @@
   "mobile_bar": {
     "call": "Call",
     "whatsapp": "WhatsApp",
-    "calculate": "Calculate"
+    "calculate": "Request"
+  },
+  "price_factors": {
+    "title": "How the price is calculated",
+    "note": "We give you the exact amount once a manager clarifies the details or the team inspects the property on site — so the price you're quoted never differs from the real one.",
+    "factors": [
+      { "icon": "box", "title": "Area and property type", "desc": "Apartment, house or office — and how many square meters it is." },
+      { "icon": "broom", "title": "Type of cleaning", "desc": "Maintenance, general, post-renovation or move-in/out — each takes a different amount of work." },
+      { "icon": "users", "title": "Number of bathrooms", "desc": "Each bathroom beyond the first adds time and cost." },
+      { "icon": "sparkle", "title": "Add-ons and urgency", "desc": "Window washing, furniture dry cleaning, plus booking a cleaner today or tomorrow." }
+    ]
   },
   "footer": {
     "services_title": "Services",

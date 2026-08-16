@@ -2,7 +2,15 @@
   "items": [
     {
       "question": "How is the cost of cleaning calculated?",
-      "answer": "The price depends on the area, cleaning type, number of bathrooms, selected add-on services, urgency and frequency of visits. Use the calculator on the site — it shows an exact price range in 30 seconds, no calls needed."
+      "answer": "The price depends on the area, cleaning type, number of bathrooms, selected add-on services, urgency and frequency of visits. Leave a request with your approximate details — we'll call you back and confirm the exact price within minutes."
+    },
+    {
+      "question": "Are there any hidden fees?",
+      "answer": "No. We never add \"as it turns out\" charges that weren't agreed on in advance. All the details of the cleaning are clarified before the team arrives, and the final price is locked in and confirmed before work starts."
+    },
+    {
+      "question": "What's included in the price?",
+      "answer": "The price covers the team's work plus all professional cleaning products, vacuums and equipment. You only pay extra for add-on services you choose yourself — for example, window washing or furniture dry cleaning."
     },
     {
       "question": "Do I need to buy cleaning products or provide equipment?",

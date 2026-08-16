@@ -21,17 +21,17 @@ Several components get added to the base area-based cost:
 
 ## A sample calculation for apartments of different sizes
 
-Take a standard two-room apartment of 55 m² with one bathroom as an example. At the base general-cleaning rate, this apartment would cost an amount proportional to its area, with no bathroom surcharge — the final price is usually shown as a range "from X to Y KGS," because the exact total gets slightly adjusted once the apartment's condition is assessed.
+Take a standard two-room apartment of 55 m² with one bathroom as an example. At the base general-cleaning rate, this apartment would cost an amount proportional to its area, with no bathroom surcharge — a manager confirms the exact figure once they've clarified the details of your property, so the quoted price never differs from the real one.
 
 For a three-room apartment of 80–90 m² with two bathrooms, the base cost gets a surcharge for the second bathroom. If you also add window washing (usually priced per square meter of glazing), add that cost on top separately.
 
 For a private house of 150–200 m², the estimate will be noticeably higher — not just because of the larger area, but because of the higher property-type multiplier as well. Such houses simply require more of the team's time due to their layout: more rooms, hallways, staircases.
 
-The most accurate way to find out the current price for your specific apartment is to use the [cost calculator](/en/ceny/#calculator) on the site: enter the area, number of bathrooms and any add-ons you need, and get a price range in 30 seconds — no phone calls needed.
+The most accurate way to find out the current price for your specific apartment is to [leave a request](/en/ceny/#lead-form) with the area, number of bathrooms and any add-ons you need: a manager will call you back and confirm the exact price, not an automated estimate that might not match the real one.
 
-## Why the price is shown as a range, not an exact figure
+## Why we don't show a price automatically on the site
 
-Many people wonder why cleaning companies quote a range like "10,200 to 13,800 KGS" instead of an exact number right away. The reason is simple: without inspecting the apartment, it's impossible to predict with 100% certainty the condition of the grime, the accessibility of certain areas, or layout quirks. A ±15% range around the calculated amount is an honest way to show a realistic ballpark, while the exact amount is confirmed before work starts so there are no surprises later.
+Many cleaning companies have an online calculator that instantly quotes a range like "10,200 to 13,800 KGS." We deliberately chose not to build one: without inspecting the apartment, it's impossible to predict with 100% certainty the condition of the grime, the accessibility of certain areas, or layout quirks — so an automated estimate would sooner or later drift from the real price on site, which makes for an unpleasant surprise. Instead, a manager confirms the exact amount after clarifying the details by phone or the team inspecting the property, and that amount is locked in before work starts.
 
 ## How to compare quotes from different cleaning companies
 
@@ -63,6 +63,6 @@ Another way to save is to book cleaning in advance rather than urgently. The urg
 
 The cost of general cleaning in Bishkek in 2026 depends on the apartment's area, number of bathrooms, chosen add-on services, urgency and booking frequency. For a standard apartment, the estimate typically falls within a range of several thousand KGS, and for larger apartments and private houses the amount scales up proportionally with area.
 
-The fastest way to find the exact price for your apartment is to use the calculator on the site or [leave a request](/en/kontakty/#lead-form) with your property's details. We'll calculate the price and confirm a convenient visit time within minutes.
+The fastest way to find the exact price for your apartment is to [leave a request](/en/kontakty/#lead-form) with your property's details. We'll call you back, confirm the exact price and a convenient visit time within minutes.
 
 One last thing: try not to put off general cleaning until it becomes an emergency booking. Planned cleaning scheduled a few days ahead is almost always cheaper and less stressful for everyone than a last-minute scramble before guests arrive or an apartment changes hands.

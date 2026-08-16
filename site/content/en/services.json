@@ -44,7 +44,7 @@
       "faq": [
         {
           "question": "How long does a general cleaning take?",
-          "answer": "On average 3–6 hours with a team of 2 cleaners for a 60–80 m² apartment. The calculator shows the exact estimate based on area and number of bathrooms."
+          "answer": "On average 3–6 hours with a team of 2 cleaners for a 60–80 m² apartment. The exact time depends on the area and number of bathrooms — we'll confirm it with your request."
         },
         {
           "question": "Do I need to be home during the cleaning?",
@@ -60,8 +60,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["podderzhivayushchaya-uborka", "himchistka-mebeli", "mytyo-okon"],
-      "calculator_preset": { "service_type": "general", "property_type": null, "highlight_addon": null }
+      "related": ["podderzhivayushchaya-uborka", "himchistka-mebeli", "mytyo-okon"]
     },
     {
       "slug": "uborka-posle-remonta",
@@ -111,7 +110,7 @@
         },
         {
           "question": "How many cleaners and how much time does a post-renovation apartment need?",
-          "answer": "Usually a team of 2–3 works 5–8 hours for a 60–80 m² apartment — this is the most labor-intensive cleaning type; the calculator will show the exact area-based estimate."
+          "answer": "Usually a team of 2–3 works 5–8 hours for a 60–80 m² apartment — this is the most labor-intensive cleaning type; a manager will confirm the exact time for your area with your request."
         },
         {
           "question": "Will you remove dried paint stains from the floor?",
@@ -119,8 +118,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["generalnaya-uborka", "mytyo-okon"],
-      "calculator_preset": { "service_type": "post_renovation", "property_type": null, "highlight_addon": null }
+      "related": ["generalnaya-uborka", "mytyo-okon"]
     },
     {
       "slug": "podderzhivayushchaya-uborka",
@@ -160,7 +158,7 @@
         },
         {
           "question": "How much does a recurring cleaning subscription cost?",
-          "answer": "The subscription is a fixed monthly price regardless of area: weekly — 12,000 KGS, biweekly — 8,000 KGS, monthly — 5,000 KGS. The calculator shows the exact price for your chosen frequency."
+          "answer": "The subscription is a fixed monthly price regardless of area: weekly — 12,000 KGS, biweekly — 8,000 KGS, monthly — 5,000 KGS."
         },
         {
           "question": "Can I cancel or reschedule a visit?",
@@ -168,8 +166,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["generalnaya-uborka", "uborka-ofisov"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": null }
+      "related": ["generalnaya-uborka", "uborka-ofisov"]
     },
     {
       "slug": "uborka-ofisov",
@@ -216,8 +213,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["podderzhivayushchaya-uborka", "mytyo-okon"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": "office", "highlight_addon": null }
+      "related": ["podderzhivayushchaya-uborka", "mytyo-okon"]
     },
     {
       "slug": "himchistka-mebeli",
@@ -270,8 +266,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "sofa_dry_clean" }
+      "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"]
     },
     {
       "slug": "mytyo-okon",
@@ -311,7 +306,7 @@
       "faq": [
         {
           "question": "Is the price per whole window or per square meter?",
-          "answer": "Per square meter of glazing — from 300 to 350 KGS/m² depending on access type. The calculator will show the exact price for your window."
+          "answer": "Per square meter of glazing — from 300 to 350 KGS/m² depending on access type. A manager will confirm the exact price for your windows with your request."
         },
         {
           "question": "Do you wash windows on high floors?",
@@ -323,8 +318,7 @@
         }
       ],
       "related_title": "Related services",
-      "related": ["generalnaya-uborka", "uborka-posle-remonta"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "windows_per_m2" }
+      "related": ["generalnaya-uborka", "uborka-posle-remonta"]
     }
   ]
 }

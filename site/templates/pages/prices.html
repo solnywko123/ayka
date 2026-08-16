@@ -70,18 +70,31 @@
   </div>
 </section>
 
-<section id="calculator" class="bg-muted">
+<section class="bg-muted">
   <div class="container">
     <div class="section-head section-head--center">
-      <h2>{{ calculator_i18n.title }}</h2>
+      <h2>{{ ui.price_factors.title }}</h2>
     </div>
-    {% include "partials/calculator.html" %}
+    <div class="grid grid-4">
+      {% for factor in ui.price_factors.factors %}
+      <div class="why-card reveal">
+        <span class="why-card__icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ factor.icon }}"></use></svg>
+        </span>
+        <div>
+          <h3>{{ factor.title }}</h3>
+          <p>{{ factor.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="price-table__note" style="margin-top:2rem; text-align:center">{{ ui.price_factors.note }}</p>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div class="calculator" style="max-width:640px; margin-inline:auto;" id="lead-form">
+    <div class="calculator" style="max-width:640px; margin-inline:auto;">
       <h3 style="margin-bottom:1.5rem">{{ ui.form.title }}</h3>
       {% include "partials/lead_form.html" %}
     </div>

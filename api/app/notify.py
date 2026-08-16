@@ -14,13 +14,20 @@ logger = logging.getLogger("ayka.notify")
 
 
 def format_lead_message(lead: Lead) -> str:
+    service_line = f"Услуга: {lead.service_type.value}\n" if lead.service_type else ""
+    area_line = f"Площадь: {lead.area_m2} м²\n" if lead.area_m2 else ""
+    price_line = (
+        f"Цена: {lead.price_min}–{lead.price_max} {lead.currency}\n"
+        if lead.price_min is not None and lead.price_max is not None
+        else "Цена: уточняется после осмотра объекта\n"
+    )
     return (
-        f"🧹 Новая заявка Ayka Cleaning\n"
+        f"🧹 Новая заявка All Clean\n"
         f"Имя: {lead.name}\n"
         f"Телефон: {lead.phone}\n"
-        f"Услуга: {lead.service_type.value}\n"
-        f"Площадь: {lead.area_m2} м²\n"
-        f"Цена: {lead.price_min}–{lead.price_max} {lead.currency}\n"
+        f"{service_line}"
+        f"{area_line}"
+        f"{price_line}"
         f"Канал связи: {lead.contact_channel.value}\n"
         f"Комментарий: {lead.comment or '—'}"
     )

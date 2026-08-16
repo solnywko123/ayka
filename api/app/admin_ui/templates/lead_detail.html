@@ -21,9 +21,9 @@
   <h2 style="font-size:1rem">Параметры заказа</h2>
   <table>
     <tbody>
-      <tr><td>Услуга</td><td>{{ lead.service_type.value }}</td></tr>
+      <tr><td>Услуга</td><td>{{ lead.service_type.value if lead.service_type else "не указана — уточнить у клиента" }}</td></tr>
       <tr><td>Тип объекта</td><td>{{ lead.property_type.value }}</td></tr>
-      <tr><td>Площадь</td><td>{{ lead.area_m2 }} м²</td></tr>
+      <tr><td>Площадь</td><td>{{ (lead.area_m2 ~ " м²") if lead.area_m2 else "—" }}</td></tr>
       <tr><td>Санузлов</td><td>{{ lead.bathrooms }}</td></tr>
       <tr><td>Доп. услуги</td><td>{{ lead.addons or "—" }}</td></tr>
       <tr><td>Срочность</td><td>{{ lead.urgency.value }}</td></tr>
@@ -32,7 +32,7 @@
       <tr><td>Район</td><td>{{ lead.district or "—" }}</td></tr>
       <tr><td>Адрес</td><td>{{ lead.address or "—" }}</td></tr>
       <tr><td>Комментарий</td><td>{{ lead.comment or "—" }}</td></tr>
-      <tr><td>Цена</td><td>{{ lead.price_min }}–{{ lead.price_max }} {{ lead.currency }}</td></tr>
+      <tr><td>Цена</td><td>{% if lead.price_min is not none %}{{ lead.price_min }}–{{ lead.price_max }} {{ lead.currency }}{% else %}уточняется после осмотра объекта{% endif %}</td></tr>
       <tr><td>Язык сайта</td><td>{{ lead.lang.value }}</td></tr>
       <tr><td>UTM</td><td>{{ lead.utm_source or "—" }} / {{ lead.utm_medium or "—" }} / {{ lead.utm_campaign or "—" }}</td></tr>
       <tr><td>Страница захода</td><td>{{ lead.landing_page or "—" }}</td></tr>

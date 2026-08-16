@@ -4,22 +4,35 @@ from conftest import make_valid_lead_payload
 
 
 def test_create_lead_valid_data(client):
+    """Раздел про удаление калькулятора (DECISIONS.md): без калькулятора клиент
+    не присылает цену вообще — заявка создаётся нормально, price_min/price_max = null,
+    менеджер называет цену сам после осмотра."""
     response = client.post("/api/v1/leads", json=make_valid_lead_payload())
     assert response.status_code == 200
     body = response.json()
     assert body["status"] == "new"
-    assert body["price_min"] == 7650
-    assert body["price_max"] == 10350
+    assert body["price_min"] is None
+    assert body["price_max"] is None
 
 
-def test_create_lead_normalizes_phone_and_recomputes_price(client):
-    # Клиент присылает заведомо неверную цену — сервер должен её проигнорировать и пересчитать сам.
-    payload = make_valid_lead_payload(phone="+996 555 12-34-56", price_min=1, price_max=2)
+def test_create_lead_normalizes_phone(client):
+    payload = make_valid_lead_payload(phone="+996 555 12-34-56")
+    response = client.post("/api/v1/leads", json=payload)
+    assert response.status_code == 200
+
+
+def test_create_lead_without_calculator_context(client):
+    """Калькулятор убран с сайта — service_type/area_m2 больше никогда не приходят
+    от клиента, заявка обязана создаваться и без них (см. DECISIONS.md)."""
+    payload = make_valid_lead_payload()
+    del payload["service_type"]
+    del payload["area_m2"]
     response = client.post("/api/v1/leads", json=payload)
     assert response.status_code == 200
     body = response.json()
-    assert body["price_min"] == 7650
-    assert body["price_max"] == 10350
+    assert body["status"] == "new"
+    assert body["price_min"] is None
+    assert body["price_max"] is None
 
 
 def test_create_lead_invalid_phone_rejected(client):

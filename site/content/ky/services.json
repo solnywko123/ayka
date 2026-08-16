@@ -44,7 +44,7 @@
       "faq": [
         {
           "question": "Генералдык тазалоо канча убакыт алат?",
-          "answer": "60–80 м² батир үчүн орточо 3–6 саат, 2 тазалоочудан турган бригада менен. Так убакытты аянтка жана санузелдердин санына жараша калькулятор көрсөтөт."
+          "answer": "60–80 м² батир үчүн орточо 3–6 саат, 2 тазалоочудан турган бригада менен. Так убакыты аянтка жана санузелдердин санына жараша болот — билдирүүдө тактайбыз."
         },
         {
           "question": "Тазалоо учурунда үйдө болушум керекпи?",
@@ -60,8 +60,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["podderzhivayushchaya-uborka", "himchistka-mebeli", "mytyo-okon"],
-      "calculator_preset": { "service_type": "general", "property_type": null, "highlight_addon": null }
+      "related": ["podderzhivayushchaya-uborka", "himchistka-mebeli", "mytyo-okon"]
     },
     {
       "slug": "uborka-posle-remonta",
@@ -111,7 +110,7 @@
         },
         {
           "question": "Ремонттон кийинки батирге канча тазалоочу жана убакыт керек?",
-          "answer": "Адатта 60–80 м² батирге 2–3 адамдан турган бригада 5–8 саат иштейт — бул эң эмгекти талап кылган тазалоо түрү, аянтты жана убакытты калькулятор так көрсөтөт."
+          "answer": "Адатта 60–80 м² батирге 2–3 адамдан турган бригада 5–8 саат иштейт — бул эң эмгекти талап кылган тазалоо түрү, сиздин аянтыңыз үчүн так убакытты менеджер билдирүүдө айтат."
         },
         {
           "question": "Полдогу кураган боёк тактарын тазалайсызбы?",
@@ -119,8 +118,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["generalnaya-uborka", "mytyo-okon"],
-      "calculator_preset": { "service_type": "post_renovation", "property_type": null, "highlight_addon": null }
+      "related": ["generalnaya-uborka", "mytyo-okon"]
     },
     {
       "slug": "podderzhivayushchaya-uborka",
@@ -160,7 +158,7 @@
         },
         {
           "question": "Туруктуу тазалоо абонементи канча турат?",
-          "answer": "Абонемент — аянтка көз карандысыз айына туруктуу баа: жумасына бир жолу — 12 000 сом, эки жумада бир жолу — 8 000 сом, айына бир жолу — 5 000 сом. Так баасын калькулятор көрсөтөт."
+          "answer": "Абонемент — аянтка көз карандысыз айына туруктуу баа: жумасына бир жолу — 12 000 сом, эки жумада бир жолу — 8 000 сом, айына бир жолу — 5 000 сом."
         },
         {
           "question": "Визитти жокко чыгарса же которсо болобу?",
@@ -168,8 +166,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["generalnaya-uborka", "uborka-ofisov"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": null }
+      "related": ["generalnaya-uborka", "uborka-ofisov"]
     },
     {
       "slug": "uborka-ofisov",
@@ -216,8 +213,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["podderzhivayushchaya-uborka", "mytyo-okon"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": "office", "highlight_addon": null }
+      "related": ["podderzhivayushchaya-uborka", "mytyo-okon"]
     },
     {
       "slug": "himchistka-mebeli",
@@ -270,8 +266,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "sofa_dry_clean" }
+      "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"]
     },
     {
       "slug": "mytyo-okon",
@@ -311,7 +306,7 @@
       "faq": [
         {
           "question": "Баасы кантип эсептелет — терезе бүтүн үчүнбү же квадрат метрине?",
-          "answer": "Айнек аянтынын квадрат метрине — кирүү түрүнө жараша 300дөн 350 сомго чейин. Терезеңиздин так баасын калькулятор эсептейт."
+          "answer": "Айнек аянтынын квадрат метрине — кирүү түрүнө жараша 300дөн 350 сомго чейин. Терезеңиздин так баасын менеджер билдирүүдө эсептейт."
         },
         {
           "question": "Бийик кабаттардагы терезелерди жуйсуздарбы?",
@@ -323,8 +318,7 @@
         }
       ],
       "related_title": "Байланыштуу кызматтар",
-      "related": ["generalnaya-uborka", "uborka-posle-remonta"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "windows_per_m2" }
+      "related": ["generalnaya-uborka", "uborka-posle-remonta"]
     }
   ]
 }

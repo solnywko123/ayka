@@ -96,8 +96,8 @@ def export_csv(leads: list[models.Lead]) -> str:
     for lead in leads:
         writer.writerow([
             str(lead.id), lead.created_at.isoformat(), lead.status.value, lead.name, lead.phone,
-            lead.contact_channel.value, lead.service_type.value, lead.property_type.value,
-            lead.area_m2, lead.bathrooms, lead.urgency.value, lead.frequency.value,
+            lead.contact_channel.value, lead.service_type.value if lead.service_type else "",
+            lead.property_type.value, lead.area_m2, lead.bathrooms, lead.urgency.value, lead.frequency.value,
             lead.preferred_date.isoformat() if lead.preferred_date else "",
             lead.district or "", lead.address or "", lead.comment or "",
             lead.price_min, lead.price_max, lead.currency, lead.lang.value,

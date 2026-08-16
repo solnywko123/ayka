@@ -5,13 +5,13 @@ date: "2026-03-05"
 slug: "kak-vybrat-klining-i-ne-pereplatit"
 ---
 
-The cleaning services market in Bishkek is growing, and with it, the number of options — from independent cleaners found through classifieds to full-fledged companies with a website and an online calculator. The spread in price and quality is enormous. In this article — a practical checklist for what to look for when choosing a cleaning company, so you don't overpay or end up disappointed with the result.
+The cleaning services market in Bishkek is growing, and with it, the number of options — from independent cleaners found through classifieds to full-fledged companies with their own website and a transparent price list. The spread in price and quality is enormous. In this article — a practical checklist for what to look for when choosing a cleaning company, so you don't overpay or end up disappointed with the result.
 
 ## 1. Price transparency before work begins
 
 The first and most important sign of a reliable company is the ability to find out an approximate cost before you even call, and an exact price before work starts — not "based on the actual outcome." If a company refuses to give even a rough price range without an in-person visit, that's a red flag: it often masks a desire to quote a low price verbally and then find a reason to raise it on site.
 
-A good sign is a public price list on the website and a calculator where you can enter your apartment's details yourself and get an estimate. That doesn't mean the final price can never change at all — sometimes an apartment's condition differs from what the client described — but the range should be known in advance, not sprung on you as a surprise.
+A good sign is a public price list on the website with clear base rates per m² and add-on prices, so you can ballpark a figure yourself before even submitting a request. That doesn't mean the final price can never change at all — sometimes an apartment's condition differs from what the client described — but the pricing logic should be known in advance, not sprung on you as a surprise.
 
 ## 2. What exactly is included in the cleaning
 
@@ -67,7 +67,7 @@ It's also worth asking whether the company's liability is insured in case of pro
 
 Before submitting a request to a cleaning company, check:
 
-- Is there a transparent price list or calculator for estimating cost in advance;
+- Is there a transparent price list with base rates on the website;
 - Is there a concrete checklist of what's included and what's not;
 - When does payment happen — before, during, or after you check the result;
 - Does the company vet cleaners before hiring them;
@@ -75,4 +75,4 @@ Before submitting a request to a cleaning company, check:
 - How specific and credible are the reviews on the site;
 - Is there a discount for recurring bookings, if that's relevant to you.
 
-If a company answers all of these points openly and specifically, the odds of a satisfying result are noticeably higher. Want to see this in practice? [Get a cleaning quote](/en/ceny/#calculator) on our site and see for yourself how transparent the calculation really is.
+If a company answers all of these points openly and specifically, the odds of a satisfying result are noticeably higher. Want to see this in practice? [Leave a request](/en/ceny/#lead-form) on our site and see for yourself how transparent and quick our pricing is once we've had a look at your property.
