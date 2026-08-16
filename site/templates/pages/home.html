@@ -22,8 +22,21 @@
         {% endfor %}
       </div>
     </div>
-    <div class="hero__media reveal">
-      <img src="{{ asset('img/gallery/facade-wash-1.jpg') }}" alt="{{ home.hero.image_alt }}" width="960" height="720" fetchpriority="high" style="object-position: center 30%;">
+    <div class="hero__bubbles reveal" aria-hidden="true">
+      <svg viewBox="0 0 480 480" width="100%" height="100%">
+        <circle class="hero__bubble" cx="120" cy="90" r="46" fill="#fff" opacity="0.14"/>
+        <circle class="hero__bubble" cx="380" cy="70" r="26" fill="#fff" opacity="0.18"/>
+        <circle class="hero__bubble" cx="60" cy="330" r="34" fill="#fff" opacity="0.16"/>
+        <circle class="hero__bubble" cx="420" cy="380" r="52" fill="#fff" opacity="0.12"/>
+        <circle class="hero__bubble" cx="410" cy="230" r="16" fill="var(--color-brand-yellow)" opacity="0.55"/>
+        <circle class="hero__bubble" cx="70" cy="200" r="12" fill="var(--color-brand-red)" opacity="0.55"/>
+        <circle class="hero__bubble" cx="300" cy="420" r="10" fill="var(--color-brand-green)" opacity="0.6"/>
+        <circle cx="240" cy="240" r="150" fill="#fff" opacity="0.95"/>
+        <circle cx="240" cy="240" r="150" fill="none" stroke="#fff" stroke-width="2" opacity="0.5"/>
+        <use href="{{ asset('icons/sprite.svg') }}#icon-broom" x="176" y="180" width="80" height="80" color="var(--color-primary-700)"/>
+        <use href="{{ asset('icons/sprite.svg') }}#icon-sparkle" x="255" y="150" width="46" height="46" color="var(--color-brand-yellow-glyph)"/>
+        <use href="{{ asset('icons/sprite.svg') }}#icon-sparkle" x="140" y="270" width="30" height="30" color="var(--color-brand-blue-glyph)"/>
+      </svg>
     </div>
   </div>
 </section>
