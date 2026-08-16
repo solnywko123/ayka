@@ -8,7 +8,7 @@ def test_quote_matches_lead_price(client):
     и реализуют одну и ту же формулу (см. DECISIONS.md)."""
     quote_payload = {
         "service_type": "post_renovation", "property_type": "house", "area_m2": 120,
-        "bathrooms": 2, "addons": {"windows_per_sash": 4}, "urgency": "urgent", "frequency": "weekly",
+        "bathrooms": 2, "addons": {"windows_per_m2": 4}, "urgency": "urgent", "frequency": "weekly",
     }
     quote_response = client.post("/api/v1/quote", json=quote_payload)
     assert quote_response.status_code == 200

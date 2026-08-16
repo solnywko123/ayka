@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var ADDONS_WITH_QTY = ["windows_per_sash", "sofa_seat", "carpet_per_m2", "ironing_per_hour"];
+  var ADDONS_WITH_QTY = ["windows_per_m2", "carpet_per_m2", "ironing_per_hour", "facade_wash_per_m2"];
   var PRODUCTIVITY_M2_PER_HOUR = {
     maintenance: 30,
     general: 18,
@@ -26,6 +26,10 @@
   }
 
   function computeTotal(pricing, params) {
+    if (pricing.subscriptions_monthly && pricing.subscriptions_monthly[params.frequency] != null) {
+      return pricing.subscriptions_monthly[params.frequency];
+    }
+
     var rate = pricing.base_rates_per_m2[params.service_type] || 0;
     var base = params.area_m2 * rate;
     base += pricing.bathroom_extra * Math.max(0, params.bathrooms - 1);
@@ -46,18 +50,16 @@
 
     var subtotal = (base + addonsSum) * propertyMultiplier * urgencyMultiplier;
 
-    var discount = 0;
-    if (params.frequency === "weekly") discount = pricing.discounts.weekly;
-    if (params.frequency === "biweekly") discount = pricing.discounts.biweekly;
-    if (params.frequency === "monthly") discount = pricing.discounts.monthly;
-    subtotal = subtotal * (1 - discount);
-
     var total = Math.max(subtotal, pricing.min_order);
     return total;
   }
 
   function computeRange(pricing, params) {
     var total = computeTotal(pricing, params);
+    if (pricing.subscriptions_monthly && pricing.subscriptions_monthly[params.frequency] != null) {
+      // Абонемент — фиксированная цена в месяц, без разброса "от-до".
+      return { total: total, price_min: total, price_max: total };
+    }
     var spread = pricing.price_range_spread;
     return {
       total: total,
@@ -238,10 +240,12 @@
     }
 
     if (this.savingsEl) {
-      if (params.frequency !== "once") {
+      var subMap = this.pricing.subscriptions_monthly || {};
+      if (params.frequency !== "once" && subMap[params.frequency] != null) {
         var onceParams = Object.assign({}, params, { frequency: "once" });
         var onceResult = computeRange(this.pricing, onceParams);
-        var savings = onceResult.total - result.total;
+        var visits = (this.pricing.visits_per_month && this.pricing.visits_per_month[params.frequency]) || 1;
+        var savings = onceResult.total * visits - result.total;
         if (savings > 10) {
           var savingsTemplate = this.i18n.savings_template || "Вы экономите {amount} {currency} при выбранной регулярности";
           this.savingsEl.textContent = savingsTemplate

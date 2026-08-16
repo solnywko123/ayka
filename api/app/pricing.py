@@ -61,6 +61,13 @@ def compute_price(
     pricing = pricing or PRICING
     addons = addons or {}
 
+    subscriptions = pricing.get("subscriptions_monthly", {})
+    if frequency in subscriptions:
+        # Регулярная уборка по подписке — фиксированная абонентская плата в месяц,
+        # не зависит от площади/допуслуг/срочности (решение владельца, см. DECISIONS.md).
+        flat_total = subscriptions[frequency]
+        return {"total": flat_total, "price_min": flat_total, "price_max": flat_total}
+
     rate = pricing["base_rates_per_m2"][service_type]
     base = area_m2 * rate
     base += pricing["bathroom_extra"] * max(0, bathrooms - 1)
@@ -79,15 +86,6 @@ def compute_price(
     urgency_multiplier = pricing["multipliers"]["urgency_today"] if urgency == "urgent" else 1.0
 
     subtotal = (base + addons_sum) * property_multiplier * urgency_multiplier
-
-    discount = 0.0
-    if frequency == "weekly":
-        discount = pricing["discounts"]["weekly"]
-    elif frequency == "biweekly":
-        discount = pricing["discounts"]["biweekly"]
-    elif frequency == "monthly":
-        discount = pricing["discounts"]["monthly"]
-    subtotal *= 1 - discount
 
     total = max(subtotal, pricing["min_order"])
     spread = pricing["price_range_spread"]

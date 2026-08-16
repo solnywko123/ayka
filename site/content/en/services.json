@@ -4,10 +4,10 @@
       "slug": "generalnaya-uborka",
       "service_type": "general",
       "title": "General Cleaning in Bishkek",
-      "meta_title": "General Apartment Cleaning in Bishkek — from 180 KGS/m²",
+      "meta_title": "General Apartment Cleaning in Bishkek — from 150 KGS/m²",
       "meta_description": "General cleaning of apartments and houses in Bishkek: ceiling-to-baseboard cleaning, bathrooms, kitchen, appliance exteriors. Our own supplies, fixed pricing. Get an instant quote.",
       "short_description": "A deep clean of every corner: from light fixtures to baseboards, including the kitchen and bathrooms.",
-      "price_from": 180,
+      "price_from": 150,
       "icon": "sparkle",
       "included_title": "What's included in general cleaning",
       "excluded_title": "What's not included",
@@ -61,10 +61,10 @@
       "slug": "uborka-posle-remonta",
       "service_type": "post_renovation",
       "title": "Post-Renovation Cleaning in Bishkek",
-      "meta_title": "Post-Renovation Cleaning in Bishkek — from 300 KGS/m²",
+      "meta_title": "Post-Renovation Cleaning in Bishkek — from 170 KGS/m²",
       "meta_description": "Post-renovation cleaning in Bishkek: removing construction dust, paint and glue residue, washing windows and floors. Professional equipment. Get an instant quote.",
       "short_description": "We remove construction dust, paint, glue and cement residue — handing over a move-in-ready home.",
-      "price_from": 300,
+      "price_from": 170,
       "icon": "hammer",
       "included_title": "What's included in post-renovation cleaning",
       "excluded_title": "What's not included",
@@ -114,10 +114,10 @@
       "slug": "podderzhivayushchaya-uborka",
       "service_type": "maintenance",
       "title": "Maintenance Cleaning in Bishkek",
-      "meta_title": "Maintenance Apartment Cleaning in Bishkek — from 90 KGS/m²",
+      "meta_title": "Maintenance Apartment Cleaning in Bishkek — from 80 KGS/m²",
       "meta_description": "Regular maintenance cleaning of apartments in Bishkek: weekly, biweekly or monthly. Discounts for recurring bookings. A consistent, vetted cleaning team.",
       "short_description": "Regular upkeep of your apartment — weekly, biweekly or monthly, with a discount for recurring bookings.",
-      "price_from": 90,
+      "price_from": 80,
       "icon": "broom",
       "included_title": "What's included in maintenance cleaning",
       "excluded_title": "What's not included",
@@ -147,8 +147,8 @@
           "answer": "Yes, for recurring cleaning we try to assign a consistent team to each client — this way the cleaners get to know your home's specifics."
         },
         {
-          "question": "What discount applies to recurring cleaning?",
-          "answer": "Weekly cleaning gets a 15% discount, biweekly 10%, monthly 5%. The calculator shows the discounted total."
+          "question": "How much does a recurring cleaning subscription cost?",
+          "answer": "The subscription is a fixed monthly price regardless of area: weekly — 12,000 KGS, biweekly — 8,000 KGS, monthly — 5,000 KGS. The calculator shows the exact price for your chosen frequency."
         },
         {
           "question": "Can I cancel or reschedule a visit?",
@@ -166,7 +166,7 @@
       "meta_title": "Office Cleaning in Bishkek — Commercial Cleaning Services",
       "meta_description": "Professional office cleaning in Bishkek: one-time or recurring, in the evening or after hours. Contracts with legal entities, invoicing, flexible scheduling. Get an instant quote.",
       "short_description": "Cleaning for offices and commercial spaces — one-time or on a schedule, without disrupting your business.",
-      "price_from": 90,
+      "price_from": 80,
       "icon": "briefcase",
       "included_title": "What's included in office cleaning",
       "excluded_title": "What's not included",
@@ -211,10 +211,10 @@
       "slug": "himchistka-mebeli",
       "service_type": "maintenance",
       "title": "Furniture Dry Cleaning in Bishkek",
-      "meta_title": "Sofa & Upholstery Dry Cleaning in Bishkek — from 900 KGS",
+      "meta_title": "Sofa & Upholstery Dry Cleaning in Bishkek — from 450 KGS",
       "meta_description": "Dry cleaning of sofas, armchairs and carpets at home in Bishkek. We remove stains, odors and dust mites. Professional equipment, chemicals safe for kids and pets.",
       "short_description": "We remove stains, odors and dust from your sofa, armchairs and carpets right at home.",
-      "price_from": 900,
+      "price_from": 450,
       "icon": "sofa",
       "included_title": "What's included in furniture dry cleaning",
       "excluded_title": "What's not included",
@@ -253,16 +253,16 @@
       ],
       "related_title": "Related services",
       "related": ["generalnaya-uborka", "podderzhivayushchaya-uborka"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "sofa_seat" }
+      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "sofa_dry_clean" }
     },
     {
       "slug": "mytyo-okon",
       "service_type": "maintenance",
       "title": "Window Washing in Bishkek",
-      "meta_title": "Window Washing in Bishkek — from 400 KGS per sash",
+      "meta_title": "Window Washing in Bishkek — from 300 KGS per m²",
       "meta_description": "Professional window washing in Bishkek: frames, glass, sills, reveals, insect screens. Streak-free finish using squeegees and professional products.",
       "short_description": "Streak-free windows: glass, frames, sills and insect screens — inside and out.",
-      "price_from": 400,
+      "price_from": 300,
       "icon": "window",
       "included_title": "What's included in window washing",
       "excluded_title": "What's not included",
@@ -287,8 +287,8 @@
       "faq_title": "Window washing FAQ",
       "faq": [
         {
-          "question": "Is the price per whole window or per sash?",
-          "answer": "Per sash. A standard window with 2–3 sashes costs from 800 to 1,200 KGS depending on the number of sashes and access type."
+          "question": "Is the price per whole window or per square meter?",
+          "answer": "Per square meter of glazing — from 300 to 350 KGS/m² depending on access type. The calculator will show the exact price for your window."
         },
         {
           "question": "Do you wash windows on high floors?",
@@ -301,7 +301,7 @@
       ],
       "related_title": "Related services",
       "related": ["generalnaya-uborka", "uborka-posle-remonta"],
-      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "windows_per_sash" }
+      "calculator_preset": { "service_type": "maintenance", "property_type": null, "highlight_addon": "windows_per_m2" }
     }
   ]
 }

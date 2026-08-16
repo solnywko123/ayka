@@ -23,13 +23,16 @@
     "office": "Офис"
   },
   "addons": {
-    "windows_per_sash": { "label": "Терезелерди жуу", "unit": "бир канатына" },
-    "sofa_seat": { "label": "Диванды химиялык тазалоо", "unit": "бир орунга" },
+    "windows_per_m2": { "label": "Терезелерди жуу", "unit": "м² үчүн" },
+    "sofa_dry_clean": { "label": "Диванды химиялык тазалоо", "unit": "" },
     "carpet_per_m2": { "label": "Килемди химиялык тазалоо", "unit": "м² үчүн" },
     "fridge_inside": { "label": "Муздаткычтын ичи", "unit": "" },
     "oven_inside": { "label": "Мешкененин ичи", "unit": "" },
     "balcony": { "label": "Балконду тазалоо", "unit": "" },
-    "ironing_per_hour": { "label": "Кийимди үтүктөө", "unit": "саатына" }
+    "ironing_per_hour": { "label": "Кийимди үтүктөө", "unit": "саатына" },
+    "mattress_single": { "label": "Матрасты химиялык тазалоо, 1 орундук", "unit": "" },
+    "mattress_double": { "label": "Матрасты химиялык тазалоо, 2 орундук", "unit": "" },
+    "facade_wash_per_m2": { "label": "Фасаддарды жуу", "unit": "м² үчүн" }
   },
   "urgency": {
     "normal": "Бир жумада",

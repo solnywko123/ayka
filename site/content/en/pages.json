@@ -94,11 +94,11 @@
       "bathroom_row": "Each bathroom beyond the first",
       "addon_col": "Add-on service",
       "frequency_col": "Frequency",
-      "discount_col": "Discount"
+      "discount_col": "Subscription price per month"
     },
     "addons_title": "Add-on services",
-    "discounts_title": "Discounts for recurring bookings",
-    "note": "The final price in your request is shown as a range \"from X to Y\" — the exact amount is confirmed once the details of the property are clarified."
+    "discounts_title": "Recurring cleaning subscription",
+    "note": "The final price in your request is shown as a range \"from X to Y\" — the exact amount is confirmed once the details of the property are clarified. The subscription price is fixed and does not depend on area."
   },
   "otzyvy": {
     "meta_title": "Reviews of Ayka Cleaning in Bishkek",

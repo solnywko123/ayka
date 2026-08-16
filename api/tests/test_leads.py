@@ -8,8 +8,8 @@ def test_create_lead_valid_data(client):
     assert response.status_code == 200
     body = response.json()
     assert body["status"] == "new"
-    assert body["price_min"] == 9180
-    assert body["price_max"] == 12420
+    assert body["price_min"] == 7650
+    assert body["price_max"] == 10350
 
 
 def test_create_lead_normalizes_phone_and_recomputes_price(client):
@@ -18,8 +18,8 @@ def test_create_lead_normalizes_phone_and_recomputes_price(client):
     response = client.post("/api/v1/leads", json=payload)
     assert response.status_code == 200
     body = response.json()
-    assert body["price_min"] == 9180
-    assert body["price_max"] == 12420
+    assert body["price_min"] == 7650
+    assert body["price_max"] == 10350
 
 
 def test_create_lead_invalid_phone_rejected(client):

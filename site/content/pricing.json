@@ -1,30 +1,38 @@
 {
   "base_rates_per_m2": {
-    "maintenance": 90,
-    "general": 180,
-    "post_renovation": 300,
-    "post_move": 200
+    "maintenance": 80,
+    "general": 150,
+    "post_renovation": 170,
+    "post_move": 180
   },
-  "min_order": 2500,
+  "min_order": 9000,
   "bathroom_extra": 500,
   "addons": {
-    "windows_per_sash": 400,
-    "sofa_seat": 900,
+    "windows_per_m2": 325,
+    "sofa_dry_clean": 600,
     "carpet_per_m2": 250,
     "fridge_inside": 700,
     "oven_inside": 800,
     "balcony": 1000,
-    "ironing_per_hour": 500
+    "ironing_per_hour": 500,
+    "mattress_single": 1500,
+    "mattress_double": 2000,
+    "facade_wash_per_m2": 160
   },
   "multipliers": {
     "urgency_today": 1.20,
     "property_house": 1.10,
     "property_office": 1.05
   },
-  "discounts": {
-    "weekly": 0.15,
-    "biweekly": 0.10,
-    "monthly": 0.05
+  "subscriptions_monthly": {
+    "weekly": 12000,
+    "biweekly": 8000,
+    "monthly": 5000
+  },
+  "visits_per_month": {
+    "weekly": 4,
+    "biweekly": 2,
+    "monthly": 1
   },
   "price_range_spread": 0.15
 }

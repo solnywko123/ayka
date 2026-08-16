@@ -56,7 +56,7 @@
               {{ addon.label }}
               {% if addon.unit %}<span class="calc-addon__price">{{ addon.unit }}</span>{% endif %}
             </label>
-            {% if key in ["windows_per_sash", "sofa_seat", "carpet_per_m2", "ironing_per_hour"] %}
+            {% if key in ["windows_per_m2", "carpet_per_m2", "ironing_per_hour", "facade_wash_per_m2"] %}
             <input type="number" min="1" value="1" class="calc-number" data-role="addon-qty" style="width:60px">
             {% endif %}
           </div>

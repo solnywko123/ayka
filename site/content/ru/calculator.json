@@ -23,13 +23,16 @@
     "office": "Офис"
   },
   "addons": {
-    "windows_per_sash": { "label": "Мытьё окон", "unit": "за створку" },
-    "sofa_seat": { "label": "Химчистка дивана", "unit": "за посадочное место" },
+    "windows_per_m2": { "label": "Мытьё окон", "unit": "за м²" },
+    "sofa_dry_clean": { "label": "Химчистка дивана", "unit": "" },
     "carpet_per_m2": { "label": "Химчистка ковра", "unit": "за м²" },
     "fridge_inside": { "label": "Холодильник внутри", "unit": "" },
     "oven_inside": { "label": "Духовка внутри", "unit": "" },
     "balcony": { "label": "Уборка балкона", "unit": "" },
-    "ironing_per_hour": { "label": "Глажка белья", "unit": "за час" }
+    "ironing_per_hour": { "label": "Глажка белья", "unit": "за час" },
+    "mattress_single": { "label": "Химчистка матраса, 1-спальный", "unit": "" },
+    "mattress_double": { "label": "Химчистка матраса, 2-спальный", "unit": "" },
+    "facade_wash_per_m2": { "label": "Мойка фасадов", "unit": "за м²" }
   },
   "urgency": {
     "normal": "В течение недели",

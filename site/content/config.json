@@ -1,5 +1,5 @@
 {
-  "company_name": "Ayka Cleaning",
+  "company_name": "All Clean",
   "legal_name": "",
   "tagline": {
     "ru": "Чистота без хлопот в Бишкеке",
@@ -17,8 +17,8 @@
     "en": "Kyrgyzstan"
   },
   "service_area": ["Бишкек", "Кант", "Лебединовка", "Военно-Антоновка"],
-  "phone": "+996 700 000 000",
-  "whatsapp": "+996 700 000 000",
+  "phone": "+996 505 766 665",
+  "whatsapp": "+996 505 766 665",
   "telegram": "",
   "instagram": "",
   "email": "info@example.kg",
@@ -29,7 +29,7 @@
     "ky": "Дүй–Жек, 08:00–20:00",
     "en": "Mon–Sun, 8:00 AM–8:00 PM"
   },
-  "domain": "example.kg",
+  "domain": "allclean.kg",
   "founded_year": null,
   "currency": "KGS",
   "currency_symbol": {

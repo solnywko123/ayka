@@ -60,9 +60,9 @@
           <tr><th>{{ page.table.frequency_col }}</th><th>{{ page.table.discount_col }}</th></tr>
         </thead>
         <tbody>
-          <tr><td>{{ calculator_i18n.frequency.weekly }}</td><td>&minus;{{ (pricing.discounts.weekly * 100) | round | int }}%</td></tr>
-          <tr><td>{{ calculator_i18n.frequency.biweekly }}</td><td>&minus;{{ (pricing.discounts.biweekly * 100) | round | int }}%</td></tr>
-          <tr><td>{{ calculator_i18n.frequency.monthly }}</td><td>&minus;{{ (pricing.discounts.monthly * 100) | round | int }}%</td></tr>
+          <tr><td>{{ calculator_i18n.frequency.weekly }}</td><td>{{ pricing.subscriptions_monthly.weekly }} {{ config.currency_symbol[lang] }}</td></tr>
+          <tr><td>{{ calculator_i18n.frequency.biweekly }}</td><td>{{ pricing.subscriptions_monthly.biweekly }} {{ config.currency_symbol[lang] }}</td></tr>
+          <tr><td>{{ calculator_i18n.frequency.monthly }}</td><td>{{ pricing.subscriptions_monthly.monthly }} {{ config.currency_symbol[lang] }}</td></tr>
         </tbody>
       </table>
     </div>

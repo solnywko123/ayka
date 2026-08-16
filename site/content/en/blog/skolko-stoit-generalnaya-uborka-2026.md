@@ -23,7 +23,7 @@ Several components get added to the base area-based cost:
 
 Take a standard two-room apartment of 55 m² with one bathroom as an example. At the base general-cleaning rate, this apartment would cost an amount proportional to its area, with no bathroom surcharge — the final price is usually shown as a range "from X to Y KGS," because the exact total gets slightly adjusted once the apartment's condition is assessed.
 
-For a three-room apartment of 80–90 m² with two bathrooms, the base cost gets a surcharge for the second bathroom. If you also add window washing (usually priced per sash), add that cost on top separately.
+For a three-room apartment of 80–90 m² with two bathrooms, the base cost gets a surcharge for the second bathroom. If you also add window washing (usually priced per square meter of glazing), add that cost on top separately.
 
 For a private house of 150–200 m², the estimate will be noticeably higher — not just because of the larger area, but because of the higher property-type multiplier as well. Such houses simply require more of the team's time due to their layout: more rooms, hallways, staircases.
 
@@ -31,7 +31,7 @@ The most accurate way to find out the current price for your specific apartment 
 
 ## Why the price is shown as a range, not an exact figure
 
-Many people wonder why cleaning companies quote a range like "12,000 to 14,300 KGS" instead of an exact number right away. The reason is simple: without inspecting the apartment, it's impossible to predict with 100% certainty the condition of the grime, the accessibility of certain areas, or layout quirks. A ±15% range around the calculated amount is an honest way to show a realistic ballpark, while the exact amount is confirmed before work starts so there are no surprises later.
+Many people wonder why cleaning companies quote a range like "10,200 to 13,800 KGS" instead of an exact number right away. The reason is simple: without inspecting the apartment, it's impossible to predict with 100% certainty the condition of the grime, the accessibility of certain areas, or layout quirks. A ±15% range around the calculated amount is an honest way to show a realistic ballpark, while the exact amount is confirmed before work starts so there are no surprises later.
 
 ## How to compare quotes from different cleaning companies
 

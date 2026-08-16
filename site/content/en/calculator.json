@@ -23,13 +23,16 @@
     "office": "Office"
   },
   "addons": {
-    "windows_per_sash": { "label": "Window washing", "unit": "per sash" },
-    "sofa_seat": { "label": "Sofa dry cleaning", "unit": "per seat" },
+    "windows_per_m2": { "label": "Window washing", "unit": "per m²" },
+    "sofa_dry_clean": { "label": "Sofa dry cleaning", "unit": "" },
     "carpet_per_m2": { "label": "Carpet dry cleaning", "unit": "per m²" },
     "fridge_inside": { "label": "Fridge — inside", "unit": "" },
     "oven_inside": { "label": "Oven — inside", "unit": "" },
     "balcony": { "label": "Balcony cleaning", "unit": "" },
-    "ironing_per_hour": { "label": "Ironing", "unit": "per hour" }
+    "ironing_per_hour": { "label": "Ironing", "unit": "per hour" },
+    "mattress_single": { "label": "Mattress dry cleaning, single", "unit": "" },
+    "mattress_double": { "label": "Mattress dry cleaning, double", "unit": "" },
+    "facade_wash_per_m2": { "label": "Facade washing", "unit": "per m²" }
   },
   "urgency": {
     "normal": "Within a week",
