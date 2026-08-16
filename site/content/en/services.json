@@ -9,6 +9,13 @@
       "short_description": "A deep clean of every corner: from light fixtures to baseboards, including the kitchen and bathrooms.",
       "price_from": 150,
       "icon": "sparkle",
+      "gallery": [
+        { "file": "general-cleaning-1.jpg", "alt": "General apartment cleaning — photo from a real job" },
+        { "file": "general-cleaning-2.jpg", "alt": "General apartment cleaning — photo from a real job" },
+        { "file": "general-cleaning-3.jpg", "alt": "General apartment cleaning — photo from a real job" },
+        { "file": "general-cleaning-4.jpg", "alt": "General apartment cleaning — photo from a real job" },
+        { "file": "general-cleaning-5.jpg", "alt": "General apartment cleaning — photo from a real job" }
+      ],
       "included_title": "What's included in general cleaning",
       "excluded_title": "What's not included",
       "checklist_included": [
@@ -66,6 +73,12 @@
       "short_description": "We remove construction dust, paint, glue and cement residue — handing over a move-in-ready home.",
       "price_from": 170,
       "icon": "hammer",
+      "gallery": [
+        { "file": "post-renovation-1.jpg", "alt": "Post-renovation cleaning — photo from a real job" },
+        { "file": "post-renovation-2.jpg", "alt": "Post-renovation cleaning — photo from a real job" },
+        { "file": "post-renovation-3.jpg", "alt": "Post-renovation cleaning — photo from a real job" },
+        { "file": "post-renovation-4.jpg", "alt": "Post-renovation cleaning — photo from a real job" }
+      ],
       "included_title": "What's included in post-renovation cleaning",
       "excluded_title": "What's not included",
       "checklist_included": [
@@ -216,6 +229,12 @@
       "short_description": "We remove stains, odors and dust from your sofa, armchairs and carpets right at home.",
       "price_from": 450,
       "icon": "sofa",
+      "gallery": [
+        { "file": "furniture-dry-clean-1.jpg", "alt": "Furniture dry cleaning — photo from a real job" },
+        { "file": "furniture-dry-clean-2.jpg", "alt": "Furniture dry cleaning — photo from a real job" },
+        { "file": "furniture-dry-clean-3.jpg", "alt": "Furniture dry cleaning — photo from a real job" },
+        { "file": "furniture-dry-clean-4.jpg", "alt": "Furniture dry cleaning — photo from a real job" }
+      ],
       "included_title": "What's included in furniture dry cleaning",
       "excluded_title": "What's not included",
       "checklist_included": [
@@ -264,6 +283,11 @@
       "short_description": "Streak-free windows: glass, frames, sills and insect screens — inside and out.",
       "price_from": 300,
       "icon": "window",
+      "gallery": [
+        { "file": "facade-wash-1.jpg", "alt": "Window and facade washing — photo from a real job" },
+        { "file": "facade-wash-2.jpg", "alt": "Window and facade washing — photo from a real job" },
+        { "file": "facade-wash-3.jpg", "alt": "Window and facade washing — photo from a real job" }
+      ],
       "included_title": "What's included in window washing",
       "excluded_title": "What's not included",
       "checklist_included": [

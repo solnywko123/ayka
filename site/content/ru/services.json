@@ -9,6 +9,13 @@
       "short_description": "Глубокая уборка каждого угла: от люстры до плинтусов, с разбором кухни и санузлов.",
       "price_from": 150,
       "icon": "sparkle",
+      "gallery": [
+        { "file": "general-cleaning-1.jpg", "alt": "Генеральная уборка квартиры — фото с объекта" },
+        { "file": "general-cleaning-2.jpg", "alt": "Генеральная уборка квартиры — фото с объекта" },
+        { "file": "general-cleaning-3.jpg", "alt": "Генеральная уборка квартиры — фото с объекта" },
+        { "file": "general-cleaning-4.jpg", "alt": "Генеральная уборка квартиры — фото с объекта" },
+        { "file": "general-cleaning-5.jpg", "alt": "Генеральная уборка квартиры — фото с объекта" }
+      ],
       "included_title": "Что входит в генеральную уборку",
       "excluded_title": "Что не входит",
       "checklist_included": [
@@ -66,6 +73,12 @@
       "short_description": "Убираем строительную пыль, следы краски, клея и цемента — сдаём квартиру под ключ.",
       "price_from": 170,
       "icon": "hammer",
+      "gallery": [
+        { "file": "post-renovation-1.jpg", "alt": "Уборка после ремонта — фото с объекта" },
+        { "file": "post-renovation-2.jpg", "alt": "Уборка после ремонта — фото с объекта" },
+        { "file": "post-renovation-3.jpg", "alt": "Уборка после ремонта — фото с объекта" },
+        { "file": "post-renovation-4.jpg", "alt": "Уборка после ремонта — фото с объекта" }
+      ],
       "included_title": "Что входит в уборку после ремонта",
       "excluded_title": "Что не входит",
       "checklist_included": [
@@ -216,6 +229,12 @@
       "short_description": "Удаляем пятна, запахи и пыль из дивана, кресел и ковров прямо у вас дома.",
       "price_from": 450,
       "icon": "sofa",
+      "gallery": [
+        { "file": "furniture-dry-clean-1.jpg", "alt": "Химчистка мебели — фото с объекта" },
+        { "file": "furniture-dry-clean-2.jpg", "alt": "Химчистка мебели — фото с объекта" },
+        { "file": "furniture-dry-clean-3.jpg", "alt": "Химчистка мебели — фото с объекта" },
+        { "file": "furniture-dry-clean-4.jpg", "alt": "Химчистка мебели — фото с объекта" }
+      ],
       "included_title": "Что входит в химчистку мебели",
       "excluded_title": "Что не входит",
       "checklist_included": [
@@ -264,6 +283,11 @@
       "short_description": "Окна без разводов: стёкла, рамы, подоконники, москитные сетки — изнутри и снаружи.",
       "price_from": 300,
       "icon": "window",
+      "gallery": [
+        { "file": "facade-wash-1.jpg", "alt": "Мойка окон и фасадов — фото с объекта" },
+        { "file": "facade-wash-2.jpg", "alt": "Мойка окон и фасадов — фото с объекта" },
+        { "file": "facade-wash-3.jpg", "alt": "Мойка окон и фасадов — фото с объекта" }
+      ],
       "included_title": "Что входит в мытьё окон",
       "excluded_title": "Что не входит",
       "checklist_included": [

@@ -48,23 +48,23 @@
     }
   },
   "services": {
-    "meta_title": "Cleaning Services in Bishkek — Ayka Cleaning",
-    "meta_description": "All cleaning services from Ayka Cleaning in Bishkek: general and maintenance cleaning, post-renovation cleaning, office cleaning, furniture dry cleaning, window washing.",
+    "meta_title": "Cleaning Services in Bishkek — All Clean",
+    "meta_description": "All cleaning services from All Clean in Bishkek: general and maintenance cleaning, post-renovation cleaning, office cleaning, furniture dry cleaning, window washing.",
     "h1": "Our services",
     "intro": "Pick the service you need to see a detailed checklist and get a price estimate for your apartment or office.",
     "from_label": "from"
   },
   "about": {
-    "meta_title": "About Ayka Cleaning — Cleaning Services in Bishkek",
-    "meta_description": "Ayka Cleaning is a cleaning company operating in Bishkek. Vetted cleaners, our own equipment and supplies, fixed prices agreed in advance. Learn more about how we work.",
-    "h1": "About Ayka Cleaning",
+    "meta_title": "About All Clean — Cleaning Services in Bishkek",
+    "meta_description": "All Clean is a cleaning company operating in Bishkek. Vetted cleaners, our own equipment and supplies, fixed prices agreed in advance. Learn more about how we work.",
+    "h1": "About All Clean",
     "intro": "We are a cleaning company operating in Bishkek and its suburbs. Our goal is to take cleaning off your plate — without overcharging you or cutting corners on quality.",
     "sections": [
       {
         "title": "Our team",
         "text": "Cleaners go through document verification and an interview before they start working with clients. For recurring cleaning, we build a consistent team around each client — so cleaners get to know your home or office and work faster with every visit.",
         "image": "about-team.svg",
-        "image_alt": "Ayka Cleaning's team of cleaners"
+        "image_alt": "All Clean's team of cleaners"
       },
       {
         "title": "Equipment & supplies",
@@ -72,6 +72,13 @@
         "image": "about-equipment.svg",
         "image_alt": "Professional cleaning equipment and supplies"
       }
+    ],
+    "process_title": "How a cleaning visit works",
+    "process_gallery": [
+      { "file": "process-1.jpg", "alt": "The All Clean team on site" },
+      { "file": "process-2.jpg", "alt": "The All Clean team on site" },
+      { "file": "process-3.jpg", "alt": "The All Clean team on site" },
+      { "file": "process-4.jpg", "alt": "The All Clean team on site" }
     ],
     "values_title": "How we operate",
     "value_items": [
@@ -83,7 +90,7 @@
     "cta_title": "Leave the cleaning to the professionals"
   },
   "ceny": {
-    "meta_title": "Cleaning Prices in Bishkek — Ayka Cleaning",
+    "meta_title": "Cleaning Prices in Bishkek — All Clean",
     "meta_description": "Current cleaning service prices in Bishkek: general and maintenance cleaning, post-renovation cleaning, add-on services and discounts for recurring bookings.",
     "h1": "Cleaning prices",
     "intro": "Below are the base rates per square meter and the cost of add-on services. The final price is calculated individually based on area, number of bathrooms, urgency and frequency — use the calculator below for an exact quote.",
@@ -101,29 +108,29 @@
     "note": "The final price in your request is shown as a range \"from X to Y\" — the exact amount is confirmed once the details of the property are clarified. The subscription price is fixed and does not depend on area."
   },
   "otzyvy": {
-    "meta_title": "Reviews of Ayka Cleaning in Bishkek",
-    "meta_description": "Client reviews of Ayka Cleaning, a cleaning company in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning.",
+    "meta_title": "Reviews of All Clean in Bishkek",
+    "meta_description": "Client reviews of All Clean, a cleaning company in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning.",
     "h1": "Client reviews",
     "intro": "Here you'll find reviews about the quality of our work. We only publish reviews from real clients.",
     "disclaimer": "The reviews on this page are marked as demo placeholders and will be replaced with real client reviews once the site launches — publishing fabricated reviews is not something we do.",
     "cta_title": "Become our next happy client"
   },
   "kontakty": {
-    "meta_title": "Contact Ayka Cleaning — Cleaning Services in Bishkek",
-    "meta_description": "Get in touch with Ayka Cleaning, a cleaning company in Bishkek: phone, WhatsApp, email, working hours. Leave an online request for cleaning.",
+    "meta_title": "Contact All Clean — Cleaning Services in Bishkek",
+    "meta_description": "Get in touch with All Clean, a cleaning company in Bishkek: phone, WhatsApp, email, working hours. Leave an online request for cleaning.",
     "h1": "Contacts",
     "intro": "Reach out however is convenient for you — by phone, on WhatsApp, or through the request form below. We respond quickly during business hours.",
     "map_title": "Location map"
   },
   "blog": {
-    "meta_title": "Cleaning Blog — Ayka Cleaning, Bishkek",
+    "meta_title": "Cleaning Blog — All Clean, Bishkek",
     "meta_description": "Helpful articles about apartment cleaning in Bishkek: prices, tips, and advice on choosing a cleaning company.",
     "h1": "Blog",
     "intro": "We explain how cleaning actually works: what things cost, what to watch out for, and how to avoid overpaying."
   },
   "not_found": {
-    "meta_title": "Page Not Found — Ayka Cleaning",
-    "meta_description": "The page you requested was not found. Go to the homepage of Ayka Cleaning or use the navigation menu.",
+    "meta_title": "Page Not Found — All Clean",
+    "meta_description": "The page you requested was not found. Go to the homepage of All Clean or use the navigation menu.",
     "title": "Page not found",
     "text": "The link may be outdated or the page may have moved. Go back to the homepage or pick a service below."
   }

@@ -33,6 +33,23 @@
   </div>
 </section>
 
+{% if page.process_gallery %}
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ page.process_title }}</h2>
+    </div>
+    <div class="grid grid-4">
+      {% for photo in page.process_gallery %}
+      <div class="hero__media" style="aspect-ratio:4/3">
+        <img src="{{ asset('img/gallery/' + photo.file) }}" alt="{{ photo.alt }}" width="400" height="300" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="bg-muted">
   <div class="container">
     <div class="section-head">

@@ -31,6 +31,20 @@
   </div>
 </section>
 
+{% if service.gallery %}
+<section>
+  <div class="container">
+    <div class="grid grid-4">
+      {% for photo in service.gallery %}
+      <div class="hero__media" style="aspect-ratio:4/3">
+        <img src="{{ asset('img/gallery/' + photo.file) }}" alt="{{ photo.alt }}" width="400" height="300" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section id="calculator" class="bg-muted">
   <div class="container">
     <div class="section-head section-head--center">

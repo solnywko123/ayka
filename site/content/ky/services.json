@@ -9,6 +9,13 @@
       "short_description": "Ар бир бурчту терең тазалоо: люстрадан плинтускага чейин, ашкана жана санузелдерди кошо.",
       "price_from": 150,
       "icon": "sparkle",
+      "gallery": [
+        { "file": "general-cleaning-1.jpg", "alt": "Генералдык тазалоо — объекттеги сүрөт" },
+        { "file": "general-cleaning-2.jpg", "alt": "Генералдык тазалоо — объекттеги сүрөт" },
+        { "file": "general-cleaning-3.jpg", "alt": "Генералдык тазалоо — объекттеги сүрөт" },
+        { "file": "general-cleaning-4.jpg", "alt": "Генералдык тазалоо — объекттеги сүрөт" },
+        { "file": "general-cleaning-5.jpg", "alt": "Генералдык тазалоо — объекттеги сүрөт" }
+      ],
       "included_title": "Генералдык тазалоого эмне кирет",
       "excluded_title": "Эмне кирбейт",
       "checklist_included": [
@@ -66,6 +73,12 @@
       "short_description": "Курулуш чаңын, боёк, клей жана цемент изин тазалайбыз — батирди даяр абалда тапшырабыз.",
       "price_from": 170,
       "icon": "hammer",
+      "gallery": [
+        { "file": "post-renovation-1.jpg", "alt": "Ремонттон кийинки тазалоо — объекттеги сүрөт" },
+        { "file": "post-renovation-2.jpg", "alt": "Ремонттон кийинки тазалоо — объекттеги сүрөт" },
+        { "file": "post-renovation-3.jpg", "alt": "Ремонттон кийинки тазалоо — объекттеги сүрөт" },
+        { "file": "post-renovation-4.jpg", "alt": "Ремонттон кийинки тазалоо — объекттеги сүрөт" }
+      ],
       "included_title": "Ремонттон кийинки тазалоого эмне кирет",
       "excluded_title": "Эмне кирбейт",
       "checklist_included": [
@@ -216,6 +229,12 @@
       "short_description": "Диван, кресло жана килемдерден тактарды, жытты жана чаңды түздөн-түз үйүңүздө алып салабыз.",
       "price_from": 450,
       "icon": "sofa",
+      "gallery": [
+        { "file": "furniture-dry-clean-1.jpg", "alt": "Эмеректи химиялык тазалоо — объекттеги сүрөт" },
+        { "file": "furniture-dry-clean-2.jpg", "alt": "Эмеректи химиялык тазалоо — объекттеги сүрөт" },
+        { "file": "furniture-dry-clean-3.jpg", "alt": "Эмеректи химиялык тазалоо — объекттеги сүрөт" },
+        { "file": "furniture-dry-clean-4.jpg", "alt": "Эмеректи химиялык тазалоо — объекттеги сүрөт" }
+      ],
       "included_title": "Эмеректи химиялык тазалоого эмне кирет",
       "excluded_title": "Эмне кирбейт",
       "checklist_included": [
@@ -264,6 +283,11 @@
       "short_description": "Изсиз терезелер: айнек, рама, текче, антимоскит тору — ичинен жана сырттан.",
       "price_from": 300,
       "icon": "window",
+      "gallery": [
+        { "file": "facade-wash-1.jpg", "alt": "Терезе жана фасаддарды жуу — объекттеги сүрөт" },
+        { "file": "facade-wash-2.jpg", "alt": "Терезе жана фасаддарды жуу — объекттеги сүрөт" },
+        { "file": "facade-wash-3.jpg", "alt": "Терезе жана фасаддарды жуу — объекттеги сүрөт" }
+      ],
       "included_title": "Терезе жууга эмне кирет",
       "excluded_title": "Эмне кирбейт",
       "checklist_included": [
