@@ -12,7 +12,7 @@
       <div class="review-card__avatar" aria-hidden="true">{{ review.author[0] }}</div>
       <div>
         <div>{{ review.author }}</div>
-        <div class="review-card__meta">{{ review.service }} &middot; {{ review.date }}</div>
+        <div class="review-card__meta">{{ review.service }}{% if review.date %} &middot; {{ review.date }}{% endif %}</div>
       </div>
     </div>
   </article>

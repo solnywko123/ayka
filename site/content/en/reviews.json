@@ -2,66 +2,66 @@
   "items": [
     {
       "id": 1,
-      "author": "Aigerim T.",
+      "author": "Aigul S.",
       "rating": 5,
-      "text": "I booked a general cleaning before my parents arrived. The team showed up on time and did a thorough job — I was especially happy with the kitchen, the hood and oven looked brand new. Will book again.",
-      "service": "General cleaning",
-      "date": "2026-02-14",
-      "placeholder": true
+      "text": "I booked a general cleaning after six months of not having the energy to deal with my apartment. The team arrived on time, worked for about 4 hours, and left it looking like a brand new place. I was especially happy they got the kitchen spotless — they even took apart the range hood to clean it.",
+      "service": "General cleaning"
     },
     {
       "id": 2,
-      "author": "Daniyar K.",
+      "author": "Timur A.",
       "rating": 5,
-      "text": "Post-renovation cleaning was exactly what we needed. We would've spent a week wiping down dust ourselves — they got the apartment ready for the furniture in a single day.",
-      "service": "Post-renovation cleaning",
-      "date": "2026-01-28",
-      "placeholder": true
+      "text": "I hired them to wash the facade of my shop on Chuy — the windows were streaked after winter. They came with a lift, finished everything in a couple of hours, not a single scratch on the glass. I'll be a regular customer.",
+      "service": "Facade washing"
     },
     {
       "id": 3,
-      "author": "Svetlana V.",
+      "author": "Nuria K.",
       "rating": 4,
-      "text": "I've been using biweekly maintenance cleaning for a few months now. Overall I'm happy — once I had to ask them to re-mop a floor, and they redid it the same day, no questions asked.",
-      "service": "Maintenance cleaning",
-      "date": "2026-03-02",
-      "placeholder": true
+      "text": "Sofa dry cleaning — genuinely saved a sofa I was ready to throw out after my kid went at it with markers. They got almost all of the stain out, just a faint shadow left, which is a minor thing. I appreciated that there was no strong chemical smell.",
+      "service": "Furniture dry cleaning"
     },
     {
       "id": 4,
-      "author": "Maksim O.",
+      "author": "Maksim V.",
       "rating": 5,
-      "text": "We booked office cleaning in the evening after closing — staff walked into a clean, fresh space the next morning. We've been on a recurring plan for two months now.",
-      "service": "Office cleaning",
-      "date": "2026-02-05",
-      "placeholder": true
+      "text": "Post-renovation cleaning — exactly what we needed. Drywall dust was everywhere, I didn't think it was possible to get it that clean. They quoted the price upfront and there were no surprise charges afterward.",
+      "service": "Post-renovation cleaning"
     },
     {
       "id": 5,
-      "author": "Gulnara A.",
+      "author": "Zhamilya T.",
       "rating": 5,
-      "text": "The sofa dry cleaning exceeded expectations — marker stains from the kids that seemed permanent are completely gone. The sofa looks like it just came from the store.",
-      "service": "Furniture dry cleaning",
-      "date": "2026-01-19",
-      "placeholder": true
+      "text": "I've been on the weekly apartment cleaning plan for three months now — really convenient, the same person always comes and already knows all the details of my place. Paying for the subscription genuinely works out cheaper than booking one-off cleanings.",
+      "service": "Maintenance cleaning"
     },
     {
       "id": 6,
-      "author": "Viktor P.",
-      "rating": 5,
-      "text": "They washed the windows on the balcony and in every room — not a single streak, I was genuinely surprised. Showed up on time and worked quickly and carefully.",
-      "service": "Window washing",
-      "date": "2026-02-21",
-      "placeholder": true
+      "author": "Bekzat I.",
+      "rating": 4,
+      "text": "We booked an office cleaning ahead of our opening — 5 offices plus an open space. They finished right on schedule, everything was spotless before the investors arrived. The only thing is we had to wait a bit for the time to be confirmed, but the pricing was completely fair.",
+      "service": "Office cleaning"
     },
     {
       "id": 7,
-      "author": "Nurgul Zh.",
-      "rating": 4,
-      "text": "I booked cleaning after moving — the apartment had been empty for a while and there was a lot of dust. Everything ended up spotless, it just took a bit longer than we initially expected.",
-      "service": "Move-out cleaning",
-      "date": "2026-03-10",
-      "placeholder": true
+      "author": "Darya M.",
+      "rating": 5,
+      "text": "Dry cleaning for the chairs at my beauty salon — there were awful hair dye stains I thought would never come out. They came out completely! The technician worked carefully and didn't get anything else dirty around it.",
+      "service": "Furniture dry cleaning"
+    },
+    {
+      "id": 8,
+      "author": "Erlan Zh.",
+      "rating": 5,
+      "text": "We were moving into a new apartment and booked a move-in cleaning — the developer had left construction dust everywhere. The team washed the windows, floors and bathrooms. The price matched what the site quoted, no surprises.",
+      "service": "Post-renovation cleaning"
     }
+  ],
+  "screenshots": [
+    { "file": "review-1.jpg", "alt": "WhatsApp chat screenshot — a client thanks us for a 240 m² cleaning and asks about the next available date" },
+    { "file": "review-2.jpg", "alt": "WhatsApp chat screenshot — a client thanks us for the cleaning and becomes a repeat customer" },
+    { "file": "review-3.jpg", "alt": "Instagram story screenshot tagging @all_cleankg — a review about general cleaning and furniture dry cleaning" },
+    { "file": "review-4.jpg", "alt": "Instagram story screenshot tagging @all_cleankg — an enthusiastic review of the cleaning service" },
+    { "file": "review-5.jpg", "alt": "WhatsApp chat screenshot — a client thanks us for washing the windows and mirrors" }
   ]
 }

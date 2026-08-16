@@ -273,6 +273,7 @@ class SiteBuilder:
             "services": lang_data["services"],
             "districts": lang_data["districts"],
             "reviews": lang_data["reviews"],
+            "screenshots": lang_data["review_screenshots"] if kind == "otzyvy" else None,
         })
         html = self.render(template, ctx)
         write_html(DIST_DIR, path, html)

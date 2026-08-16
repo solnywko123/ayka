@@ -78,17 +78,20 @@ def test_json_ld_is_valid_json_everywhere():
     assert checked_any
 
 
-def test_no_aggregate_rating_while_reviews_are_placeholders():
-    """BRIEF.md раздел 5.1 п.6 / 17: AggregateRating запрещён, пока в reviews.json есть placeholder."""
+def test_no_aggregate_rating_without_real_reviews():
+    """BRIEF.md раздел 5.1 п.6 / 17: AggregateRating запрещён, пока нет ни одного настоящего
+    (не placeholder) отзыва — независимо от того, пуст ли reviews.json или в нём demo-данные."""
     for lang in ["ru", "ky", "en"]:
         reviews = json.loads((CONTENT_DIR / lang / "reviews.json").read_text(encoding="utf-8"))
-        assert any(r.get("placeholder") for r in reviews["items"]), (
-            f"{lang}/reviews.json: тест ожидает демо-данные с placeholder=true; "
-            "если это уже реальные отзывы — обновите тест вместе с данными"
-        )
-    for page in _content_pages():
-        text = page.read_text(encoding="utf-8")
-        assert "AggregateRating" not in text, f"{page.relative_to(DIST_DIR)}: AggregateRating недопустим с demo-отзывами"
+        real = [r for r in reviews["items"] if not r.get("placeholder")]
+        if real:
+            continue
+        lang_pages = [p for p in _content_pages() if p.relative_to(DIST_DIR).parts[0] == lang]
+        for page in lang_pages:
+            text = page.read_text(encoding="utf-8")
+            assert "AggregateRating" not in text, (
+                f"{page.relative_to(DIST_DIR)}: AggregateRating недопустим без настоящих отзывов"
+            )
 
 
 def test_sitemap_has_no_broken_paths():

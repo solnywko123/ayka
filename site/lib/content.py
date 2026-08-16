@@ -29,6 +29,7 @@ def load_lang_content(lang: str) -> dict:
         "pages": load_json(d / "pages.json"),
         "faq": load_json(d / "faq.json")["items"],
         "reviews": load_json(d / "reviews.json")["items"],
+        "review_screenshots": load_json(d / "reviews.json").get("screenshots", []),
         "districts": load_json(d / "districts.json")["items"],
         "seo": load_json(d / "seo.json"),
     }

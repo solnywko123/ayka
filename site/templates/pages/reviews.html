@@ -23,13 +23,24 @@
           <div class="review-card__avatar" aria-hidden="true">{{ review.author[0] }}</div>
           <div>
             <div>{{ review.author }}</div>
-            <div class="review-card__meta">{{ review.service }} &middot; {{ review.date }}</div>
+            <div class="review-card__meta">{{ review.service }}{% if review.date %} &middot; {{ review.date }}{% endif %}</div>
           </div>
         </div>
       </article>
       {% endfor %}
     </div>
     <p class="form-note" style="margin-top:2rem">{{ page.disclaimer }}</p>
+
+    {% if screenshots %}
+    <h2 style="margin-top:3rem">{{ page.screenshots_title }}</h2>
+    <div class="grid grid-4" style="margin-top:1.5rem">
+      {% for photo in screenshots %}
+      <div class="hero__media" style="aspect-ratio:9/16">
+        <img src="{{ asset('img/gallery/' + photo.file) }}" alt="{{ photo.alt }}" width="360" height="640" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
 </section>
 
