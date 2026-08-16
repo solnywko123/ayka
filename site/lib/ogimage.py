@@ -15,7 +15,7 @@ PRIMARY = (39, 44, 61)
 BRAND_LABEL = (34, 163, 82)
 WHITE = (255, 255, 255)
 MUTED = (179, 168, 156)
-GRADIENT_STOPS = [(239, 68, 68), (234, 163, 0), (34, 197, 94)]
+GRADIENT_STOPS = [(14, 165, 233), (37, 99, 235), (30, 58, 138)]
 
 _font_cache: dict[tuple[int, int], ImageFont.FreeTypeFont] = {}
 
@@ -44,7 +44,7 @@ def generate_og_image(title: str, subtitle: str, out_path: Path, brand: str = ""
         b = int(PRIMARY_DARK[2] + (PRIMARY[2] - PRIMARY_DARK[2]) * t)
         draw.line([(x, 0), (x, height)], fill=(r, g, b))
 
-    # 4-stop brand gradient bar (red -> yellow -> green -> blue) — the same
+    # 3-stop brand gradient bar (sky -> royal blue -> navy) — the same
     # signature strip used as the footer's top border on the live site.
     bar_top = height - 14
     stops = GRADIENT_STOPS

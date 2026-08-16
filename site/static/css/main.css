@@ -45,8 +45,8 @@
 
   /* accent — the ONE CTA color, unchanging on every page. Owner's explicit pick:
      green, so the WhatsApp/call/request buttons visually rhyme with the WhatsApp
-     brand itself. Deeper than the decorative brand-green below so it stays a
-     distinct "this is a button" signal, not just another dot in the palette. */
+     brand itself. Kept as-is when the decorative trio below moved to blue — it's
+     a distinct "this is a button" signal, not part of the decorative palette. */
   --color-accent-600: #0f6b2f;
   --color-accent-500: #15803d;
   --color-accent-400: #22a352;
@@ -55,22 +55,27 @@
   /* brand palette — decorative use ONLY: gradients, hero/final-cta backgrounds,
      icon badges. Never body text, never every button at once. Each has a
      "-glyph" tone (WCAG AA on its own "-100" pale tint) for small icon use.
-     Three colors per the owner's final call — red/yellow/green, no blue. */
-  --color-brand-red: #ef4444;
-  --color-brand-red-glyph: #b91c1c;
-  --color-brand-red-100: #fde2e2;
-  --color-brand-yellow: #eaa300;
-  --color-brand-yellow-glyph: #b45309;
-  --color-brand-yellow-100: #fef3d9;
-  --color-brand-green: #22c55e;
-  --color-brand-green-glyph: #0f7a3a;
-  --color-brand-green-100: #dcf5e6;
+     Monochromatic blue family (sky -> royal -> navy) per the owner's later
+     request — replaces the earlier red/yellow/green trio, see DECISIONS.md. */
+  --color-brand-sky: #0ea5e9;
+  --color-brand-sky-glyph: #0369a1;
+  --color-brand-sky-100: #e0f2fe;
+  --color-brand-blue: #2563eb;
+  --color-brand-blue-glyph: #1d4ed8;
+  --color-brand-blue-100: #dbeafe;
+  --color-brand-navy: #1e3a8a;
+  --color-brand-navy-glyph: #1e3a8a;
+  --color-brand-navy-100: #e0e7ff;
 
-  /* Diagonal red -> yellow -> green, for hero/final-cta/dividers only. */
-  --gradient-brand: linear-gradient(135deg, var(--color-brand-red) 0%, var(--color-brand-yellow) 50%, var(--color-brand-green) 100%);
+  /* Diagonal sky -> royal blue -> navy, for hero/final-cta/dividers only. */
+  --gradient-brand: linear-gradient(135deg, var(--color-brand-sky) 0%, var(--color-brand-blue) 50%, var(--color-brand-navy) 100%);
   /* Dark wash composited under white text on the gradient — tuned so even the
-     lightest stop (yellow) still clears 4.5:1 for white text, see DECISIONS.md. */
+     lightest stop (sky) still clears 4.5:1 for white text, see DECISIONS.md. */
   --gradient-overlay: linear-gradient(rgba(15, 15, 25, 0.42), rgba(15, 15, 25, 0.42));
+
+  /* standalone rating-star color — gold reads as "rating" to users far more
+     reliably than blue would, so it's deliberately outside the brand trio. */
+  --color-rating-star: #b45309;
 
   /* neutrals — warm-neutral (slight red/yellow bias, no more blue in the palette
      to lean toward) */
@@ -420,9 +425,9 @@ section { padding-block: var(--space-8); }
 }
 /* Cycle the 4 brand colors through the icon badges only — small, controlled
    accents rather than a whole loud card, see DECISIONS.md. */
-.service-card:nth-of-type(3n+1) .service-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
-.service-card:nth-of-type(3n+2) .service-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
-.service-card:nth-of-type(3n+3) .service-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
+.service-card:nth-of-type(3n+1) .service-card__icon { background: var(--color-brand-sky-100); color: var(--color-brand-sky-glyph); }
+.service-card:nth-of-type(3n+2) .service-card__icon { background: var(--color-brand-blue-100); color: var(--color-brand-blue-glyph); }
+.service-card:nth-of-type(3n+3) .service-card__icon { background: var(--color-brand-navy-100); color: var(--color-brand-navy-glyph); }
 .service-card__price { color: var(--color-accent-600); font-weight: 700; }
 .service-card__desc { color: var(--color-text-muted); font-size: 0.95rem; flex-grow: 1; }
 .service-card__link { font-weight: 700; color: var(--color-primary-700); display: inline-flex; align-items: center; gap: var(--space-1); }
@@ -459,9 +464,9 @@ section { padding-block: var(--space-8); }
   background: var(--color-primary-100);
   display: flex; align-items: center; justify-content: center;
 }
-.why-card:nth-of-type(3n+1) .why-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
-.why-card:nth-of-type(3n+2) .why-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
-.why-card:nth-of-type(3n+3) .why-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
+.why-card:nth-of-type(3n+1) .why-card__icon { background: var(--color-brand-sky-100); color: var(--color-brand-sky-glyph); }
+.why-card:nth-of-type(3n+2) .why-card__icon { background: var(--color-brand-blue-100); color: var(--color-brand-blue-glyph); }
+.why-card:nth-of-type(3n+3) .why-card__icon { background: var(--color-brand-navy-100); color: var(--color-brand-navy-glyph); }
 .why-card h3 { font-size: 1.05rem; margin-bottom: var(--space-1); }
 .why-card p { color: var(--color-text-muted); font-size: 0.95rem; }
 
@@ -485,7 +490,7 @@ section { padding-block: var(--space-8); }
   flex-direction: column;
   gap: var(--space-3);
 }
-.review-card__stars { color: var(--color-brand-yellow-glyph); letter-spacing: 2px; }
+.review-card__stars { color: var(--color-rating-star); letter-spacing: 2px; }
 .review-card__text { color: var(--color-text); font-size: 0.97rem; flex-grow: 1; }
 .review-card__author { display: flex; align-items: center; gap: var(--space-3); }
 .review-card__avatar {
