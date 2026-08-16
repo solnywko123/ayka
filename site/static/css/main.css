@@ -130,6 +130,15 @@
     --color-border: #2b3140;
     --color-text: #eef0f5;
     --color-text-muted: #a3aab8;
+    /* primary-500/600/700/900 are used both as text/border color (needs to
+       lighten here) and — in a handful of rules — as a fixed dark background
+       paired with white text (those rules use literal hex instead of these
+       variables specifically so they're unaffected by this override; see
+       DECISIONS.md for the full list and why). */
+    --color-primary-900: #eef0f5;
+    --color-primary-700: #c7cfe0;
+    --color-primary-600: #a3aec4;
+    --color-primary-500: #7c88a3;
     --color-primary-100: #1c202b;
     --color-primary-050: #161922;
     --color-accent-100: #1c2740;
@@ -179,7 +188,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; color: inher
   position: absolute;
   left: -999px;
   top: 0;
-  background: var(--color-primary-700);
+  background: #1e2230;
   color: #fff;
   padding: var(--space-3) var(--space-4);
   z-index: 1000;
@@ -256,10 +265,10 @@ section { padding-block: var(--space-8); }
 }
 .btn-accent:hover { background: var(--color-accent-600); }
 .btn-primary {
-  background: var(--color-primary-700);
+  background: #1e2230;
   color: #fff;
 }
-.btn-primary:hover { background: var(--color-primary-900); }
+.btn-primary:hover { background: #12151b; }
 .btn-outline {
   background: transparent;
   border-color: var(--color-border);
@@ -268,7 +277,7 @@ section { padding-block: var(--space-8); }
 .btn-outline:hover { border-color: var(--color-primary-500); color: var(--color-primary-700); }
 .btn-whatsapp {
   background: #25d366;
-  color: var(--color-primary-900);
+  color: #12151b;
 }
 .btn-whatsapp:hover { background: #1fb857; }
 .btn-block { width: 100%; }
@@ -302,7 +311,7 @@ section { padding-block: var(--space-8); }
 .logo__mark {
   width: 34px; height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+  background: linear-gradient(135deg, #3a4157, #1e2230);
   display: flex; align-items: center; justify-content: center;
   color: #fff;
   flex-shrink: 0;
@@ -391,7 +400,7 @@ section { padding-block: var(--space-8); }
 .hero__title { color: #fff; }
 .hero__subtitle { margin-top: var(--space-4); font-size: 1.15rem; color: rgba(255, 255, 255, 0.9); max-width: 46ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
-.hero .btn-accent { background: #fff; color: var(--color-primary-900); }
+.hero .btn-accent { background: #fff; color: #12151b; }
 .hero .btn-accent:hover { background: #fff; opacity: 0.9; }
 .trust-markers { display: flex; flex-wrap: wrap; gap: var(--space-5); margin-top: var(--space-6); }
 .trust-marker { display: flex; align-items: center; gap: var(--space-2); font-weight: 600; font-size: 0.95rem; color: #fff; }
@@ -466,7 +475,7 @@ section { padding-block: var(--space-8); }
   display: flex; align-items: center; justify-content: center;
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: var(--color-primary-700);
+  background: #1e2230;
   color: #fff;
   font-weight: 800;
   margin-bottom: var(--space-3);
@@ -651,7 +660,7 @@ input[type="range"] { flex-grow: 1; accent-color: var(--color-primary-600); heig
 }
 
 .calc-result {
-  background: var(--color-primary-900);
+  background: #12151b;
   color: #fff;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -707,12 +716,12 @@ input[type="range"] { flex-grow: 1; accent-color: var(--color-primary-600); heig
 .final-cta h2 { color: #fff; }
 .final-cta p { color: rgba(255,255,255,0.85); margin-top: var(--space-3); }
 .final-cta__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
-.final-cta .btn-accent { background: #fff; color: var(--color-primary-900); }
+.final-cta .btn-accent { background: #fff; color: #12151b; }
 .final-cta .btn-accent:hover { background: #fff; opacity: 0.9; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--color-primary-900);
+  background: #12151b;
   color: rgba(255,255,255,0.85);
   padding-block: var(--space-7);
   margin-top: var(--space-8);
