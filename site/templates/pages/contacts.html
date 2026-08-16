@@ -18,10 +18,12 @@
             <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
             <a href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">WhatsApp</a>
           </li>
+          {% if config.email %}
           <li>
             <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-mail"></use></svg>
             <a href="mailto:{{ config.email }}">{{ config.email }}</a>
           </li>
+          {% endif %}
           {% if config.address %}
           <li>
             <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-pin"></use></svg>

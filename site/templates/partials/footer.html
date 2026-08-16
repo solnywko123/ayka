@@ -44,7 +44,9 @@
         <ul>
           <li><a href="tel:{{ config.phone | replace(' ', '') }}">{{ config.phone }}</a></li>
           <li><a href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">WhatsApp</a></li>
+          {% if config.email %}
           <li><a href="mailto:{{ config.email }}">{{ config.email }}</a></li>
+          {% endif %}
           {% if config.address %}
           <li>{{ config.address }}</li>
           {% endif %}
