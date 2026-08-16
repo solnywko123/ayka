@@ -9,6 +9,17 @@
       <p>{{ page.intro }}</p>
     </div>
 
+    <div class="hero__actions" style="margin-bottom:var(--space-7)">
+      <a class="btn btn-whatsapp btn-lg" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
+        <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+        {{ ui.buttons.whatsapp }}
+      </a>
+      <a class="btn btn-primary btn-lg" href="tel:{{ config.phone | replace(' ', '') }}">
+        <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-phone"></use></svg>
+        {{ ui.buttons.call }}
+      </a>
+    </div>
+
     <div class="table-scroll">
       <table class="price-table">
         <thead>
@@ -89,6 +100,10 @@
       {% endfor %}
     </div>
     <p class="price-table__note" style="margin-top:2rem; text-align:center">{{ ui.price_factors.note }}</p>
+    <div class="hero__actions" style="margin-top:1.5rem; justify-content:center">
+      <a class="btn btn-whatsapp btn-lg" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+      <a class="btn btn-primary btn-lg" href="tel:{{ config.phone | replace(' ', '') }}">{{ ui.buttons.call }}</a>
+    </div>
   </div>
 </section>
 

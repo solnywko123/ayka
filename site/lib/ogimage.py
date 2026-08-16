@@ -10,12 +10,12 @@ from PIL import Image, ImageDraw, ImageFont
 
 FONT_PATH = Path(__file__).resolve().parent.parent / "build_assets" / "Manrope-Variable.ttf"
 
-PRIMARY_DARK = (18, 21, 27)
+PRIMARY_DARK = (20, 17, 14)
 PRIMARY = (39, 44, 61)
-BRAND_LABEL = (91, 141, 239)
+BRAND_LABEL = (34, 163, 82)
 WHITE = (255, 255, 255)
-MUTED = (163, 170, 184)
-GRADIENT_STOPS = [(239, 68, 68), (234, 163, 0), (34, 197, 94), (59, 130, 246)]
+MUTED = (179, 168, 156)
+GRADIENT_STOPS = [(239, 68, 68), (234, 163, 0), (34, 197, 94)]
 
 _font_cache: dict[tuple[int, int], ImageFont.FreeTypeFont] = {}
 

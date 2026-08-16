@@ -7,12 +7,16 @@
       <h1 class="hero__title reveal">{{ home.hero.h1 }}</h1>
       <p class="hero__subtitle reveal">{{ home.hero.subtitle }}</p>
       <div class="hero__actions reveal">
-        <a class="btn btn-accent" href="#lead-form">{{ ui.buttons.calculate }}</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
+        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
           <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
           {{ ui.buttons.whatsapp }}
         </a>
+        <a class="btn btn-accent btn-lg" href="tel:{{ config.phone | replace(' ', '') }}">
+          <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-phone"></use></svg>
+          {{ ui.buttons.call }}
+        </a>
       </div>
+      <a class="hero__secondary-link reveal" href="#lead-form">{{ ui.buttons.calculate }}</a>
       <div class="trust-markers reveal">
         {% for marker in home.hero.trust_markers %}
         <div class="trust-marker">
@@ -207,8 +211,8 @@
       <h2>{{ home.final_cta.title }}</h2>
       <p>{{ home.final_cta.subtitle }}</p>
       <div class="final-cta__actions">
-        <a class="btn btn-accent" href="#lead-form">{{ ui.buttons.calculate }}</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
+        <a class="btn btn-accent btn-lg" href="#lead-form">{{ ui.buttons.calculate }}</a>
+        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">{{ ui.buttons.whatsapp }}</a>
       </div>
     </div>
 

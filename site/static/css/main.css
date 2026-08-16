@@ -42,16 +42,19 @@
   --color-primary-100: #eef0f5;
   --color-primary-050: #f7f8fb;
 
-  /* accent — the ONE CTA color, unchanging on every page. Vivid blue: reads as
-     trustworthy, doesn't collide with the danger/success semantic colors below. */
-  --color-accent-600: #1d4ed8;
-  --color-accent-500: #2563eb;
-  --color-accent-400: #5b8def;
-  --color-accent-100: #dbe7fd;
+  /* accent — the ONE CTA color, unchanging on every page. Owner's explicit pick:
+     green, so the WhatsApp/call/request buttons visually rhyme with the WhatsApp
+     brand itself. Deeper than the decorative brand-green below so it stays a
+     distinct "this is a button" signal, not just another dot in the palette. */
+  --color-accent-600: #0f6b2f;
+  --color-accent-500: #15803d;
+  --color-accent-400: #22a352;
+  --color-accent-100: #dcf5e6;
 
   /* brand palette — decorative use ONLY: gradients, hero/final-cta backgrounds,
      icon badges. Never body text, never every button at once. Each has a
-     "-glyph" tone (WCAG AA on its own "-100" pale tint) for small icon use. */
+     "-glyph" tone (WCAG AA on its own "-100" pale tint) for small icon use.
+     Three colors per the owner's final call — red/yellow/green, no blue. */
   --color-brand-red: #ef4444;
   --color-brand-red-glyph: #b91c1c;
   --color-brand-red-100: #fde2e2;
@@ -61,27 +64,25 @@
   --color-brand-green: #22c55e;
   --color-brand-green-glyph: #0f7a3a;
   --color-brand-green-100: #dcf5e6;
-  --color-brand-blue: #3b82f6;
-  --color-brand-blue-glyph: #1d4ed8;
-  --color-brand-blue-100: #dbe7fd;
 
-  /* Diagonal red -> yellow -> green -> blue, for hero/final-cta/dividers only. */
-  --gradient-brand: linear-gradient(135deg, var(--color-brand-red) 0%, var(--color-brand-yellow) 35%, var(--color-brand-green) 68%, var(--color-brand-blue) 100%);
+  /* Diagonal red -> yellow -> green, for hero/final-cta/dividers only. */
+  --gradient-brand: linear-gradient(135deg, var(--color-brand-red) 0%, var(--color-brand-yellow) 50%, var(--color-brand-green) 100%);
   /* Dark wash composited under white text on the gradient — tuned so even the
      lightest stop (yellow) still clears 4.5:1 for white text, see DECISIONS.md. */
   --gradient-overlay: linear-gradient(rgba(15, 15, 25, 0.42), rgba(15, 15, 25, 0.42));
 
-  /* neutrals — cool-toned (slight blue bias) to sit well with the accent/primary */
-  --color-bg: #f7f8fb;
+  /* neutrals — warm-neutral (slight red/yellow bias, no more blue in the palette
+     to lean toward) */
+  --color-bg: #faf9f7;
   --color-surface: #ffffff;
-  --color-surface-muted: #eef1f6;
-  --color-border: #dde2ea;
-  --color-text: #191c23;
-  --color-text-muted: #5c6472;
+  --color-surface-muted: #f2f0ec;
+  --color-border: #e2ded6;
+  --color-text: #201c19;
+  --color-text-muted: #63594f;
   --color-text-on-primary: #ffffff;
   --color-text-on-accent: #ffffff;
 
-  --color-success: #15803d;
+  --color-success: #0d9488;
   --color-danger: #c02626;
   --color-warning-bg: #fff4cc;
   --color-warning-text: #665400;
@@ -124,28 +125,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0d0f14;
-    --color-surface: #161922;
-    --color-surface-muted: #1c202b;
-    --color-border: #2b3140;
-    --color-text: #eef0f5;
-    --color-text-muted: #a3aab8;
+    --color-bg: #14110e;
+    --color-surface: #1e1a16;
+    --color-surface-muted: #262019;
+    --color-border: #3a3229;
+    --color-text: #f5f1ec;
+    --color-text-muted: #b3a89c;
     /* primary-500/600/700/900 are used both as text/border color (needs to
        lighten here) and — in a handful of rules — as a fixed dark background
        paired with white text (those rules use literal hex instead of these
        variables specifically so they're unaffected by this override; see
        DECISIONS.md for the full list and why). */
-    --color-primary-900: #eef0f5;
-    --color-primary-700: #c7cfe0;
-    --color-primary-600: #a3aec4;
-    --color-primary-500: #7c88a3;
-    --color-primary-100: #1c202b;
-    --color-primary-050: #161922;
-    --color-accent-100: #1c2740;
+    --color-primary-900: #f5f1ec;
+    --color-primary-700: #d3cabd;
+    --color-primary-600: #ada194;
+    --color-primary-500: #837769;
+    --color-primary-100: #262019;
+    --color-primary-050: #1e1a16;
+    --color-accent-100: #163a24;
     --color-brand-red-100: #3a1e1e;
     --color-brand-yellow-100: #3a2e14;
     --color-brand-green-100: #163a24;
-    --color-brand-blue-100: #1c2740;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
@@ -282,6 +282,8 @@ section { padding-block: var(--space-8); }
 .btn-whatsapp:hover { background: #1fb857; }
 .btn-block { width: 100%; }
 .btn-sm { padding: 0.55rem 1.1rem; font-size: 0.9rem; }
+.btn-lg { padding: 1.25rem 2.25rem; font-size: 1.2rem; gap: var(--space-3); box-shadow: var(--shadow-lg); }
+.btn-lg svg { width: 26px; height: 26px; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -388,7 +390,15 @@ section { padding-block: var(--space-8); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
 .hero .btn-accent { background: #fff; color: #12151b; }
 .hero .btn-accent:hover { background: #fff; opacity: 0.9; }
-.trust-markers { display: flex; flex-wrap: wrap; gap: var(--space-5); margin-top: var(--space-6); }
+.hero__secondary-link {
+  display: inline-block;
+  margin-top: var(--space-4);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.hero__secondary-link:hover { color: #fff; }
+.trust-markers { display: flex; flex-wrap: wrap; gap: var(--space-5); margin-top: var(--space-5); }
 .trust-marker { display: flex; align-items: center; gap: var(--space-2); font-weight: 600; font-size: 0.95rem; color: #fff; }
 .trust-marker svg { color: #fff; flex-shrink: 0; }
 .hero__media {
@@ -438,10 +448,9 @@ section { padding-block: var(--space-8); }
 }
 /* Cycle the 4 brand colors through the icon badges only — small, controlled
    accents rather than a whole loud card, see DECISIONS.md. */
-.service-card:nth-of-type(4n+1) .service-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
-.service-card:nth-of-type(4n+2) .service-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
-.service-card:nth-of-type(4n+3) .service-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
-.service-card:nth-of-type(4n+4) .service-card__icon { background: var(--color-brand-blue-100); color: var(--color-brand-blue-glyph); }
+.service-card:nth-of-type(3n+1) .service-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
+.service-card:nth-of-type(3n+2) .service-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
+.service-card:nth-of-type(3n+3) .service-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
 .service-card__price { color: var(--color-accent-600); font-weight: 700; }
 .service-card__desc { color: var(--color-text-muted); font-size: 0.95rem; flex-grow: 1; }
 .service-card__link { font-weight: 700; color: var(--color-primary-700); display: inline-flex; align-items: center; gap: var(--space-1); }
@@ -478,10 +487,9 @@ section { padding-block: var(--space-8); }
   background: var(--color-primary-100);
   display: flex; align-items: center; justify-content: center;
 }
-.why-card:nth-of-type(4n+1) .why-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
-.why-card:nth-of-type(4n+2) .why-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
-.why-card:nth-of-type(4n+3) .why-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
-.why-card:nth-of-type(4n+4) .why-card__icon { background: var(--color-brand-blue-100); color: var(--color-brand-blue-glyph); }
+.why-card:nth-of-type(3n+1) .why-card__icon { background: var(--color-brand-red-100); color: var(--color-brand-red-glyph); }
+.why-card:nth-of-type(3n+2) .why-card__icon { background: var(--color-brand-yellow-100); color: var(--color-brand-yellow-glyph); }
+.why-card:nth-of-type(3n+3) .why-card__icon { background: var(--color-brand-green-100); color: var(--color-brand-green-glyph); }
 .why-card h3 { font-size: 1.05rem; margin-bottom: var(--space-1); }
 .why-card p { color: var(--color-text-muted); font-size: 0.95rem; }
 
@@ -740,7 +748,7 @@ input[type="range"] { flex-grow: 1; accent-color: var(--color-primary-600); heig
   position: fixed;
   right: var(--space-5);
   bottom: var(--space-5);
-  width: 58px; height: 58px;
+  width: 72px; height: 72px;
   border-radius: 50%;
   background: #25d366;
   color: #fff;
@@ -748,8 +756,17 @@ input[type="range"] { flex-grow: 1; accent-color: var(--color-primary-600); heig
   box-shadow: var(--shadow-lg);
   z-index: 600;
   transition: transform var(--transition-fast);
+  animation: whatsapp-pulse 2.6s ease-in-out infinite;
 }
-.float-whatsapp:hover { transform: scale(1.06); }
+.float-whatsapp svg { width: 34px; height: 34px; }
+.float-whatsapp:hover { transform: scale(1.06); animation-play-state: paused; }
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: var(--shadow-lg), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  50% { box-shadow: var(--shadow-lg), 0 0 0 14px rgba(37, 211, 102, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-whatsapp { animation: none; }
+}
 
 .mobile-bar {
   position: fixed;
@@ -766,20 +783,21 @@ input[type="range"] { flex-grow: 1; accent-color: var(--color-primary-600); heig
 }
 .mobile-bar.is-visible { transform: translateY(0); }
 .mobile-bar a, .mobile-bar button {
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: var(--space-3) var(--space-2);
-  font-size: 0.72rem;
-  font-weight: 700;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: var(--space-4) var(--space-2);
+  font-size: 0.9rem;
+  font-weight: 800;
   border: none;
   background: none;
   color: var(--color-text);
   border-right: 1px solid var(--color-border);
 }
 .mobile-bar a:last-child, .mobile-bar button:last-child { border-right: none; }
+.mobile-bar a:nth-child(2) { color: var(--color-accent-500); }
 @media (min-width: 900px) {
   .mobile-bar { display: none; }
 }
-body.has-mobile-bar { padding-bottom: 64px; }
+body.has-mobile-bar { padding-bottom: 82px; }
 @media (min-width: 900px) {
   body.has-mobile-bar { padding-bottom: 0; }
 }
