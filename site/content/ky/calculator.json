@@ -23,8 +23,8 @@
     "office": "Офис"
   },
   "addons": {
-    "windows_per_m2": { "label": "Терезелерди жуу", "unit": "м² үчүн" },
-    "sofa_dry_clean": { "label": "Диванды химиялык тазалоо", "unit": "" },
+    "windows_per_m2": { "label": "Терезелерди жуу", "unit": "м² үчүн", "price_display": "300–350" },
+    "sofa_dry_clean": { "label": "Диванды химиялык тазалоо", "unit": "", "price_display": "450–750" },
     "carpet_per_m2": { "label": "Килемди химиялык тазалоо", "unit": "м² үчүн" },
     "fridge_inside": { "label": "Муздаткычтын ичи", "unit": "" },
     "oven_inside": { "label": "Мешкененин ичи", "unit": "" },

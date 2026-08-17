@@ -57,7 +57,7 @@
           {% for key, addon in calculator_i18n.addons.items() %}
           <tr>
             <td>{{ addon.label }}</td>
-            <td>{{ pricing.addons[key] }} {{ config.currency_symbol[lang] }}{% if addon.unit %} {{ addon.unit }}{% endif %}</td>
+            <td>{{ addon.price_display or pricing.addons[key] }} {{ config.currency_symbol[lang] }}{% if addon.unit %} {{ addon.unit }}{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>

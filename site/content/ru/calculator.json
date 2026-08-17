@@ -23,8 +23,8 @@
     "office": "Офис"
   },
   "addons": {
-    "windows_per_m2": { "label": "Мытьё окон", "unit": "за м²" },
-    "sofa_dry_clean": { "label": "Химчистка дивана", "unit": "" },
+    "windows_per_m2": { "label": "Мытьё окон", "unit": "за м²", "price_display": "300–350" },
+    "sofa_dry_clean": { "label": "Химчистка дивана", "unit": "", "price_display": "450–750" },
     "carpet_per_m2": { "label": "Химчистка ковра", "unit": "за м²" },
     "fridge_inside": { "label": "Холодильник внутри", "unit": "" },
     "oven_inside": { "label": "Духовка внутри", "unit": "" },

@@ -23,8 +23,8 @@
     "office": "Office"
   },
   "addons": {
-    "windows_per_m2": { "label": "Window washing", "unit": "per m²" },
-    "sofa_dry_clean": { "label": "Sofa dry cleaning", "unit": "" },
+    "windows_per_m2": { "label": "Window washing", "unit": "per m²", "price_display": "300–350" },
+    "sofa_dry_clean": { "label": "Sofa dry cleaning", "unit": "", "price_display": "450–750" },
     "carpet_per_m2": { "label": "Carpet dry cleaning", "unit": "per m²" },
     "fridge_inside": { "label": "Fridge — inside", "unit": "" },
     "oven_inside": { "label": "Oven — inside", "unit": "" },
