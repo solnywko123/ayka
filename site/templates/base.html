@@ -4,6 +4,7 @@
 {% include "partials/seo_head.html" %}
 </head>
 <body class="has-mobile-bar" data-page-type="{{ page_type }}"{% if service_slug %} data-service-slug="{{ service_slug }}"{% endif %}>
+<div class="bg-glow" aria-hidden="true"></div>
 <a class="skip-link" href="#main">{{ ui.skip_to_content }}</a>
 {% if demo_banner %}
 {% include "partials/demo_banner.html" %}

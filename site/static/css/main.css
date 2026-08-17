@@ -157,6 +157,19 @@ body {
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
 }
+/* Soft ambient glow behind the whole page — first in the DOM so it paints
+   behind header/main/footer (all z-index:auto or higher), no negative
+   z-index needed. Static, not animated, so prefers-reduced-motion is moot. */
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(560px circle at 12% -8%, #e0f2fe 0%, transparent 62%),
+    radial-gradient(480px circle at 108% 18%, #d0e8ff 0%, transparent 58%),
+    radial-gradient(620px circle at 45% 118%, #e0f2fe 0%, transparent 60%);
+}
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul, ol { padding: 0; margin: 0; list-style: none; }
