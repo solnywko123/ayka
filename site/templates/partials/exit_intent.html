@@ -1,0 +1,14 @@
+<div class="exit-popup" data-exit-popup hidden>
+  <div class="exit-popup__backdrop" data-exit-popup-dismiss></div>
+  <div class="exit-popup__card" role="dialog" aria-modal="true" aria-labelledby="exit-popup-title">
+    <button type="button" class="exit-popup__close" data-exit-popup-dismiss aria-label="{{ ui.exit_popup.dismiss }}">
+      <svg width="18" height="18" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-plus"></use></svg>
+    </button>
+    <h3 id="exit-popup-title">{{ ui.exit_popup.title }}</h3>
+    <p>{{ ui.exit_popup.text }}</p>
+    <a class="btn btn-whatsapp btn-block" href="https://wa.me/{{ config.whatsapp | replace(' ', '') | replace('+', '') }}" rel="noopener" target="_blank">
+      <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-whatsapp"></use></svg>
+      {{ ui.exit_popup.cta }}
+    </a>
+  </div>
+</div>

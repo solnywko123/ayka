@@ -1,15 +1,22 @@
 {
   "home": {
     "meta_title": "Cleaning Company in Bishkek — Apartment & Office Cleaning",
-    "meta_description": "Cleaning services in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning, window washing. Get an instant online quote in 30 seconds.",
+    "meta_description": "Cleaning services in Bishkek: general and maintenance cleaning, post-renovation cleaning, furniture dry cleaning, window washing. Leave a request — we'll come at a convenient time.",
     "hero": {
-      "h1": "Cleaning Services in Bishkek",
-      "subtitle": "Effortless cleanliness: get an instant online quote and book a cleaning for a convenient time — our own supplies, vetted cleaners, a fixed price on your request.",
+      "location_badge": "Serving all of Bishkek",
+      "h1": "Impeccable cleanliness for your home and office",
+      "subtitle": "Professional cleaning with a quality guarantee: our own supplies and equipment, vetted cleaners, a fixed price on your request.",
       "image_alt": "The All Clean team washing a building facade in Bishkek",
       "trust_markers": [
         "Our own supplies and equipment",
         "Cleaners with verified documents",
         "Pay after you check the result"
+      ],
+      "stats": [
+        { "title": "Our own supplies and equipment", "desc": "Nothing to buy in advance — the crew brings everything." },
+        { "title": "Cleaners with verified documents", "desc": "Every staff member passes a document check and interview." },
+        { "title": "Pay after you check the result", "desc": "You only pay once you've confirmed the quality yourself." },
+        { "title": "No days off", "desc": "We work every day, including holidays, around your schedule." }
       ]
     },
     "services_title": "Our services",
@@ -34,6 +41,12 @@
     ],
     "reviews_title": "What our clients say",
     "prices_title": "Cleaning prices",
+    "packages_title": "Main cleaning packages",
+    "min_order_label": "Minimum order",
+    "consult_note": "Questions about a non-standard property? Message us on WhatsApp — we'll advise you in a few minutes.",
+    "addons_title": "Additional services",
+    "gallery_eyebrow": "Portfolio",
+    "gallery_title": "Our work",
     "price_table": {
       "service_col": "Service",
       "price_col": "Price",
@@ -44,7 +57,7 @@
     "geography_title": "We serve all of Bishkek and its suburbs",
     "final_cta": {
       "title": "Book a cleaning right now",
-      "subtitle": "Get an instant online quote or leave a request — we'll call you back and confirm a convenient visit time."
+      "subtitle": "Leave a request — we'll call you back and confirm a convenient visit time."
     }
   },
   "services": {
@@ -130,5 +143,40 @@
     "meta_description": "The page you requested was not found. Go to the homepage of All Clean or use the navigation menu.",
     "title": "Page not found",
     "text": "The link may be outdated or the page may have moved. Go back to the homepage or pick a service below."
+  },
+  "business": {
+    "meta_title": "Commercial Cleaning in Bishkek — Offices, HoReCa, Facades | All Clean",
+    "meta_description": "Professional commercial cleaning in Bishkek: offices, restaurants, malls, business centers. Contract, invoicing, bank transfer, night shifts, dedicated supervisor.",
+    "h1": "Professional commercial cleaning in Bishkek",
+    "intro": "Full-service cleaning for offices, commercial spaces, restaurants, malls, business centers and production facilities. Official contract, bank transfer, invoicing and closing documents.",
+    "hero": {
+      "cta_primary": "Get a quote for your company",
+      "cta_secondary": "Request an on-site assessment"
+    },
+    "services_title": "Services for corporate clients",
+    "services": [
+      { "icon": "briefcase", "title": "Daily office cleaning", "desc": "Scheduled service — morning, midday or evening — without interrupting your workflow." },
+      { "icon": "hammer", "title": "Post-construction cleaning", "desc": "Getting commercial spaces move-in ready: construction dust, finishing residue, pre-opening prep." },
+      { "icon": "window", "title": "Facade and panoramic glass washing", "desc": "High-pressure washing and at-height work for storefronts, facades and panoramic windows." },
+      { "icon": "sparkle", "title": "Deep HoReCa cleaning", "desc": "Restaurants, cafes and food-service areas — deep cleaning and disinfection to food-service standards." },
+      { "icon": "broom", "title": "Deep floor scrubbing", "desc": "Rotary machines and polymer protective coating for commercial floors." }
+    ],
+    "benefits_title": "Why businesses choose us",
+    "benefits": [
+      { "icon": "shield-check", "title": "Contract-based work", "desc": "Official contract, invoicing and bank transfer — with or without VAT, matching your accounting setup." },
+      { "icon": "clock", "title": "Night shifts", "desc": "We clean outside business hours so your operations are never interrupted." },
+      { "icon": "users", "title": "Dedicated supervisor", "desc": "A personal supervisor and crew liability for your site." },
+      { "icon": "sparkle", "title": "Professional equipment", "desc": "Kärcher equipment and industrial-grade chemistry for consistent results at scale." }
+    ],
+    "form_title": "Request a commercial quote",
+    "form": {
+      "company_label": "Company name",
+      "company_placeholder": "Company LLC",
+      "area_label": "Area (m²)",
+      "object_type_label": "Object type",
+      "object_types": ["Office", "Restaurant", "Mall", "Warehouse", "Other"],
+      "contact_label": "Contact person",
+      "submit": "Request a quote and free assessment visit"
+    }
   }
 }

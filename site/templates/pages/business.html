@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+
+<section class="hero" style="padding-top:var(--space-6)">
+  <div class="container hero__inner">
+    <div>
+      <h1 class="hero__title reveal">{{ page.h1 }}</h1>
+      <p class="hero__subtitle reveal">{{ page.intro }}</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn-accent btn-lg" href="#lead-form">{{ page.hero.cta_primary }}</a>
+        <a class="btn btn-outline btn-lg" style="background:#fff" href="#lead-form">{{ page.hero.cta_secondary }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ ui.nav.business }}</span>
+      <h2>{{ page.services_title }}</h2>
+    </div>
+    <div class="grid grid-3">
+      {% for s in page.services %}
+      <div class="service-card reveal">
+        <span class="service-card__icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ s.icon }}"></use></svg>
+        </span>
+        <h3>{{ s.title }}</h3>
+        <p class="service-card__desc">{{ s.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ page.benefits_title }}</h2>
+    </div>
+    <div class="grid grid-2">
+      {% for b in page.benefits %}
+      <div class="why-card reveal">
+        <span class="why-card__icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-{{ b.icon }}"></use></svg>
+        </span>
+        <div>
+          <h3>{{ b.title }}</h3>
+          <p>{{ b.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calculator" style="max-width:640px; margin-inline:auto;">
+      <h3 style="margin-bottom:1.5rem">{{ page.form_title }}</h3>
+      {% include "partials/lead_form_business.html" %}
+    </div>
+  </div>
+</section>
+{% endblock %}

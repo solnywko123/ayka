@@ -5,10 +5,15 @@
     "home": "Home",
     "services": "Services",
     "prices": "Prices",
+    "before_after": "Our work",
+    "how_it_works": "How we work",
     "about": "About us",
     "reviews": "Reviews",
     "blog": "Blog",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "business": "For business",
+    "segment_b2c": "For individuals",
+    "segment_b2b": "For business"
   },
   "buttons": {
     "calculate": "Leave a request",
@@ -70,5 +75,11 @@
   },
   "reviews": {
     "placeholder_badge": "Demo review — to be replaced with a real one"
+  },
+  "exit_popup": {
+    "title": "Leaving? Ask us on WhatsApp",
+    "text": "We'll reply within a couple of minutes with an estimate for your property.",
+    "cta": "Message on WhatsApp",
+    "dismiss": "Close"
   }
 }

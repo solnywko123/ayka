@@ -14,6 +14,9 @@
 </main>
 {% include "partials/footer.html" %}
 {% include "partials/cta.html" %}
+{% if page_type not in ["kontakty", "biznes"] %}
+{% include "partials/exit_intent.html" %}
+{% endif %}
 
 <script id="ayka-config" type="application/json">{{ {"analytics": config.analytics} | tojson }}</script>
 <script type="module" src="{{ asset('js/ui.js') }}"></script>

@@ -73,6 +73,24 @@
     });
   }
 
+  // Fields marked [data-merge-comment="Label"] have no name= attribute (so
+  // FormData never sends them under an unknown key the API would silently
+  // drop) — instead their value is folded into the real "comment" field
+  // right before submit. Used by the B2B form (company name, object type).
+  function mergeExtraFieldsIntoComment(form) {
+    var extras = form.querySelectorAll("[data-merge-comment]");
+    if (!extras.length) return;
+    var commentField = form.querySelector('[name="comment"]');
+    if (!commentField) return;
+    var lines = [];
+    extras.forEach(function (el) {
+      if (el.value) lines.push(el.dataset.mergeComment + ": " + el.value);
+    });
+    if (lines.length) {
+      commentField.value = lines.join("\n") + (commentField.value ? "\n" + commentField.value : "");
+    }
+  }
+
   function initForm(form) {
     var utm = captureUtm();
     fillHiddenFields(form, utm);
@@ -94,6 +112,7 @@
       var submitButton = form.querySelector('[type="submit"]');
       if (submitButton) submitButton.disabled = true;
 
+      mergeExtraFieldsIntoComment(form);
       var formData = new FormData(form);
       var payload = {};
       formData.forEach(function (value, key) {

@@ -35,9 +35,13 @@ URL_SLUGS = {
     "otzyvy": "otzyvy",
     "kontakty": "kontakty",
     "blog": "blog",
+    "biznes": "biznes",
 }
 
-STATIC_PAGE_KEYS = {"uslugi": "services", "ceny": "ceny", "o-nas": "about", "otzyvy": "otzyvy", "kontakty": "kontakty"}
+STATIC_PAGE_KEYS = {
+    "uslugi": "services", "ceny": "ceny", "o-nas": "about", "otzyvy": "otzyvy",
+    "kontakty": "kontakty", "biznes": "business",
+}
 
 BUILD_DATE = dt.date.today().isoformat()
 
@@ -396,6 +400,7 @@ class SiteBuilder:
             self.build_static_page(lang, "o-nas", "pages/about.html")
             self.build_static_page(lang, "otzyvy", "pages/reviews.html")
             self.build_static_page(lang, "kontakty", "pages/contacts.html")
+            self.build_static_page(lang, "biznes", "pages/business.html")
             self.build_blog_index(lang)
             for post in self.lang_posts[lang]:
                 self.build_blog_post(lang, post)

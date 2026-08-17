@@ -1,0 +1,61 @@
+<form class="lead-form" id="lead-form" data-lead-form
+      data-api-base="{{ config.api_base_url }}"
+      data-whatsapp="{{ config.whatsapp }}"
+      data-success-text="{{ ui.form.success }}"
+      data-error-text="{{ ui.form.error }}"
+      data-fallback-text="{{ ui.form.fallback }}"
+      novalidate>
+  <div class="form-field">
+    <label for="lf-company">{{ page.form.company_label }}</label>
+    <input type="text" id="lf-company" data-merge-comment="{{ page.form.company_label }}" placeholder="{{ page.form.company_placeholder }}" maxlength="150">
+  </div>
+
+  <div class="form-field">
+    <label for="lf-object-type">{{ page.form.object_type_label }}</label>
+    <select id="lf-object-type" class="calc-select" data-merge-comment="{{ page.form.object_type_label }}">
+      {% for ot in page.form.object_types %}
+      <option value="{{ ot }}">{{ ot }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-area">{{ page.form.area_label }}</label>
+    <input type="number" id="lf-area" name="area_m2" min="5" max="1000" step="1">
+  </div>
+
+  <div class="form-field">
+    <label for="lf-name">{{ page.form.contact_label }}</label>
+    <input type="text" id="lf-name" name="name" placeholder="{{ ui.form.name_placeholder }}" minlength="2" maxlength="100" required>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-phone">{{ ui.form.phone_label }}</label>
+    <input type="tel" id="lf-phone" name="phone" placeholder="{{ ui.form.phone_placeholder }}" required>
+  </div>
+
+  <div class="form-field">
+    <label for="lf-comment">{{ ui.form.comment_label }}</label>
+    <textarea id="lf-comment" name="comment" rows="3" maxlength="1000" placeholder="{{ ui.form.comment_placeholder }}"></textarea>
+  </div>
+
+  <input type="hidden" name="property_type" value="office">
+  <input type="hidden" name="lang" value="{{ lang }}">
+  <input type="hidden" name="utm_source">
+  <input type="hidden" name="utm_medium">
+  <input type="hidden" name="utm_campaign">
+  <input type="hidden" name="utm_content">
+  <input type="hidden" name="utm_term">
+  <input type="hidden" name="referrer">
+  <input type="hidden" name="landing_page">
+  <input type="hidden" name="rendered_at">
+
+  <div class="form-honeypot" aria-hidden="true">
+    <label for="lf-website">Website</label>
+    <input type="text" id="lf-website" name="company_website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit" class="btn btn-accent btn-block">{{ page.form.submit }}</button>
+  <p class="form-note">{{ ui.form.consent }}</p>
+  <div class="form-status" data-form-status role="status"></div>
+</form>

@@ -1,4 +1,10 @@
 <header class="site-header">
+  <div class="site-header__segment">
+    <div class="container segment-switch">
+      <a class="segment-switch__option{% if page_type != 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/' }}">{{ ui.nav.segment_b2c }}</a>
+      <a class="segment-switch__option{% if page_type == 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/biznes/' }}">{{ ui.nav.segment_b2b }}</a>
+    </div>
+  </div>
   <div class="container site-header__inner">
     <a class="logo" href="{{ meta.alt_paths.get(lang, '/' + lang + '/') }}">
       <img class="logo__image" src="{{ asset('img/logo.png') }}" alt="{{ config.company_name }}" width="44" height="44">
@@ -8,8 +14,12 @@
       <ul>
         <li><a href="{{ '/' + lang + '/uslugi/' }}">{{ ui.nav.services }}</a></li>
         <li><a href="{{ '/' + lang + '/ceny/' }}">{{ ui.nav.prices }}</a></li>
-        <li><a href="{{ '/' + lang + '/o-nas/' }}">{{ ui.nav.about }}</a></li>
+        {% if page_type != 'biznes' %}
+        <li><a href="{{ '/' + lang + '/' }}#before-after">{{ ui.nav.before_after }}</a></li>
+        <li><a href="{{ '/' + lang + '/' }}#how-it-works">{{ ui.nav.how_it_works }}</a></li>
+        {% endif %}
         <li><a href="{{ '/' + lang + '/otzyvy/' }}">{{ ui.nav.reviews }}</a></li>
+        <li><a href="{{ '/' + lang + '/o-nas/' }}">{{ ui.nav.about }}</a></li>
         <li><a href="{{ '/' + lang + '/blog/' }}">{{ ui.nav.blog }}</a></li>
         <li><a href="{{ '/' + lang + '/kontakty/' }}">{{ ui.nav.contacts }}</a></li>
       </ul>
@@ -30,7 +40,11 @@
         </ul>
       </div>
 
+      {% if page_type == 'biznes' %}
+      <a class="btn btn-accent btn-sm" href="#lead-form">{{ ui.buttons.order }}</a>
+      {% else %}
       <a class="btn btn-accent btn-sm" href="{{ '/' + lang + '/kontakty/#lead-form' }}">{{ ui.buttons.order }}</a>
+      {% endif %}
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="{{ ui.nav.services }}">
         <svg width="20" height="20" aria-hidden="true"><use href="{{ asset('icons/sprite.svg') }}#icon-menu"></use></svg>
@@ -38,3 +52,4 @@
     </div>
   </div>
 </header>
+<div class="nav-backdrop" data-nav-backdrop aria-hidden="true"></div>
