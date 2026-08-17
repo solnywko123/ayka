@@ -9,13 +9,12 @@
       "image_alt": "The All Clean team washing a building facade in Bishkek",
       "trust_markers": [
         "Our own supplies and equipment",
-        "Cleaners with verified documents",
-        "Pay after you check the result"
+        "Cleaners with verified documents"
       ],
       "stats": [
         { "title": "Our own supplies and equipment", "desc": "Nothing to buy in advance — the crew brings everything." },
         { "title": "Cleaners with verified documents", "desc": "Every staff member passes a document check and interview." },
-        { "title": "Pay after you check the result", "desc": "You only pay once you've confirmed the quality yourself." },
+        { "title": "A fixed price", "desc": "The price is agreed before work starts — no surprise charges." },
         { "title": "No days off", "desc": "We work every day, including holidays, around your schedule." }
       ]
     },
@@ -27,7 +26,7 @@
       { "title": "Request", "desc": "Leave a request on the site, via WhatsApp or by phone — tell us what needs cleaning." },
       { "title": "Quote & confirmation", "desc": "We clarify the details, lock in the price and agree on a convenient visit time." },
       { "title": "Cleaning", "desc": "Cleaners arrive with their own supplies and equipment and follow the agreed checklist." },
-      { "title": "Check & payment", "desc": "You personally check the result, and only then does payment happen." }
+      { "title": "Check & payment", "desc": "You check the work against the checklist and pay using whichever method suits you." }
     ],
     "why_us_eyebrow": "Why us",
     "why_us_title": "Why choose us",
@@ -36,7 +35,6 @@
       { "title": "Cleaners with verified documents", "desc": "Every team member goes through document verification and an interview before working with clients." },
       { "title": "Free re-cleaning", "desc": "If, for objective reasons, you don't accept the work, we'll redo the problem areas free of charge within 24 hours." },
       { "title": "Our own supplies and equipment", "desc": "Professional cleaning products, vacuums and equipment — nothing to buy or prepare." },
-      { "title": "Pay after inspection", "desc": "You only pay once you've personally confirmed the quality of the cleaning." },
       { "title": "Flexible scheduling, no days off", "desc": "We work daily, including holidays — we fit your schedule, not the other way around." }
     ],
     "reviews_title": "What our clients say",
@@ -92,7 +90,6 @@
     "values_title": "How we operate",
     "value_items": [
       { "title": "Honest pricing", "desc": "The price range is locked in before work starts, with no hidden charges added afterward." },
-      { "title": "Pay for results", "desc": "You pay after personally checking the quality of the cleaning, not upfront." },
       { "title": "Accountability", "desc": "If something's not right for an objective reason, we redo it free of charge within 24 hours." },
       { "title": "Respect for your time", "desc": "We show up at the agreed time and fit your schedule, including evenings and weekends." }
     ],

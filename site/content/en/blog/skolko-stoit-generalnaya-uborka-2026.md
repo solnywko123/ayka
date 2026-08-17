@@ -43,7 +43,7 @@ Second, find out how many cleaners are coming and for how long. A general cleani
 
 Third, check whether the price includes the company's own products and equipment, or whether you're expected to supply something yourself — your own vacuum cleaner or cleaning products, say. Some cheaper offers on the market save money precisely by shifting part of the cost onto the client.
 
-Finally, ask about payment terms and re-cleaning policy. A company that only takes payment after you've checked the result and is willing to redo problem areas for free objectively carries less financial risk for you than one that requires prepayment with no clear guarantees — even if its price is a bit higher.
+Finally, ask about payment terms and re-cleaning policy. A company with clear payment terms and a willingness to redo problem areas for free objectively carries less financial risk for you than one that requires full prepayment with no clear guarantees — even if its price is a bit higher.
 
 ## Common budgeting mistakes
 

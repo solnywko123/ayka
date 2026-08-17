@@ -21,7 +21,7 @@ Pay attention to whether the company is upfront about what the service doesn't c
 
 ## 3. Payment terms
 
-Notice when the company asks for payment — before work starts, during the process, or after you've personally checked the result. Payment on acceptance of the work is a sign the company is confident in the quality of its service and isn't afraid the client will refuse to pay.
+Notice on what terms the company accepts payment, and how clearly those terms are spelled out upfront. The clearer the payment terms are before work starts, the fewer surprises you'll have after the cleaning.
 
 If a company insists on full prepayment with no quality guarantees whatsoever, weigh the risk: if you're unhappy with the result, getting a refund or a re-clean will be much harder.
 
@@ -69,7 +69,7 @@ Before submitting a request to a cleaning company, check:
 
 - Is there a transparent price list with base rates on the website;
 - Is there a concrete checklist of what's included and what's not;
-- When does payment happen — before, during, or after you check the result;
+- When payment happens and on what terms;
 - Does the company vet cleaners before hiring them;
 - Is there a policy of free re-cleaning for legitimate complaints;
 - How specific and credible are the reviews on the site;

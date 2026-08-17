@@ -1,10 +1,10 @@
-<header class="site-header">
-  <div class="site-header__segment">
-    <div class="container segment-switch">
-      <a class="segment-switch__option{% if page_type != 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/' }}">{{ ui.nav.segment_b2c }}</a>
-      <a class="segment-switch__option{% if page_type == 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/biznes/' }}">{{ ui.nav.segment_b2b }}</a>
-    </div>
+<div class="site-header__segment">
+  <div class="container segment-switch">
+    <a class="segment-switch__option{% if page_type != 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/' }}">{{ ui.nav.segment_b2c }}</a>
+    <a class="segment-switch__option{% if page_type == 'biznes' %} is-active{% endif %}" href="{{ '/' + lang + '/biznes/' }}">{{ ui.nav.segment_b2b }}</a>
   </div>
+</div>
+<header class="site-header">
   <div class="container site-header__inner">
     <a class="logo" href="{{ meta.alt_paths.get(lang, '/' + lang + '/') }}">
       <img class="logo__image" src="{{ asset('img/logo.png') }}" alt="{{ config.company_name }}" width="44" height="44">
