@@ -103,12 +103,18 @@ def faq_jsonld(items: list[dict]) -> dict:
     }
 
 
-def breadcrumb_jsonld(items: list[tuple[str, str]]) -> dict:
+def breadcrumb_jsonld(items: list[tuple[str, str]], domain: str) -> dict:
+    """items carry site-relative paths (so the HTML breadcrumb nav works regardless
+    of which host actually serves the build — see DECISIONS.md for the bug this
+    fixes); schema.org expects absolute URLs in BreadcrumbList, so absolutize here."""
+    def absolutize(url: str) -> str:
+        return url if url.startswith("http") else f"https://{domain}{url}"
+
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": name, "item": url}
+            {"@type": "ListItem", "position": i + 1, "name": name, "item": absolutize(url)}
             for i, (name, url) in enumerate(items)
         ],
     }

@@ -207,15 +207,15 @@ class SiteBuilder:
             service["title"], service.get("short_description", ""),
         )
         breadcrumbs = [
-            (lang_data["ui"]["nav"]["home"], abs_url(self.domain, page_path(lang))),
-            (lang_data["ui"]["nav"]["services"], abs_url(self.domain, page_path(lang, "uslugi"))),
+            (lang_data["ui"]["nav"]["home"], page_path(lang)),
+            (lang_data["ui"]["nav"]["services"], page_path(lang, "uslugi")),
             (service["title"], meta["canonical"]),
         ]
         json_ld = [
             seo.local_business_jsonld(self.config, lang, meta["canonical"]),
             seo.service_jsonld(self.config, service, meta["canonical"]),
             seo.faq_jsonld(service["faq"]),
-            seo.breadcrumb_jsonld(breadcrumbs),
+            seo.breadcrumb_jsonld(breadcrumbs, self.domain),
         ]
         related = [s for s in lang_data["services"] if s["slug"] in service.get("related", [])]
         ctx = self.base_context(lang, "service", meta, json_ld, service_slug=service["slug"])
@@ -233,13 +233,13 @@ class SiteBuilder:
             district["title"], district.get("intro", ""),
         )
         breadcrumbs = [
-            (lang_data["ui"]["nav"]["home"], abs_url(self.domain, page_path(lang))),
-            (lang_data["ui"]["geography_title"], abs_url(self.domain, page_path(lang))),
+            (lang_data["ui"]["nav"]["home"], page_path(lang)),
+            (lang_data["ui"]["geography_title"], page_path(lang)),
             (district["title"], meta["canonical"]),
         ]
         json_ld = [
             seo.local_business_jsonld(self.config, lang, meta["canonical"]),
-            seo.breadcrumb_jsonld(breadcrumbs),
+            seo.breadcrumb_jsonld(breadcrumbs, self.domain),
         ]
         ctx = self.base_context(lang, "district", meta, json_ld)
         ctx.update({"district": district, "breadcrumbs": breadcrumbs, "services": lang_data["services"]})
@@ -257,18 +257,18 @@ class SiteBuilder:
             page_data.get("h1", page_data["meta_title"]), page_data.get("meta_description", ""),
         )
         breadcrumbs = [
-            (lang_data["ui"]["nav"]["home"], abs_url(self.domain, page_path(lang))),
+            (lang_data["ui"]["nav"]["home"], page_path(lang)),
             (page_data.get("h1", ""), meta["canonical"]),
         ]
         json_ld = [
             seo.local_business_jsonld(self.config, lang, meta["canonical"],
                                        reviews=lang_data["reviews"] if kind == "otzyvy" else None),
-            seo.breadcrumb_jsonld(breadcrumbs),
+            seo.breadcrumb_jsonld(breadcrumbs, self.domain),
         ]
         if kind == "otzyvy":
             json_ld = [
                 seo.local_business_jsonld(self.config, lang, meta["canonical"], reviews=lang_data["reviews"]),
-                seo.breadcrumb_jsonld(breadcrumbs),
+                seo.breadcrumb_jsonld(breadcrumbs, self.domain),
             ]
         ctx = self.base_context(lang, kind, meta, json_ld)
         ctx.update({
@@ -294,10 +294,10 @@ class SiteBuilder:
             page_data.get("h1", page_data["meta_title"]), "",
         )
         breadcrumbs = [
-            (lang_data["ui"]["nav"]["home"], abs_url(self.domain, page_path(lang))),
+            (lang_data["ui"]["nav"]["home"], page_path(lang)),
             (page_data.get("h1", ""), meta["canonical"]),
         ]
-        json_ld = [seo.local_business_jsonld(self.config, lang, meta["canonical"]), seo.breadcrumb_jsonld(breadcrumbs)]
+        json_ld = [seo.local_business_jsonld(self.config, lang, meta["canonical"]), seo.breadcrumb_jsonld(breadcrumbs, self.domain)]
         ctx = self.base_context(lang, "blog_index", meta, json_ld)
         ctx.update({"posts": posts, "page": page_data, "breadcrumbs": breadcrumbs})
         html = self.render("pages/blog_index.html", ctx)
@@ -313,14 +313,14 @@ class SiteBuilder:
             post["title"], post["description"],
         )
         breadcrumbs = [
-            (lang_data["ui"]["nav"]["home"], abs_url(self.domain, page_path(lang))),
-            (lang_data["pages"]["blog"].get("h1", ""), abs_url(self.domain, page_path(lang, "blog"))),
+            (lang_data["ui"]["nav"]["home"], page_path(lang)),
+            (lang_data["pages"]["blog"].get("h1", ""), page_path(lang, "blog")),
             (post["title"], meta["canonical"]),
         ]
         json_ld = [
             seo.local_business_jsonld(self.config, lang, meta["canonical"]),
             seo.article_jsonld(self.config, post, meta["canonical"], meta["og_image"]),
-            seo.breadcrumb_jsonld(breadcrumbs),
+            seo.breadcrumb_jsonld(breadcrumbs, self.domain),
         ]
         other_posts = [p for p in self.lang_posts[lang] if p["slug"] != post["slug"]][:2]
         ctx = self.base_context(lang, "blog_post", meta, json_ld)
