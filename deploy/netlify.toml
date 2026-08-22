@@ -23,6 +23,20 @@
   status = 200
   force = true
 
+# /admin — серверный HTML-интерфейс бэкенда, проксируется через основной домен, чтобы
+# cookie сессии (без явного Domain) привязывался к allclean.kg, а не к onrender.com.
+[[redirects]]
+  from = "/admin"
+  to = "https://ayka-cleaning-api.onrender.com/admin"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/admin/*"
+  to = "https://ayka-cleaning-api.onrender.com/admin/:splat"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
@@ -36,6 +50,20 @@
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     X-Frame-Options = "DENY"
     Content-Security-Policy = "default-src 'self'; base-uri 'self'; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; connect-src 'self' https://ayka-cleaning-api.onrender.com https://www.google-analytics.com https://region1.google-analytics.com https://mc.yandex.ru; frame-src https://mc.yandex.ru; frame-ancestors 'none'"
+
+# /admin проксируется с бэкенда (см. redirects выше) — он уже отдаёт свой CSP
+# (api/app/main.py, ADMIN_CSP). Правило "/*" выше матчится и по /admin*, а Netlify
+# берёт для одного и того же заголовка значение более специфичного правила — задаём
+# здесь тот же CSP явно, чтобы не было конфликта между двумя разными политиками.
+[[headers]]
+  for = "/admin"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'"
 
 # Статика с хешем в имени — кешировать на год (раздел 14 BRIEF.md)
 [[headers]]
