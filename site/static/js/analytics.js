@@ -15,13 +15,22 @@
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
 
-  if (analytics.ga4_id) {
+  // GA4 and Google Ads both run on the same gtag.js loader — one <script> tag is enough
+  // for either or both to be configured; each just gets its own gtag("config", ...) call.
+  if (analytics.ga4_id || analytics.google_ads_id) {
     var gaScript = document.createElement("script");
     gaScript.async = true;
-    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(analytics.ga4_id);
+    gaScript.src =
+      "https://www.googletagmanager.com/gtag/js?id=" +
+      encodeURIComponent(analytics.ga4_id || analytics.google_ads_id);
     document.head.appendChild(gaScript);
     gtag("js", new Date());
-    gtag("config", analytics.ga4_id, { anonymize_ip: true });
+    if (analytics.ga4_id) {
+      gtag("config", analytics.ga4_id, { anonymize_ip: true });
+    }
+    if (analytics.google_ads_id) {
+      gtag("config", analytics.google_ads_id);
+    }
   }
 
   if (analytics.yandex_metrica_id) {
@@ -69,9 +78,9 @@
   // Unified conversion event dispatcher — same event names across GA4 / Metrica / Pixel.
   window.aykaTrack = function (eventName, params) {
     params = params || {};
-    if (analytics.ga4_id && window.gtag) {
+    if ((analytics.ga4_id || analytics.google_ads_id) && window.gtag) {
       window.gtag("event", eventName, params);
-    } else if (analytics.ga4_id) {
+    } else if (analytics.ga4_id || analytics.google_ads_id) {
       gtag("event", eventName, params);
     }
     if (analytics.yandex_metrica_id && window.ym) {
@@ -79,6 +88,20 @@
     }
     if (analytics.meta_pixel_id && window.fbq) {
       window.fbq("trackCustom", eventName, params);
+    }
+    // lead_submitted is the one event worth reporting to Google Ads as an actual
+    // conversion (it's the moment a visitor becomes a lead) — whatsapp_click/phone_click
+    // stay plain GA4 events above, since they're softer intent signals, not the
+    // conversion the ad account should optimize toward. Needs both the Ads ID and the
+    // conversion label (set once a conversion goal exists in the Google Ads UI); with
+    // either missing there's no valid send_to target, so skip rather than fire a broken call.
+    if (eventName === "lead_submitted" && analytics.google_ads_id && analytics.google_ads_conversion_label) {
+      var conversionParams = { send_to: analytics.google_ads_id + "/" + analytics.google_ads_conversion_label };
+      if (window.gtag) {
+        window.gtag("event", "conversion", conversionParams);
+      } else {
+        gtag("event", "conversion", conversionParams);
+      }
     }
   };
 

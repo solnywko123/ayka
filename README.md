@@ -138,7 +138,7 @@ docker compose up --build
 
 ## Аналитика и верификация в поисковиках
 
-ID Google Analytics / Яндекс.Метрики задаются в `site/content/config.json` (поле `analytics`). Пустое значение — скрипт соответствующей системы не подключается вообще. Инструкция по подтверждению сайта в Google Search Console и Яндекс.Вебмастере — [deploy/verification/README.md](deploy/verification/README.md).
+ID Google Analytics / Google Ads / Яндекс.Метрики задаются в `site/content/config.json` (поле `analytics`). Пустое значение — скрипт соответствующей системы не подключается вообще. Google Ads конверсия (`lead_submitted`) отправляется только если заполнены оба поля `google_ads_id` и `google_ads_conversion_label` — второе появляется после создания цели конверсии в интерфейсе Google Ads. Инструкция по подтверждению сайта в Google Search Console и Яндекс.Вебмастере — [deploy/verification/README.md](deploy/verification/README.md).
 
 ## Опционально: уведомления о заявках в Telegram
 

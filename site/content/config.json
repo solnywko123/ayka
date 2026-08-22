@@ -43,6 +43,8 @@
   "analytics": {
     "ga4_id": "",
     "yandex_metrica_id": "",
-    "meta_pixel_id": ""
+    "meta_pixel_id": "",
+    "google_ads_id": "",
+    "google_ads_conversion_label": ""
   }
 }
