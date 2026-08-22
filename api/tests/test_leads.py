@@ -105,6 +105,15 @@ def test_preferred_date_too_far_rejected(client):
     assert response.status_code == 422
 
 
+def test_preferred_date_empty_string_accepted(client):
+    """<input type="date"> отправляет "" когда поле оставлено пустым (оно
+    необязательное на сайте) — form.js шлёт его как есть, не опуская ключ."""
+    payload = make_valid_lead_payload(preferred_date="")
+    response = client.post("/api/v1/leads", json=payload)
+    assert response.status_code == 200
+    assert response.json()["id"]
+
+
 def test_comment_html_is_sanitized(client):
     payload = make_valid_lead_payload(phone="0555888888", comment="<script>alert(1)</script>Hello")
     response = client.post("/api/v1/leads", json=payload)

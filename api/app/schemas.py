@@ -73,6 +73,13 @@ class LeadCreate(BaseModel):
     def sanitize_text(cls, value: str | None) -> str | None:
         return strip_html(value)
 
+    @field_validator("preferred_date", mode="before")
+    @classmethod
+    def empty_preferred_date_to_none(cls, value: object) -> object:
+        # <input type="date"> отправляет "" когда поле оставлено пустым (оно
+        # необязательное) — Pydantic не приводит "" к None для типа date сам.
+        return None if value == "" else value
+
     @field_validator("preferred_date")
     @classmethod
     def validate_preferred_date(cls, value: date | None) -> date | None:
