@@ -31,7 +31,8 @@
 <link rel="preload" href="{{ asset('fonts/manrope-variable-cyrillic.woff2') }}" as="font" type="font/woff2" crossorigin>
 
 <style>{{ critical_css | safe }}</style>
-<link rel="preload" as="style" href="{{ asset('css/main.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+<link id="main-css-preload" rel="preload" as="style" href="{{ asset('css/main.css') }}">
+<script src="{{ asset('js/css-preload.js') }}"></script>
 <noscript><link rel="stylesheet" href="{{ asset('css/main.css') }}"></noscript>
 
 {% for block in json_ld %}
